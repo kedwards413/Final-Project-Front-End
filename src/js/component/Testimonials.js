@@ -35,7 +35,7 @@ export const Testimonials = () => {
 	};
 	return (
 		<>
-			<div className="testimonial-title mt-5 d-flex justify-content-center">Testimonials</div>
+			<div className="testimonial-title  d-flex justify-content-center">Testimonials</div>
 			<div className="testimonials ">
 				{testimonialArr.map((item, i) => {
 					return (
