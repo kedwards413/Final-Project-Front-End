@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { Login } from "../views/Login";
 
 export const Navbar = () => {
 	return (
@@ -18,7 +19,7 @@ export const Navbar = () => {
 					<span className="navbar-brand text-white mr-5">THERAPISTS</span>
 				</Link>
 				<div className="ml-auto">
-					<Link to="">
+					<Link to="/login">
 						<span className="navbar-brand text-white mr-5">LOGIN</span>
 					</Link>
 					<Link to="">
