@@ -3,6 +3,6 @@ import { Link } from "react-router-dom";
 
 export const Modal = () => {
     return(
-        
+        <p>test</p>
     );
 };
