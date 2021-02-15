@@ -1,19 +1,63 @@
+.background-image{
+      position: fixed;
+ z-index:-30;
+  min-width: 100%;
+  min-height: 100%;
+  
+
+}
+
 // TITLECARD 
 
 .navbar{
-    background-color: rgba(0,0,0,0.356);
+    background-color: rgba(0,0,0,0.153);
+    position:fixed;
+    width:100%;
+   z-index:300;
 }
 
 .part-title{
     font-size:25px;
     font-family: 'Bad Script', cursive;
+    margin-top:110px;
+    color:white;
    
 }
 .phobia-name{
     font-family: 'Open Sans', sans-serif;
     font-weight:600px;
-    font-size:60px;
+    font-size:80px;
     letter-spacing:4px;
+    margin-top:70px;
+    color:white;
+}
+.card{
+    background-color:rgba(0,0,0,0.253);
+     transition: transform .2s;
+    
+}
+.card:hover{
+    transform: scale(1.1);
+}
+.card-subtitle{
+    color:rgb(182, 181, 181);
+    text-decoration:none
+}
+.card-title{
+  
+  text-decoration: none;
+ color:rgb(211, 209, 209);
+  width: 100%;
+  bottom: 20px;
+  font-size:35px;
+  font-weight:700px;
+  
+  transition: all 0.5s ease-in-out;
+}
+.card-title:hover{
+ 
+  letter-spacing: 8px;
+  transition: all 0.5s ease-in-out;
 }
 
 
@@ -105,7 +149,12 @@ i{
     font-weight:600px;
     font-size:60px;
     letter-spacing:4px;
-  
+    color:white;
+
+}
+.testimonial-text{
+    background:rgba(0,0,0,0.253);
+    color:rgb(211, 209, 209)
 
 }
 // LOGIN
@@ -268,3 +317,73 @@ i{
     bottom: 100%;
   }
 }
+
+//LINEBREAK
+.fade_rule {
+        height: 2px;
+        
+        width: 66.0em;
+        margin: 0 auto;
+        background-image: linear-gradient(left , white 2%, #E6E6E6 50%, white 98%);
+        background-image: -o-linear-gradient(left , white 2%, #E6E6E6 50%, white 98%);
+        background-image: -moz-linear-gradient(left , white 2%, #E6E6E6 50%, white 98%);
+        background-image: -webkit-linear-gradient(left , white 2%, #E6E6E6 50%, white 98%);
+        background-image: -ms-linear-gradient(left , white 2%, #E6E6E6 50%, white 98%);
+        background-image: -webkit-gradient( linear, left bottom, right bottom, color-stop(0.02, white), color-stop(0.5, rgb(172, 5, 172)), color-stop(0.98, white) );
+}
+
+//MODAL
+
+.modal{
+    border: 1px solid black;
+    margin-left:400px;
+    margin-top:13%;
+    background-color:white;
+    
+    
+    
+   
+    
+}
+.modalBackground{
+    background: rgba(0,0,0,0.453);
+   
+    
+    position: absolute;
+    top: 0;
+    left: 0;
+    height:730px;
+    width:100%;
+}
+.modalImage{
+
+    
+    position: absolute;
+    top: 0;
+    left: 0;
+    height:730px;
+    width:100%;
+    z-index:-30;
+   
+
+}
+
+
+.startButton{
+    margin-top:300px;
+    margin-right:200px;
+    font-size:30px;
+    padding:5px;
+    width:200px;
+}
+.modalText{
+    margin-top:50px;
+    font-size: 20px;
+    text-align:center;
+    margin-right:-400px;
+    
+    
+    width:100%;
+}
+
+

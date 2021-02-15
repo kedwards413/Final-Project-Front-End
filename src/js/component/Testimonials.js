@@ -35,13 +35,14 @@ export const Testimonials = () => {
 	};
 	return (
 		<>
-			<div className="testimonial-title  d-flex justify-content-center">Testimonials</div>
+			<div className="testimonial-title  d-flex justify-content-center mt-4 ">Testimonials</div>
+
 			<div className="testimonials ">
 				{testimonialArr.map((item, i) => {
 					return (
 						<div key={i} className="arr " style={{ transform: `translateX(${x}%)` }}>
 							{item}
-							<p className="mt-3 ml-3 mr-2">
+							<p className=" testimonial-text pt-3 pl-3 pb-4 pr-2">
 								EXAMPLE QUOTES WOULD NOT HARD CODED HOW DO WE IMPORT IMAGE AND QUOTE FROM SUBMITTING
 								TESTIMONIAL. FOR IMAGES WE NEED TO HAVE A PREDETERMINED SIZE FOR IMAGE. AND WORD LIMIT.
 								COOL
