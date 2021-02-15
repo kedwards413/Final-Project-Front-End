@@ -1,8 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
 // import phobia from "../../img/phobia.png";
+import PropTypes from "prop-types";
 
-export const Modal = () => {
+export const Modal = props => {
 	//array of cards. map through, return one card componenet, have position absolute.
 	return (
 		<>
@@ -12,15 +13,10 @@ export const Modal = () => {
 			<div className="modalBackground">
 				<div className="modal d-flex justify-content-center" style={{ width: 600, height: 400 }}>
 					<div className="modalText pl-5 pr-5">
-						<p>
-							Congratulations on taking your first step to conquering your fear. There will be a series of
-							missions increasing in difficulty that will help you overcome your phobia. Visuals may
-							accompany some of the following steps, so if at anytime it gets to intense for you, click on
-							the button stop and the screen will black out. When youre ready, you can proceed.{" "}
-						</p>
+						<p>{props.text}</p>
 					</div>
 					<form action="">
-						<button className="startButton ">Start</button>
+						<button className="startButton ">{props.button}</button>
 					</form>
 				</div>
 				<div className="modalImage">
@@ -29,4 +25,8 @@ export const Modal = () => {
 			</div>
 		</>
 	);
+};
+Modal.propTypes = {
+	text: PropTypes.string,
+	button: PropTypes.string
 };
