@@ -1,11 +1,9 @@
-.background-image{
-      position: fixed;
- z-index:-30;
-  min-width: 100%;
-  min-height: 100%;
-  
-
-}
+// .background-image{
+//       position: fixed;
+//  z-index:-30;
+//   min-width: 100%;
+//   min-height: 100%;
+// }
 
 // TITLECARD 
 
@@ -20,7 +18,7 @@
     font-size:25px;
     font-family: 'Bad Script', cursive;
     margin-top:110px;
-    color:white;
+    color:black;
    
 }
 .phobia-name{
@@ -29,7 +27,7 @@
     font-size:80px;
     letter-spacing:4px;
     margin-top:70px;
-    color:white;
+    color:black;
 }
 .card{
     background-color:rgba(0,0,0,0.253);
@@ -40,13 +38,13 @@
     transform: scale(1.1);
 }
 .card-subtitle{
-    color:rgb(182, 181, 181);
+    color:white;
     text-decoration:none
 }
 .card-title{
   
   text-decoration: none;
- color:rgb(211, 209, 209);
+ color:white;
   width: 100%;
   bottom: 20px;
   font-size:35px;
@@ -149,12 +147,12 @@ i{
     font-weight:600px;
     font-size:60px;
     letter-spacing:4px;
-    color:white;
+    color:black;
 
 }
 .testimonial-text{
     background:rgba(0,0,0,0.253);
-    color:rgb(211, 209, 209)
+    color:white;
 
 }
 // LOGIN
@@ -329,7 +327,7 @@ i{
         background-image: -moz-linear-gradient(left , white 2%, #E6E6E6 50%, white 98%);
         background-image: -webkit-linear-gradient(left , white 2%, #E6E6E6 50%, white 98%);
         background-image: -ms-linear-gradient(left , white 2%, #E6E6E6 50%, white 98%);
-        background-image: -webkit-gradient( linear, left bottom, right bottom, color-stop(0.02, white), color-stop(0.5, rgb(172, 5, 172)), color-stop(0.98, white) );
+        background-image: -webkit-gradient( linear, left bottom, right bottom, color-stop(0.02, white), color-stop(0.5, black), color-stop(0.98, white) );
 }
 
 //MODAL
