@@ -138,3 +138,113 @@ body{
     margin-right:100px;
     padding-top:20px;
 }
+//TESTIMONIALS
+.fade_rule {
+        height: 2px;
+        
+        width: 66.0em;
+        margin: 0 auto;
+        background-image: linear-gradient(left , white 2%, #E6E6E6 50%, white 98%);
+        background-image: -o-linear-gradient(left , white 2%, #E6E6E6 50%, white 98%);
+        background-image: -moz-linear-gradient(left , white 2%, #E6E6E6 50%, white 98%);
+        background-image: -webkit-linear-gradient(left , white 2%, #E6E6E6 50%, white 98%);
+        background-image: -ms-linear-gradient(left , white 2%, #E6E6E6 50%, white 98%);
+        background-image: -webkit-gradient( linear, left bottom, right bottom, color-stop(0.02, grey), color-stop(0.5, white), color-stop(0.98, grey) );
+}
+
+
+.testimonials{
+    width: 93%;
+    height: 600px;
+    margin-left:3.5%;
+    box-sizing:border-box;
+    display:flex;
+    margin-top:800px;
+    align-items:center;
+    position:absolute;
+    overflow:hidden;
+    
+    
+  
+}
+.arr{
+    position:relative;
+  
+    min-width:350px;
+    height: 80%;
+    transition:3s;
+    overflow:hidden;
+    border: 1px solid white;
+   
+}
+
+
+button{
+    &:focus{
+        outline:none;
+    }
+}
+.leftButton{
+    position:absolute;
+    top:50%;
+    left:0;
+    transform:translateY(-50%);
+    width:5%;
+    height: 80%;
+    transition:0.5s;
+    border-right:1px solid black;
+    &:hover{
+        background:rgba(0,0,0,0.356);
+
+    }
+   
+    cursor:pointer;
+    border: none;
+    background:none;
+    outline:none;
+    border-left:1px solid rgb(148, 147, 147);
+   
+
+}
+.rightButton{
+       &:hover{
+        background:rgba(0,0,0,0.356);
+       
+      
+    }
+    cursor:pointer;
+    transition:0.5s;
+    border-right:1px solid rgb(148, 147, 147);
+    background:none;
+    outline:none;
+    position:absolute;
+    top:50%;
+    right:0;
+    transform:translateY(-50%);
+    width:5%;
+    height: 80%;
+    border-left:none;
+    border-top:none;
+    border-bottom:none;
+    
+}
+
+i{
+    color:rgb(148, 147, 147);
+    font-size:35px;
+}
+
+.testimonial-title{
+     font-family: 'IM Fell English', serif;
+    font-weight:600px;
+    font-size:90px;
+    letter-spacing:4px;
+    color:white;
+    margin-top:100px;
+
+}
+.testimonial-text{
+    background:rgba(0,0,0,0.253);
+    color:white;
+
+}

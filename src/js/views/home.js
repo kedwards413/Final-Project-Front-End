@@ -3,6 +3,7 @@ import { Context } from "../store/appContext";
 import rigoImageUrl from "../../img/rigo-baby.jpg";
 import "../../styles/home.scss";
 import { TitleCard } from "../component/TitleCard";
+import { Testimonials } from "../component/Testimonials";
 
 export const Home = () => {
 	const { store, actions } = useContext(Context);
@@ -34,7 +35,8 @@ export const Home = () => {
 					<TitleCard title=" Astraphobia" subtitle="FEAR OF THUNDER AND LIGHTNING" />
 				</div>
 			</div>
-			<div className="fade_rule" />
+			<div className="fade_rule mt-4" />
+			<Testimonials />
 		</>
 	);
 };
