@@ -1,6 +1,5 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { Login } from "../views/Login";
 
 export const Navbar = () => {
 	return (

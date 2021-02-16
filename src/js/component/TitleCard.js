@@ -1,7 +1,5 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import { Modal } from "../views/Modal";
-
 import PropTypes from "prop-types";
 
 export const TitleCard = props => {
