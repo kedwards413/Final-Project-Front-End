@@ -58,10 +58,10 @@ export const Modal = () => {
 				<div className="modalBackground">
 					<div className="modal d-flex justify-content-center" style={{ width: 600, height: 400 }}>
 						<div className="modalText pl-5 pr-5">
-							<p>yay! youre not crazy</p>
+							<p>{store.modalCards[modalIndex].text}</p>
 						</div>
 						<Link to="/profilepage">
-							<button className="startButtonLast ">see your progress</button>
+							<button className="startButtonLast "> {store.modalCards[modalIndex].button}</button>
 						</Link>
 					</div>
 				</div>
