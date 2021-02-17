@@ -87,11 +87,7 @@
     
    
 }
-.hover:hover{
-          letter-spacing: 5px;
-  transition: all .8s ease-in-out;
 
-}
 
 .card-subtitle{
     color:rgb(201, 198, 198);
@@ -108,9 +104,16 @@
   font-size:35px;
   font-weight:700px;
    transition: all 0.5s ease-in-out;
+    transition: transform .2s;
   
   
   
+}
+.card-title:hover{
+ 
+  letter-spacing: 4px;
+  transition: all .8s ease-in-out;
+  transform: scale(1.1);
 }
 
 
@@ -266,6 +269,7 @@ i{
     left: 0;
     height:730px;
     width:100%;
+   
    
 }
 
