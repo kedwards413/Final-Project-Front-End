@@ -35,14 +35,7 @@
      margin-right:170px;
    
 }
-// .phobia-name{
-//     font-family: 'Open Sans', sans-serif;
-//     font-weight:600px;
-//     font-size:80px;
-//     letter-spacing:4px;
-//     margin-top:70px;
-//     color:black;
-// }
+
 
 .first-card{
     margin-right:200px;
@@ -247,4 +240,69 @@ i{
     background:rgba(0,0,0,0.253);
     color:white;
 
+}
+//MODAL
+
+.modal{
+    border: 1px solid white;
+    margin-left:400px;
+    margin-top:85px;
+    background-color:black;
+    
+    
+    
+   
+    
+}
+
+.modalBackground{
+    background: rgba(0, 0, 0, 0.7);
+    position: absolute;
+    top: 0;
+    left: 0;
+    height:730px;
+    width:100%;
+   
+}
+
+.startButton{
+    // margin-top:550px;
+    // margin-right:40px;
+    display:flex;
+    justify-content:center;
+    align-self:flex-end;
+    margin-bottom:7px;
+    font-size:20px;
+    padding:5px;
+    width:120px;
+    height:40px;
+    color: white;
+    background-color:black;
+     position:absolute;
+}
+.startButtonLast{
+    margin-top:350px;
+    margin-left:-85px;
+    font-size:20px;
+    padding:5px;
+    width:180px;
+    height:40px;
+    color: white;
+    background-color:black;
+     position:absolute;
+}
+
+
+.modalText{
+    
+    font-size: 20px;
+    
+    text-align: center;
+    color:white;
+    width:100%;
+    position:absolute;
+      display:flex;
+    justify-content:center;
+    align-self:flex-end;
+    margin-bottom:80px;
 }

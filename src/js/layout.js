@@ -7,6 +7,9 @@ import { Demo } from "./views/demo";
 import { Single } from "./views/single";
 import injectContext from "./store/appContext";
 
+import { Modal } from "./views/Modal";
+import { ProfilePage } from "./views/ProfilePage";
+
 import { Navbar } from "./component/navbar";
 import { Footer } from "./component/footer";
 
@@ -29,6 +32,19 @@ const Layout = () => {
 							<Demo />
 						</Route>
 
+						<Route exact path="/modal">
+							<Modal
+								text="
+                            Congratulations on taking your first step to conquering your fear. There will be a series of
+                            missions increasing in difficulty that will help you overcome your phobia. Visuals may
+                            accompany some of the following steps, so if at anytime it gets to intense for you, click on
+                            the button stop and the screen will black out. When youre ready, you can proceed."
+								button="Start"
+							/>
+						</Route>
+						<Route exact path="/profilepage">
+							<ProfilePage />
+						</Route>
 						<Route exact path="/single/:theid">
 							<Single />
 						</Route>
