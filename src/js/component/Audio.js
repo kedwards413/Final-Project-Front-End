@@ -93,14 +93,11 @@
 
 import useSound from "use-sound";
 import React from "react";
+//include images into your bundle
+import boopSfx from "../../img/sound.mp3";
 
 export const Audio = () => {
-	const [play, { stop }] = useSound("../img/justBreathe/mp3");
-	return (
-		<button onMouseEnter={play} onMouseLeave={stop}>
-			<span role="img" aria-label="trumpet">
-				🎺
-			</span>
-		</button>
-	);
+	const [play] = useSound(boopSfx, { volume: 0.05 });
+
+	return <button onClick={play}>Boop!</button>;
 };

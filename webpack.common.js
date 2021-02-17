@@ -34,7 +34,14 @@ module.exports = {
             options: { name: '[name].[ext]' }
           }
         }, //for images
-        { test: /\.woff($|\?)|\.woff2($|\?)|\.ttf($|\?)|\.eot($|\?)|\.svg($|\?)/, use: ['file-loader'] } //for fonts
+        { test: /\.woff($|\?)|\.woff2($|\?)|\.ttf($|\?)|\.eot($|\?)|\.svg($|\?)/, use: ['file-loader'] } ,//for fonts
+              {
+	test: /\.mp3$/,
+	loader: 'file-loader',
+	query: {
+		name: 'static/media/[name].[hash:8].[ext]'
+	}
+},
     ]
   },
   resolve: {
