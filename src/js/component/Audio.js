@@ -6,5 +6,5 @@ import boopSfx from "../../img/sound.mp3";
 export const Audio = () => {
 	const [play] = useSound(boopSfx, { volume: 0.01 });
 
-	return <button onClick={play}>Boop!</button>;
+	return <button style={{ width: 10 }} onClick={play} />;
 };
