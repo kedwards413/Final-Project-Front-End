@@ -53,3 +53,23 @@
 // 		</div>
 // 	);
 // };
+
+import React, { useEffect } from "react";
+
+export const Audio = () => {
+	// const audioTune = new Audio("../img/sound.mp3");
+	// useEffect(() => {
+	// 	audioTune.load();
+	// }, []);
+	const playSound = () => {
+		audioTune.play();
+	};
+	return (
+		<div>
+			<input type="button" className="btn btn-primary mr-2" value="Play" onClick={playSound} />
+			<audio className="audio-element">
+				<source src="https://assets.coderrocketfuel.com/pomodoro-times-up.mp3" />
+			</audio>
+		</div>
+	);
+};
