@@ -36,7 +36,7 @@ export const Home = () => {
 					<TitleCard title=" Astraphobia" subtitle="FEAR OF THUNDER AND LIGHTNING" />
 				</div>
 			</div>
-			<div className="fade_rule mt-4" />
+			<div className="fade_rule mt-5" />
 			<Testimonials />
 			<Audio />
 		</>

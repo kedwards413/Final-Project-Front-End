@@ -97,7 +97,7 @@ import React from "react";
 import boopSfx from "../../img/sound.mp3";
 
 export const Audio = () => {
-	const [play] = useSound(boopSfx, { volume: 0.05 });
+	const [play] = useSound(boopSfx, { volume: 0.02 });
 
 	return <button onClick={play}>Boop!</button>;
 };
