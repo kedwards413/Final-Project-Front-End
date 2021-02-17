@@ -1,9 +1,10 @@
 import React, { useContext } from "react";
 import { Context } from "../store/appContext";
-import rigoImageUrl from "../../img/rigo-baby.jpg";
+
 import "../../styles/home.scss";
 import { TitleCard } from "../component/TitleCard";
 import { Testimonials } from "../component/Testimonials";
+// import { Audio } from "../component/Audio";
 
 export const Home = () => {
 	const { store, actions } = useContext(Context);
@@ -37,6 +38,7 @@ export const Home = () => {
 			</div>
 			<div className="fade_rule mt-4" />
 			<Testimonials />
+			{/* <Audio /> */}
 		</>
 	);
 };
