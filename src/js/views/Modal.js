@@ -11,7 +11,7 @@ export const Modal = () => {
 
 	const [showBlack, setShowBlack] = useState(false);
 
-	var lengthCards = store.modalCards.length;
+	var lengthCards = store.modalCards.length - 1;
 
 	//array of cards. map through, return one card componenet, have position absolute.
 	return (

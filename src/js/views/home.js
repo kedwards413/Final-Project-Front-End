@@ -17,22 +17,22 @@ export const Home = () => {
 				<p className="part-title2  ">and be set free</p>
 			</div>
 			<div className="container-fluid d-flex align-content ">
-				<div className="first-card hover">
+				<div className="first-card">
 					<TitleCard title="Arachnophobia" subtitle="FEAR OF SPIDERS" />
 				</div>
-				<div className="second-card hover">
+				<div className="second-card ">
 					<TitleCard title="Social Phobia" subtitle="FEAR OF SOCIAL INTERACTION" />
 				</div>
-				<div className="third-card hover">
+				<div className="third-card ">
 					<TitleCard title="Acrophobia" subtitle="FEAR OF HEIGHTS" />
 				</div>
-				<div className="fourth-card hover">
+				<div className="fourth-card ">
 					<TitleCard title="Cynophobia" subtitle="FEAR OF DOGS" />
 				</div>
-				<div className="fifth-card hover">
+				<div className="fifth-card ">
 					<TitleCard title="Claustrophobia" subtitle="FEAR OF ENCLOSED SPACES" />
 				</div>
-				<div className="sixth-card hover">
+				<div className="sixth-card ">
 					<TitleCard title=" Astraphobia" subtitle="FEAR OF THUNDER AND LIGHTNING" />
 				</div>
 			</div>

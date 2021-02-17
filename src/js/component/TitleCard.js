@@ -11,13 +11,11 @@ export const TitleCard = props => {
 	return (
 		<>
 			<Link to="/modal" onClick={() => manageModal()} style={{ textDecoration: "none" }}>
-				<div className="card-layout">
-					<div className="card-subject ">
-						<p className="card-title  mt-5">{props.title}</p>
-					</div>
-					<div className="card-subtitles">
-						<p className="card-subtitle mb-2  ">{props.subtitle}</p>
-					</div>
+				<div className="card-subject ">
+					<p className="card-title hover  mt-5">{props.title}</p>
+				</div>
+				<div className="card-subtitles ">
+					<p className="card-subtitle mb-2  ">{props.subtitle}</p>
 				</div>
 			</Link>
 		</>

@@ -54,22 +54,53 @@
 // 	);
 // };
 
-import React, { useEffect } from "react";
+// import React, { useEffect } from "react";
+
+// export const Audio = () => {
+// 	// const audioTune = new Audio("../img/sound.mp3");
+// 	// useEffect(() => {
+// 	// 	audioTune.load();
+// 	// }, []);
+// 	const playSound = () => {
+// 		audioTune.play();
+// 	};
+// 	return (
+// 		<div>
+// 			<input type="button" className="btn btn-primary mr-2" value="Play" onClick={playSound} />
+// 			<audio className="audio-element">
+// 				<source src="https://assets.coderrocketfuel.com/pomodoro-times-up.mp3" />
+// 			</audio>
+// 		</div>
+// 	);
+// };
+
+// import React, { useEffect } from "react";
+
+// export const Audio = () => {
+// 	useEffect(() => {
+// 		const audioEl = document.getElementsByClassName("audio-element")[0];
+// 		audioEl.play();
+// 	}, []);
+
+// 	return (
+// 		<div>
+// 			<audio className="audio-element">
+// 				<source src="../img/sound.mp3" />
+// 			</audio>
+// 		</div>
+// 	);
+// };
+
+import useSound from "use-sound";
+import React from "react";
 
 export const Audio = () => {
-	// const audioTune = new Audio("../img/sound.mp3");
-	// useEffect(() => {
-	// 	audioTune.load();
-	// }, []);
-	const playSound = () => {
-		audioTune.play();
-	};
+	const [play, { stop }] = useSound("../img/justBreathe/mp3");
 	return (
-		<div>
-			<input type="button" className="btn btn-primary mr-2" value="Play" onClick={playSound} />
-			<audio className="audio-element">
-				<source src="https://assets.coderrocketfuel.com/pomodoro-times-up.mp3" />
-			</audio>
-		</div>
+		<button onMouseEnter={play} onMouseLeave={stop}>
+			<span role="img" aria-label="trumpet">
+				🎺
+			</span>
+		</button>
 	);
 };
