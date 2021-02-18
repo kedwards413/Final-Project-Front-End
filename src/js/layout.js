@@ -11,6 +11,7 @@ import { Login } from "./views/Login";
 import { Navbar } from "./component/navbar";
 import { Footer } from "./component/footer";
 import { SignUp } from "./views/SignUp";
+import { Questions } from "./views/Questions";
 
 //create your first component
 const Layout = () => {
@@ -35,6 +36,9 @@ const Layout = () => {
 						</Route>
 						<Route exact path="/signup">
 							<SignUp />
+						</Route>
+						<Route exact path="/patientquestionnaire">
+							<Questions />
 						</Route>
 						<Route exact path="/single/:theid">
 							<Single />

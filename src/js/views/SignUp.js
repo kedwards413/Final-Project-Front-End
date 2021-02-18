@@ -50,9 +50,7 @@ export const SignUp = () => {
 								<a href="#">
 									<span />
 									<span />
-									<span />
-									<span />
-									Create Account
+									<Link to="/patientquestionnaire">Proceed to patient questionnaire</Link>
 								</a>
 							</form>
 						</div>
