@@ -3,18 +3,12 @@ import { Link } from "react-router-dom";
 // import phobia from "../../img/phobia.png";
 import { ProfilePage } from "./ProfilePage.js";
 import { Context } from "../store/appContext";
-
 export const Modal = () => {
 	const { store, action } = useContext(Context);
-
 	const [modalIndex, setModalIndex] = useState(0);
-
 	const [showImage, setShowImageBlack] = useState(false);
-
-	const [showtext, setShowTextBlack] = useState(false);
-
+	const [showText, setShowTextBlack] = useState(true);
 	var lengthCards = store.modalCards.length - 1;
-
 	//array of cards. map through, return one card componenet, have position absolute.
 	return (
 		<>
@@ -31,6 +25,7 @@ export const Modal = () => {
 									}}
 									onClick={() => {
 										setShowImageBlack(!showImage);
+										setShowTextBlack(!showText);
 									}}
 								/>
 							</div>
@@ -121,21 +116,14 @@ export const Modal = () => {
 									<button
 										onClick={() => {
 											setShowImageBlack(!showImage);
+											setShowTextBlack(!showText);
 										}}>
 										Continue
 									</button>
 								</div>
 							</div>
 						)}
-						{/* {store.modalCards[modalIndex].text == undefined ? null : showText == false ? ( */}
-						<p className="modalText">
-							{/* // onClick={() => { */}
-							{/* // 	setShowTextBlack(showText);
-							// }}>
-							// ):( */}
-							{store.modalCards[modalIndex].text}
-						</p>
-						{/* ) */}
+						{showText && <p className="modalText">{store.modalCards[modalIndex].text}</p>}
 						<button
 							className="startButton"
 							onClick={() => {
@@ -148,7 +136,7 @@ export const Modal = () => {
 			) : (
 				<div className="modalBackground">
 					<div className="modal d-flex justify-content-center rounded" style={{ width: 600, height: 600 }}>
-						<div className="modalText pl-5 pr-5">
+						<div className="modalText2 pl-5 pr-5">
 							<p>{store.modalCards[modalIndex].text}</p>
 						</div>
 						<Link to="/profilepage">
