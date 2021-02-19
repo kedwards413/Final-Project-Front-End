@@ -293,10 +293,10 @@ body{
 }
 
 .card:hover{
-   background:white;
-     transform: scale(1.1);
+   background:black;
+     transform: scale(1.5);
       transition: all 1s ease-in-out;
-        box-shadow: -35px 0px 60px 8px rgba(255,255,255,1);
+        // box-shadow: -35px 0px 60px 8px rgba(255,255,255,1);
       
 
  
@@ -314,11 +314,21 @@ body{
   bottom: 20px;
   font-size:35px;
   font-weight:700px;
-  transition: all 0.5s ease-in-out;
+  transition: all 0.8s ease-in-out;
 }
   .card-title:hover{
     letter-spacing: 8px;
   transition: all .8s ease-in-out;
+  color: #fff;
+  text-shadow:
+    0 0 .5px #fff,
+    0 0 1px #fff,
+    0 0 2px #fff,
+    0 0 3px #fff,
+    0 0 4px #fff,
+    0 0 5px #fff,
+    0 0 10px #fff,
+    0 0 20px #fff;
   
 
   }
