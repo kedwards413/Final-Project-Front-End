@@ -127,11 +127,15 @@ export const Modal = () => {
 								</div>
 							</div>
 						)}
-
-						<div className="modalText pl-5 pr-5">
-							<p>{store.modalCards[modalIndex].text}</p>
-						</div>
-
+						{/* {store.modalCards[modalIndex].text == undefined ? null : showText == false ? ( */}
+						<p className="modalText">
+							{/* // onClick={() => { */}
+							{/* // 	setShowTextBlack(showText);
+							// }}>
+							// ):( */}
+							{store.modalCards[modalIndex].text}
+						</p>
+						{/* ) */}
 						<button
 							className="startButton"
 							onClick={() => {
