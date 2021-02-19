@@ -4,7 +4,7 @@ import React from "react";
 import boopSfx from "../../img/sound.mp3";
 
 export const Audio = () => {
-	const [play] = useSound(boopSfx, { volume: 0.01 });
+	const [play] = useSound(boopSfx, { volume: 0.5 });
 
 	return <button style={{ width: 10 }} onClick={play} />;
 };
