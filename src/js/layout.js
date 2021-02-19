@@ -12,7 +12,6 @@ import { ProfilePage } from "./views/ProfilePage";
 
 import { Navbar } from "./component/navbar";
 import { Footer } from "./component/footer";
-import { Audio } from "./component/Audio";
 
 //create your first component
 const Layout = () => {

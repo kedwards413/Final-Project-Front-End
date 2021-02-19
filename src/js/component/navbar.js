@@ -4,14 +4,14 @@ import { Link } from "react-router-dom";
 export const Navbar = () => {
 	return (
 		<nav className="navbar  " style={{ height: 46 }}>
-			<Link to="/">
+			<Link to="/profilepage">
 				<span className="navbar-brand text-white  ">fearLESS</span>
 			</Link>
 			<div className="d-flex justify-content-end ">
 				<Link to="/">
 					<span className="navbar-brand  mr-5 text-white">HOME</span>
 				</Link>
-				<Link to="">
+				<Link to="about">
 					<span className="navbar-brand  mr-5 text-white">ABOUT</span>
 				</Link>
 
