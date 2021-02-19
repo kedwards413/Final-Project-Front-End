@@ -9,9 +9,9 @@ export const Modal = () => {
 
 	const [modalIndex, setModalIndex] = useState(0);
 
-	const [showBlack, setShowBlack] = useState(false);
+	const [showImage, setShowImageBlack] = useState(false);
 
-	const [text, setText] = useState(false);
+	const [showtext, setShowTextBlack] = useState(false);
 
 	var lengthCards = store.modalCards.length - 1;
 
@@ -21,7 +21,7 @@ export const Modal = () => {
 			{modalIndex < lengthCards ? (
 				<div className="modalBackground rounded">
 					<div className="modal d-flex justify-content-center rounded" style={{ width: 600, height: 600 }}>
-						{store.modalCards[modalIndex].imageUrl == undefined ? null : showBlack == false ? (
+						{store.modalCards[modalIndex].imageUrl == undefined ? null : showImage == false ? (
 							<div className="modalImage">
 								<img
 									src={store.modalCards[modalIndex].imageUrl}
@@ -30,7 +30,7 @@ export const Modal = () => {
 										height: 300
 									}}
 									onClick={() => {
-										setShowBlack(!showBlack);
+										setShowImageBlack(!showImage);
 									}}
 								/>
 							</div>
@@ -120,7 +120,7 @@ export const Modal = () => {
 								<div className="d-flex justify-content-center">
 									<button
 										onClick={() => {
-											setShowBlack(!showBlack);
+											setShowImageBlack(!showImage);
 										}}>
 										Continue
 									</button>
