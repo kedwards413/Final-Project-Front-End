@@ -29,28 +29,12 @@ export const Home = () => {
 				<p className="part-title2  ">and be set free</p>
 			</div>
 			<div className="fade_rule mt-5" />
-
-			<div className="first-card d-flex justify-content-start">
+			<div className="container-fluid d-flex align-content flex-wrap m-5">
 				<TitleCard title="Arachnophobia" subtitle="FEAR OF SPIDERS" />
-			</div>
-
-			<div className="second-card d-flex justify-content-start">
 				<TitleCard title="Social Phobia" subtitle="FEAR OF SOCIAL INTERACTION" />
-			</div>
-
-			<div className="third-card d-flex justify-content-center">
 				<TitleCard title="Acrophobia" subtitle="FEAR OF HEIGHTS" />
-			</div>
-
-			<div className="fourth-card d-flex justify-content-center ">
 				<TitleCard title="Cynophobia" subtitle="FEAR OF DOGS" />
-			</div>
-
-			<div className="fifth-card d-flex justify-content-end">
 				<TitleCard title="Claustrophobia" subtitle="FEAR OF ENCLOSED SPACES" />
-			</div>
-
-			<div className="sixth-card d-flex justify-content-end">
 				<TitleCard title=" Astraphobia" subtitle="FEAR OF THUNDER AND LIGHTNING" />
 			</div>
 
