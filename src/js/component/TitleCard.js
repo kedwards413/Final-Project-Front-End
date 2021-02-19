@@ -12,10 +12,10 @@ export const TitleCard = props => {
 		<>
 			<Link to="/modal" onClick={() => manageModal()} style={{ textDecoration: "none" }}>
 				<div className="card-subject ">
-					<p className="card-title hover  mt-5">{props.title}</p>
+					<p className="card-title hover  ">{props.title}</p>
 				</div>
 				<div className="card-subtitles ">
-					<p className="card-subtitle mb-2  ">{props.subtitle}</p>
+					<p className="card-subtitle   ">{props.subtitle}</p>
 				</div>
 			</Link>
 		</>

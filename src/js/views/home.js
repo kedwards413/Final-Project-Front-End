@@ -28,27 +28,32 @@ export const Home = () => {
 			<div className="secondsubtitle">
 				<p className="part-title2  ">and be set free</p>
 			</div>
+			<div className="fade_rule mt-5" />
 
-			<div className="container-fluid  ">
-				<div className="first-card">
-					<TitleCard title="Arachnophobia" subtitle="FEAR OF SPIDERS" />
-				</div>
-				<div className="second-card ">
-					<TitleCard title="Social Phobia" subtitle="FEAR OF SOCIAL INTERACTION" />
-				</div>
-				<div className="third-card ">
-					<TitleCard title="Acrophobia" subtitle="FEAR OF HEIGHTS" />
-				</div>
-				<div className="fourth-card ">
-					<TitleCard title="Cynophobia" subtitle="FEAR OF DOGS" />
-				</div>
-				<div className="fifth-card ">
-					<TitleCard title="Claustrophobia" subtitle="FEAR OF ENCLOSED SPACES" />
-				</div>
-				<div className="sixth-card ">
-					<TitleCard title=" Astraphobia" subtitle="FEAR OF THUNDER AND LIGHTNING" />
-				</div>
+			<div className="first-card d-flex justify-content-start">
+				<TitleCard title="Arachnophobia" subtitle="FEAR OF SPIDERS" />
 			</div>
+
+			<div className="second-card d-flex justify-content-start">
+				<TitleCard title="Social Phobia" subtitle="FEAR OF SOCIAL INTERACTION" />
+			</div>
+
+			<div className="third-card d-flex justify-content-center">
+				<TitleCard title="Acrophobia" subtitle="FEAR OF HEIGHTS" />
+			</div>
+
+			<div className="fourth-card d-flex justify-content-center ">
+				<TitleCard title="Cynophobia" subtitle="FEAR OF DOGS" />
+			</div>
+
+			<div className="fifth-card d-flex justify-content-end">
+				<TitleCard title="Claustrophobia" subtitle="FEAR OF ENCLOSED SPACES" />
+			</div>
+
+			<div className="sixth-card d-flex justify-content-end">
+				<TitleCard title=" Astraphobia" subtitle="FEAR OF THUNDER AND LIGHTNING" />
+			</div>
+
 			<div className="fade_rule mt-5" />
 			<Testimonials />
 			<Audio />

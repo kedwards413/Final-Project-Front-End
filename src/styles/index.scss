@@ -6,7 +6,10 @@
 // }
 
 // TITLECARD 
-
+body{
+    height:600vh;
+    width:100%;
+}
 .navbar{
     background-color: white;
     position:fixed;
@@ -280,7 +283,6 @@
 
 
 
-
 .card-subtitle{
     color:rgb(201, 198, 198);
     text-decoration:none;
@@ -332,12 +334,13 @@ body{
 
 
 .testimonials{
-    width: 93%;
-    height: 600px;
-    margin-left:3.5%;
+    width: 70%;
+    height: 500px;
+    margin-left:210px;
     box-sizing:border-box;
     display:flex;
-    margin-top:800px;
+    
+    margin-top:1600px;
     align-items:center;
     position:absolute;
     overflow:hidden;
@@ -347,8 +350,8 @@ body{
 }
 .arr{
     position:relative;
-  
-    min-width:350px;
+ 
+    width:300px;
     height: 80%;
     transition:3s;
     overflow:hidden;
@@ -415,10 +418,13 @@ i{
 .testimonial-title{
      font-family: 'IM Fell English', serif;
     font-weight:600px;
-    font-size:120px;
+    font-size:80px;
     letter-spacing:4px;
     color:white;
-    margin-top:90px;
+    margin-top:50px;
+     justify-content:center;
+     display:flex;
+    
 
 }
 .testimonial-text{
