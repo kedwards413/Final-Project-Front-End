@@ -11,7 +11,7 @@ body{
     width:100%;
 }
 .navbar{
-    background-color: white;
+    background-color: rgb(194, 191, 191);
     position:fixed;
     width:100%;
    z-index:300;
@@ -288,13 +288,13 @@ body{
 }
 
 .card-subtitle{
-    color:white;
+    color:rgb(124, 124, 124);
     text-decoration:none
 }
 .card-title{
   
   text-decoration: none;
- color:white;
+ color:rgb(211, 209, 209);
   width: 100%;
   bottom: 20px;
   font-size:35px;
@@ -340,7 +340,7 @@ body{
     box-sizing:border-box;
     display:flex;
     
-    margin-top:1320px;
+    margin-top:1300px;
     align-items:center;
     position:absolute;
     overflow:hidden;
@@ -418,9 +418,9 @@ i{
 .testimonial-title{
      font-family: 'IM Fell English', serif;
     font-weight:600px;
-    font-size:80px;
+    font-size:70px;
     letter-spacing:4px;
-    color:white;
+    color:rgb(218, 216, 216);
     margin-top:50px;
      justify-content:center;
      display:flex;
