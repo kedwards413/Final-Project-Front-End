@@ -15,6 +15,21 @@ const getState = ({ getStore, getActions, setStore }) => {
 			]
 		},
 		actions: {
+			addAccount: accountToAdd => {
+				const tempStore = getStore();
+				console.log(accountToAdd);
+				fetch("", {
+					method: "POST",
+					headers: {
+						"Content-Type": "application/json"
+					},
+					body: JSON.stringify(accountToAdd)
+				})
+					.then(response => response.json())
+					.then(() => {
+						getActions().getInitialData();
+					});
+			},
 			// Use getActions to call a function within a fuction
 			exampleFunction: () => {
 				getActions().changeColor(0, "green");
