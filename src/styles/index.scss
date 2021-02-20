@@ -283,7 +283,24 @@ body{
      margin-right:380px;
    
 }
-
+.aboutTitle{
+   
+        color:rgb(201, 198, 198);
+   display:flex;
+   justify-content:center;
+   margin-left:80px;
+   font-size:60px;
+   margin-top:40px;
+}
+.aboutText{
+    color:rgb(153, 149, 149);
+   display:flex;
+   justify-content:center;
+   margin-left:300px;
+   font-size:30px;
+    width:70%;
+    margin-bottom:40px;
+}
 .card{
     background-color:rgba(0,0,0,0.253);
     border-radius:40px;
@@ -368,7 +385,7 @@ body{
     box-sizing:border-box;
     display:flex;
     
-    margin-top:1300px;
+    margin-top:1750px;
     align-items:center;
     position:absolute;
     overflow:hidden;

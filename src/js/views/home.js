@@ -5,6 +5,7 @@ import "../../styles/home.scss";
 import { TitleCard } from "../component/TitleCard";
 import { Testimonials } from "../component/Testimonials";
 import { Audio } from "../component/Audio";
+import { About } from "../component/About";
 
 export const Home = () => {
 	const { store, actions } = useContext(Context);
@@ -28,7 +29,10 @@ export const Home = () => {
 			<div className="secondsubtitle">
 				<p className="part-title2  ">and be set free</p>
 			</div>
+			<div className="fade_rule mt-5 mb-5" />
+			<About />
 			<div className="fade_rule mt-5" />
+
 			<div className="container-fluid d-flex align-content flex-wrap m-5">
 				<TitleCard title="Arachnophobia" subtitle="FEAR OF SPIDERS" />
 				<TitleCard title="Social Phobia" subtitle="FEAR OF SOCIAL INTERACTION" />

@@ -8,7 +8,10 @@ export const Navbar = () => {
 				<span className="navbar-brand text-white  ">fearLESS</span>
 			</Link>
 			<div className="d-flex justify-content-end ">
-				<Link to="about">
+				<Link to="/">
+					<span className="navbar-brand  mr-5 text-white">HOME</span>
+				</Link>
+				<Link to="/about">
 					<span className="navbar-brand  mr-5 text-white">ABOUT</span>
 				</Link>
 				<Link to="/profilepage">
