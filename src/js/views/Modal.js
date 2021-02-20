@@ -13,8 +13,8 @@ export const Modal = () => {
 	return (
 		<>
 			{modalIndex < lengthCards ? (
-				<div className="modalBackground rounded">
-					<div className="modal d-flex justify-content-center rounded" style={{ width: 600, height: 600 }}>
+				<div className="modalBackground ">
+					<div className="modal " style={{ width: 600, height: 600 }}>
 						{store.modalCards[modalIndex].imageUrl == undefined ? null : showImage == false ? (
 							<div className="modalImage">
 								<img
@@ -123,7 +123,7 @@ export const Modal = () => {
 								</div>
 							</div>
 						)}
-						{showText && <p className="modalText">{store.modalCards[modalIndex].text}</p>}
+						{showText && <p className="modalText2">{store.modalCards[modalIndex].text}</p>}
 						<button
 							className="startButton"
 							onClick={() => {
