@@ -19,7 +19,16 @@ body{
    z-index:300;
    color:rgb(199, 198, 198);
 }
+.audioButton{
+      display:flex;
+    justify-content:end;
+   position:absolute;
+   margin-right:-790px;
+     margin-top:130px;
+     color:black;
+}
  .phobia-name{
+     position:relative;
     font-family: 'Montserrat', sans-serif;
     font-weight:600px;
     font-size:150px;
@@ -41,9 +50,9 @@ body{
   content: '';
   width: 150%;
  
-  -webkit-box-shadow: -35px 0px 60px 2px rgba(255,255,255,1);
-  -moz-box-shadow: -35px 0px 60px 2px rgba(255,255,255,1);
-  box-shadow: -35px 0px 60px 2px rgba(255,255,255,1);
+  -webkit-box-shadow: -35px 0px 60px 3px rgba(255,255,255,1);
+  -moz-box-shadow: -35px 0px 60px 10px rgba(255,255,255,1);
+  box-shadow: -35px 0px 60px 3px rgba(255,255,255,1);
 }
 #L, #G {
   animation: flickerLG 11s linear reverse infinite;
@@ -338,16 +347,16 @@ body{
   .card-title:hover{
     letter-spacing: 8px;
   transition: all .8s ease-in-out;
-  color: #fff;
+  color: rgba(255, 255, 255, 0.815);
   text-shadow:
-    0 0 .5px #fff,
-    0 0 1px #fff,
-    0 0 2px #fff,
-    0 0 3px #fff,
-    0 0 4px #fff,
-    0 0 5px #fff,
-    0 0 10px #fff,
-    0 0 20px #fff;
+    0 0 .5px rgba(255, 255, 255, 0.815),
+    0 0 1px rgba(255, 255, 255, 0.815),
+    0 0 2px rgba(255, 255, 255, 0.815),
+    0 0 3px rgba(255, 255, 255, 0.815),
+    0 0 4px rgba(255, 255, 255, 0.815),
+    0 0 5px rgba(255, 255, 255, 0.815),
+    0 0 10px rgba(255, 255, 255, 0.815),
+    0 0 20px rgba(255, 255, 255, 0.815);
   
 
   }

@@ -21,6 +21,7 @@ export const Home = () => {
 				<span id="L">A</span>
 				<span id="T">S</span>
 				<span id="I">.</span>
+				<Audio />
 			</div>
 
 			<div className="first-subtitle">
@@ -44,7 +45,6 @@ export const Home = () => {
 
 			<div className="fade_rule mt-5" />
 			<Testimonials />
-			<Audio />
 		</>
 	);
 };

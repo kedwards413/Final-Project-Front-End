@@ -8,7 +8,7 @@ export const Audio = () => {
 
 	const [play] = useSound(boopSfx, { volume: 0.5 });
 
-	return <button style={{ width: 100 }} onClick={play} />;
+	return <i className="far fa-play-circle audioButton" onClick={play} />;
 
 	// onClick={() => (click ? { play } : setClick(!click))} />;
 };
