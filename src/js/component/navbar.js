@@ -14,9 +14,6 @@ export const Navbar = () => {
 				<Link to="/about">
 					<span className="navbar-brand  mr-5 text-white">ABOUT</span>
 				</Link>
-				<Link to="/profilepage">
-					<span className="navbar-brand  mr-5 text-white">PROFILE</span>
-				</Link>
 
 				<div className="ml-auto">
 					<Link to="/login">

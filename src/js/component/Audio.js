@@ -6,7 +6,7 @@ import boopSfx from "../../img/sound.mp3";
 export const Audio = () => {
 	// const [click, setClick] = useState(true);
 
-	const [play] = useSound(boopSfx, { volume: 0.5 });
+	const [play] = useSound(boopSfx, { volume: 0.1 });
 
 	return <i className="far fa-play-circle audioButton" onClick={play} />;
 
