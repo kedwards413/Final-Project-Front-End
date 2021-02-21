@@ -9,12 +9,12 @@ export const Modal = () => {
 	const [showImage, setShowImageBlack] = useState(false);
 	const [showText, setShowTextBlack] = useState(true);
 	var lengthCards = store.modalCards.length - 1;
-	//array of cards. map through, return one card componenet, have position absolute.
+
 	return (
 		<>
 			{modalIndex < lengthCards ? (
 				<div className="modalBackground ">
-					<div className="modal " style={{ width: 600, height: 600 }}>
+					<div className="modal  " style={{ width: 600, height: 600 }}>
 						{store.modalCards[modalIndex].imageUrl == undefined ? null : showImage == false ? (
 							<div className="modalImage">
 								<img
@@ -31,27 +31,15 @@ export const Modal = () => {
 							</div>
 						) : (
 							<div
-								className="blackout-modal"
+								className="blackout-modal pl-5 pr-5"
 								style={{
 									width: 800,
 									height: 300
 								}}>
 								{" "}
-								<div className="modal-question-answer1 ">
-									<div className="modalbox-section1 text-white d-flex justify-content-center ">
-										<p className="firstquestion-modal mt-1">Are you ok?</p>
-									</div>
-									<div className="modal-firstinput d-flex justify-content-center ">
-										<input
-											type="text"
-											className="form-control  "
-											style={{ width: 220, height: 50 }}
-										/>
-									</div>
-								</div>
-								<div className="modal-question-answer2">
+								<div className="modal-question-answer1">
 									<div className="modalbox-section2 d-flex justify-content-center">
-										<p className="secondquestion-modal text-white">
+										<p className="firstquestion-modal text-white pt-5">
 											How are you feeling right now?
 										</p>
 									</div>
@@ -90,23 +78,23 @@ export const Modal = () => {
 											</label>
 										</div>
 									</div>
-									<div className="modal-answer3">
+									<div className="modal-answer2">
 										<div className="modal-question3 d-flex justify-content-center">
-											<p className="modalbox-question3 text-white">
-												Tell me more about your experience
+											<p className="secondquestion-modal text-white pt-5">
+												Tell us more about your experience
 											</p>
 										</div>
 										<div className="modal-secondinput d-flex justify-content-center">
 											<input
 												type="text"
 												className="form-control"
-												style={{ width: 220, height: 50 }}
+												style={{ width: 300, height: 50 }}
 											/>
 										</div>
 									</div>
 								</div>
 								<div className="d-flex justify-content-center">
-									<p className="last-modalbox-advice text-white ml-3 mr-3">
+									<p className="last-modalbox-advice text-white ml-3 mr-3 pt-5 text-center">
 										Close your eyes and focus on your breathe. Think positive thought while
 										breathing deeply. When you feel calm and ready go ahead and click on the button.
 										The image will reappear and you can continue with overcoming your fear.
@@ -123,24 +111,26 @@ export const Modal = () => {
 								</div>
 							</div>
 						)}
-						{showText && <p className="modalText2">{store.modalCards[modalIndex].text}</p>}
-						<button
-							className="startButton"
+						{showText && <p className="modalText pl-5 pr-5">{store.modalCards[modalIndex].text}</p>}
+						<i
+							className="arrowIcon fas fa-arrow-right
+							startButton mb-3"
+							style={{ color: "rgb(172, 170, 170)" }}
 							onClick={() => {
 								setModalIndex(modalIndex + 1);
 							}}>
 							{store.modalCards[modalIndex].button}
-						</button>
+						</i>
 					</div>
 				</div>
 			) : (
 				<div className="modalBackground">
-					<div className="modal d-flex justify-content-center rounded" style={{ width: 600, height: 600 }}>
+					<div className="modal " style={{ width: 600, height: 600 }}>
 						<div className="modalText2 pl-5 pr-5">
 							<p>{store.modalCards[modalIndex].text}</p>
 						</div>
 						<Link to="/profilepage">
-							<button className="startButtonLast "> {store.modalCards[modalIndex].button}</button>
+							<button className="seeProgressButton mb-4"> {store.modalCards[modalIndex].button}</button>
 						</Link>
 					</div>
 				</div>

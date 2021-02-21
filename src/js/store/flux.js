@@ -1,3 +1,5 @@
+import React from "react";
+
 const getState = ({ getStore, getActions, setStore }) => {
 	return {
 		store: {
@@ -15,37 +17,38 @@ const getState = ({ getStore, getActions, setStore }) => {
 			],
 			modalCards: [
 				{
+					imageURL: "https://i.pinimg.com/564x/1b/4f/bf/1b4fbfcafd649d3414f1a456e3565087.jpg",
 					text:
 						"You're about to begin your journey. There will be missions you need to complete in order to be able to proceed to the next one. The missions will increase in difficulty. If at any time you feel uncomfortable because of an image, you can click on the image and it will turn black. When you're ready you can continue. Caution: next card contains an image ",
-					button: "Click here"
+					button: ""
 				},
 				{
 					imageUrl: "https://s.hdnux.com/photos/01/13/13/45/19708276/8/rawImage.jpg",
 					text:
 						"The VAST majority of spiders are not harmful to humans. Instead their webs catch mosqitoes. Mosquitoes kill more humans than any other animal. When you are ready, press 'next' and you will begin your first mission",
-					button: "Next"
+					button: ""
 				},
 
 				{
 					text:
 						" Your first mission is to visit a spider exhibit at a zoo or go to a pet store and watch spiders in an enclosed space. They cannot touch you and will not hurt you. Stay calm and watch them for a bit. Bring a friend for emotional support. Remember to take deep breathes and close your eyes if you need to calm down.  Caution: next card contains an image",
 
-					button: "Next"
+					button: ""
 				},
 
 				{
 					imageUrl:
 						" http://home.bt.com/images/how-can-i-make-my-home-less-attractive-to-spiders-136421898964210401-171008113636.jpg",
 					text:
-						"You're doing great. It's time to take it a step further. Go outside and view a spider in it's natural habitat. Don't forget to take deep breathes. watchthe spider and count your breathes. Repeat this mission three times and as long as you feel comfortable,  try to observe the spider for a longer number of breathes. ",
-					button: "Next"
+						" It's time to take it a step further. Go outside and view a spider in it's natural habitat. Don't forget to take deep breathes. watch the spider and count your breathes. Repeat this mission as long as you feel comfortable.",
+					button: ""
 				},
 				{
 					imageUrl:
 						"https://media.pri.org/s3fs-public/styles/story_main/public/widow_hand_SeanMcCann-625x450.jpg?itok=MiEpSGq3",
 					text:
-						"Visit a friend that might have a spider or go to a spider exhibit and watch someone else handle a spider. By this point you should feel more comfortable observing this. If you feel overwhelmed, close your eyes and focus on taking deep breathes, you can even repeat positive phrases. ",
-					button: "Next"
+						"You've reached your last mission! Visit a friend that might have a spider or go to a spider exhibit and watch someone else handle a spider. Try to get as close as you comfortable can and stay for a few long breathes.",
+					button: ""
 				},
 				{
 					text:

@@ -4,8 +4,12 @@ import { Link } from "react-router-dom";
 export const ProfilePage = () => {
 	return (
 		<>
-			<div>
-				<h1 className="mt-5 text-white">PROFILE PAGE</h1>
+			<div className="main">
+				<div className="avatar" />
+				<div className="personId">
+					<h1 className="name">Monica Lopez</h1>
+					<h2 className="phobiaName">Arachnaphobic</h2>
+				</div>
 			</div>
 		</>
 	);

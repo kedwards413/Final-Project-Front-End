@@ -1,13 +1,10 @@
-import React, { useEffect } from "react";
+import React from "react";
 
 export const About = () => {
-	useEffect(() => {
-		window.scrollTo("/", "/about");
-	}, []);
 	return (
 		<>
 			{" "}
-			<div id="about">
+			<div>
 				<h1 className="aboutTitle"> Our Story </h1>
 				<p className="aboutText ">
 					fearLESS was designed to help people overcome their phobia through exposure therapy. Users will

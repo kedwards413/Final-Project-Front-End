@@ -10,6 +10,7 @@
 body{
     height:600vh;
     width:100%;
+    background-color:black;
 }
 .navbar{
     background-color: rgb(19, 19, 19);
@@ -365,10 +366,7 @@ body{
 
 
 
-body{
-    background-color:black;
-  
-}
+
 
 //TESTIMONIALS
 .fade_rule {
@@ -498,11 +496,6 @@ i{
     position:absolute;
     margin-left:400px;
     margin-top:100px;
-    
-    
-    
-   
-    
 }
 
 .modalBackground{
@@ -515,24 +508,29 @@ i{
    
    
 }
-
-.startButton{
-    // margin-top:550px;
-    // margin-right:40px;
-    display:flex;
-    justify-content:center;
-    align-self:flex-end;
-    margin-bottom:7px;
-    font-size:20px;
-    padding:5px;
-    width:120px;
-    height:40px;
-    color: white;
-    background-color:black;
-     position:absolute;
+.arrowIcon{
+    cursor:pointer;
+    transform: scale(1.5,1);
+   
+  
 }
-.startButtonLast{
-    margin-top:350px;
+.modalImage{
+    cursor:pointer;
+}
+.startButton{
+    margin-top:550px;
+    margin-right:-500px;
+    font-size:30px;
+   
+    
+    
+    color: white;
+   
+     position:absolute;
+     border-radius:10px;
+}
+.seeProgressButton{
+    margin-top:540px;
     margin-left:-85px;
     font-size:20px;
     padding:5px;
@@ -541,6 +539,8 @@ i{
     color: white;
     background-color:black;
      position:absolute;
+      border-radius:10px;
+
 }
 
 
@@ -555,7 +555,7 @@ i{
       display:flex;
     justify-content:center;
     align-self:flex-end;
-    margin-bottom:80px;
+    margin-bottom:150px;
 }
 .modalText2{
       font-size: 20px;
@@ -569,4 +569,19 @@ i{
     align-self:flex-end;
     margin-bottom:200px;
 
+}
+.firstquestion-modal{
+    font-size:30px;
+   
+}
+.secondquestion-modal{
+    font-size:30px;
+  
+}
+
+//PROFILE page
+
+.avatar{
+    border-radius:50%;
+    color:white;
 }
