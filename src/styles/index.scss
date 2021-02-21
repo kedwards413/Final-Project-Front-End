@@ -277,11 +277,11 @@ body{
     font-size:85px;
     font-family: 'Bad Script', cursive;
    margin-top:-90px;
- 
+   
          display:flex;
     justify-content:flex-end;
    margin-right:580px;
-   color:rgb(201, 198, 198);
+   color:rgb(204, 203, 203);
    
    
 }
@@ -293,11 +293,11 @@ body{
         display:flex;
     justify-content:flex-end;
      margin-right:380px;
-   
+     
 }
 .aboutTitle{
    
-        color:rgb(201, 198, 198);
+        color:rgb(216, 214, 214);
    display:flex;
    justify-content:center;
    margin-left:80px;
@@ -305,7 +305,7 @@ body{
    margin-top:40px;
 }
 .aboutText{
-    color:rgb(153, 149, 149);
+    color:rgb(194, 191, 191);
    display:flex;
    justify-content:center;
    margin-left:300px;
@@ -346,9 +346,10 @@ body{
   font-size:35px;
   font-weight:700px;
   transition: all 0.8s ease-in-out;
+  font-family: 'RocknRoll One', sans-serif;
 }
   .card-title:hover{
-    letter-spacing: 8px;
+    letter-spacing: 4px;
   transition: all .8s ease-in-out;
   color: rgba(255, 255, 255, 0.815);
   text-shadow:
@@ -490,7 +491,8 @@ i{
 //MODAL
 
 .modal{
-    border: 1px solid white;
+    border: 1px solid black;
+    box-shadow: 0em 0 .9em white;
     display:flex;
      justify-content:center;
      border-radius:25px;
@@ -498,6 +500,7 @@ i{
     position:absolute;
     margin-left:400px;
     margin-top:100px;
+     
 }
 
 .modalBackground{
@@ -551,7 +554,7 @@ i{
     font-size: 20px;
     
     text-align: center;
-    color:white;
+    color:rgb(161, 159, 159);
     width:100%;
     position:absolute;
       display:flex;

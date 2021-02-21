@@ -42,7 +42,7 @@ export const Home = () => {
 				<TitleCard title=" Astraphobia" subtitle="FEAR OF THUNDER AND LIGHTNING" />
 			</div>
 
-			<div className="fade_rule mt-5" />
+			<div className="fade_rule mt-3 mb-4" />
 			<Testimonials />
 		</>
 	);
