@@ -1,5 +1,6 @@
 import React, { useRef } from "react";
 import { Link } from "react-router-dom";
+import { Audio } from "../component/Audio";
 
 export const Navbar = () => {
 	const myRef = useRef(null);
@@ -10,6 +11,8 @@ export const Navbar = () => {
 			<Link to="/profilepage">
 				<span className="navbar-brand text-white  ">fearLESS</span>
 			</Link>
+			<Audio />
+
 			<div className="d-flex justify-content-end ">
 				<Link to="/">
 					<span className="navbar-brand  mr-5 text-white">HOME</span>

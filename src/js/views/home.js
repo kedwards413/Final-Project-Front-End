@@ -4,7 +4,7 @@ import { Context } from "../store/appContext";
 import "../../styles/home.scss";
 import { TitleCard } from "../component/TitleCard";
 import { Testimonials } from "../component/Testimonials";
-import { Audio } from "../component/Audio";
+
 import { About } from "../component/About";
 
 export const Home = () => {
@@ -21,7 +21,6 @@ export const Home = () => {
 				<span id="L">A</span>
 				<span id="T">S</span>
 				<span id="I">.</span>
-				<Audio />
 			</div>
 
 			<div className="first-subtitle">
