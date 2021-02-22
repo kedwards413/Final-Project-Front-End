@@ -11,6 +11,9 @@ export const ProfilePage = () => {
 				<div className="personId ">
 					<h1 className="person-name d-flex justify-content-center mt-3 text-white">Monica Lopez</h1>
 					<h2 className="phobiaName d-flex justify-content-center mt-4 text-white">Arachnaphobic</h2>
+					<button className="profileButton d-flex justify-content-center mt-4 text-black">
+						Edit Profile
+					</button>
 				</div>
 				<div className="outer-line">
 					<div className="inner-line" />
