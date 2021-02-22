@@ -11,6 +11,7 @@ import { Modal } from "./views/Modal";
 import { ProfilePage } from "./views/ProfilePage";
 import { Questions } from "./views/Questions";
 import { ModalQuestions } from "./views/ModalQuestions";
+import { SignUp } from "./views/SignUp";
 
 import { Navbar } from "./component/navbar";
 import { Footer } from "./component/footer";
@@ -40,7 +41,11 @@ const Layout = () => {
 						<Route exact path="/demo">
 							<Demo />
 						</Route>
-						<Route exact path="/questions">
+						<Route exact path="signup">
+							<SignUp />
+						</Route>
+
+						<Route exact path="patientquestionnaire">
 							<Questions />
 						</Route>
 
