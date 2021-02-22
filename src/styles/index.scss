@@ -491,6 +491,8 @@ i{
 }
 //MODAL
 
+
+
 .modal{
     border: 1px solid black;
     box-shadow: 0em 0 .9em white;
@@ -577,13 +579,14 @@ i{
 
 }
 .firstquestion-modal{
-    font-size:30px;
+    font-size:20px;
    
 }
 .secondquestion-modal{
-    font-size:30px;
+    font-size:20px;
   
 }
+
 
 //PROFILE page
 
@@ -630,4 +633,17 @@ i{
   margin-right:200px;
   margin-top:-400px;
   
+}
+
+//questions
+
+.questions{
+    margin-left:300px;
+    margin-top:-900px;
+    width:250px;
+    
+    font-size: 10px;
+}
+.container-questions{
+    height:800px;
 }

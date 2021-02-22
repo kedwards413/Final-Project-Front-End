@@ -9,6 +9,8 @@ import injectContext from "./store/appContext";
 
 import { Modal } from "./views/Modal";
 import { ProfilePage } from "./views/ProfilePage";
+import { Questions } from "./views/Questions";
+import { ModalQuestions } from "./views/ModalQuestions";
 
 import { Navbar } from "./component/navbar";
 import { Footer } from "./component/footer";
@@ -38,9 +40,15 @@ const Layout = () => {
 						<Route exact path="/demo">
 							<Demo />
 						</Route>
+						<Route exact path="/questions">
+							<Questions />
+						</Route>
 
 						<Route exact path="/modal">
 							<Modal />
+						</Route>
+						<Route exact path="/modalquestions">
+							<ModalQuestions />
 						</Route>
 						<Route exact path="/profilepage">
 							<ProfilePage />
