@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-export function App() {
+export function ImageUpload() {
 	const [state, setState] = useState(null);
 
 	return (

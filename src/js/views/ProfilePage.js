@@ -5,7 +5,7 @@ import React, { useContext } from "react";
 // import { ModalQuestionsProfilePage } from "../views/ModalQuestionsProfilePage";
 import { Progress } from "../views/ProgressBar";
 import { Context } from "../store/appContext";
-import { App } from "../views/ImageUpload";
+import { ImageUpload } from "../views/ImageUpload";
 
 export const ProfilePage = () => {
 	const { store, actions } = useContext(Context);
@@ -129,8 +129,8 @@ export const ProfilePage = () => {
 						className="testimonial-finalInput d-flex justify-content-center"
 						style={{ width: 800, height: 200 }}
 					/>
-					<button className="uploadPhoto mt-3" />
-					<App />
+					<button className="uploadPhoto mt-3"> Share with Us</button>
+					<ImageUpload />
 				</div>
 			</div>
 		</>
