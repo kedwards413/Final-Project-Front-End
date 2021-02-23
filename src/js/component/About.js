@@ -1,6 +1,15 @@
-import React from "react";
+import React, { useRef } from "react";
 
 export const About = () => {
+	//     const Field = ({ ... }: FieldProps) => {
+	//   const fieldRef = React.useRef<HTMLInputElement>(null);
+	//   return (
+	//     <div className="field" ref={fieldRef}>
+	//       ...
+	//     </div>
+	//   );
+	// };
+	const titleRef = useRef();
 	return (
 		<>
 			{" "}

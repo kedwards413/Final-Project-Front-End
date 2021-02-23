@@ -1,11 +1,18 @@
-import React, { useRef } from "react";
+import React, { useRef, myRef } from "react";
 import { Link } from "react-router-dom";
 import { Audio } from "../component/Audio";
 
 export const Navbar = () => {
-	const myRef = useRef(null);
+	const titleRef = useRef();
 
-	const executeScroll = () => myRef.current.scrollIntoView();
+	function handleBackClick() {
+		titleRef.current.scrollIntoView({ behavior: "smooth" });
+		// Scroll back to the title element...
+	}
+	// const myRef = useRef(null);
+
+	// const executeScroll = () => myRef.current.scrollIntoView();
+	// on about span.   onClick={executeScroll}
 	return (
 		<nav className="navbar  " style={{ height: 46 }}>
 			<Link to="/profilepage">
@@ -18,7 +25,7 @@ export const Navbar = () => {
 					<span className="navbar-brand  mr-5 text-white">HOME</span>
 				</Link>
 				<Link to="/about" ref={myRef}>
-					<span className="navbar-brand  mr-5 text-white" onClick={executeScroll}>
+					<span className="navbar-brand  mr-5 text-white" ref={titleRef} onClick={handleBackClick}>
 						ABOUT
 					</span>
 				</Link>
