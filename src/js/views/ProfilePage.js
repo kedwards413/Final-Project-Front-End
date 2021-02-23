@@ -99,10 +99,13 @@ export const ProfilePage = () => {
 					}}>
 					{" "}
 					<div className="modal-question-answer2 ">
-						<div className="modalbox-section2 ">
+						<div className="modalbox-section2  ">
 							<p className="firstquestion-modal2 text-center text-white pt-5">
 								How are you feeling right now?
 							</p>
+							{store.modalInfo.map((info, index) => {
+								return <p key={index}>{info.checkboxes}</p>;
+							})}
 						</div>
 
 						<div className="modal-answer2">

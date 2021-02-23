@@ -54,7 +54,11 @@ export const Modal = () => {
 												className="form-check-input"
 												type="checkbox"
 												id="inlineCheckbox1"
-												value="option1"
+												value={info.checkboxes}
+												name="checkboxes"
+												onChange={e => {
+													setInfo({ ...info, checkboxes: e.target.value });
+												}}
 											/>
 											<label className="form-check-label text-white" htmlFor="inlineCheckbox1 ">
 												Uncomfortable
@@ -65,7 +69,11 @@ export const Modal = () => {
 												className="form-check-input"
 												type="checkbox"
 												id="inlineCheckbox1"
-												value="option1"
+												value={info.checkboxes}
+												name="checkboxes"
+												onChange={e => {
+													setInfo({ ...info, checkboxes: e.target.value });
+												}}
 											/>
 											<label className="form-check-label text-white" htmlFor="inlineCheckbox1 ">
 												Scared
@@ -76,7 +84,11 @@ export const Modal = () => {
 												className="form-check-input"
 												type="checkbox"
 												id="inlineCheckbox1"
-												value="option1"
+												value={info.checkboxes}
+												name="checkboxes"
+												onChange={e => {
+													setInfo({ ...info, checkboxes: e.target.value });
+												}}
 											/>
 											<label className="form-check-label text-white" htmlFor="inlineCheckbox1 ">
 												Terrified
@@ -92,7 +104,7 @@ export const Modal = () => {
 										<div className="modal-secondinput d-flex justify-content-center">
 											<input
 												type="text"
-												className="form-control"
+												className="form-control "
 												style={{ width: 300, height: 50 }}
 												value={info.experience}
 												name="experience"
