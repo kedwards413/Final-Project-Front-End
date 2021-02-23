@@ -10,7 +10,8 @@ import injectContext from "./store/appContext";
 import { Modal } from "./views/Modal";
 import { ProfilePage } from "./views/ProfilePage";
 import { Questions } from "./views/Questions";
-import { ModalQuestions } from "./views/ModalQuestions";
+// import { ModalQuestions } from "./views/ModalQuestions";
+// import { ModalQuestionsProfilePage } from "./views/ModalQuestionsProfilePage";
 import { SignUp } from "./views/SignUp";
 
 import { Navbar } from "./component/navbar";
@@ -52,9 +53,9 @@ const Layout = () => {
 						<Route exact path="/modal">
 							<Modal />
 						</Route>
-						<Route exact path="/modalquestions">
+						{/* <Route exact path="/modalquestions">
 							<ModalQuestions />
-						</Route>
+						</Route> */}
 						<Route exact path="/profilepage">
 							<ProfilePage />
 						</Route>

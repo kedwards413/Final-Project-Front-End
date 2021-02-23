@@ -6,7 +6,7 @@ import boopSfx from "../../img/sound.mp3";
 export const Audio = () => {
 	// const [click, setClick] = useState(true);
 
-	const [play] = useSound(boopSfx, { volume: 0.1 });
+	const [play] = useSound(boopSfx, { volume: 0.01 });
 
 	return <i className="fas fa-volume-down audioButton" onClick={play} />;
 
