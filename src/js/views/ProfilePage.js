@@ -2,8 +2,8 @@ import React, { useContext } from "react";
 // import { Link } from "react-router-dom";
 // import { Questions } from "../views/Questions";
 // import { ModalQuestions } from "../views/ModalQuestions";
-import { ModalQuestionsProfilePage } from "../views/ModalQuestionsProfilePage";
-// import { Progress } from "../views/ProgressBar";
+// import { ModalQuestionsProfilePage } from "../views/ModalQuestionsProfilePage";
+import { Progress } from "../views/ProgressBar";
 import { Context } from "../store/appContext";
 
 export const ProfilePage = () => {
@@ -18,7 +18,7 @@ export const ProfilePage = () => {
 					<button className="profileButton d-flex justify-content-center mt-4 text-black">
 						Edit Profile
 					</button>
-					{/* <Progress /> */}
+					<Progress />
 				</div>
 				<div className="outer-line">
 					<div className="inner-line" />
@@ -103,13 +103,14 @@ export const ProfilePage = () => {
 							<p className="firstquestion-modal2 text-center text-white pt-5">
 								How are you feeling right now?
 							</p>
+
 							{store.modalInfo.map((info, index) => {
 								return <p key={index}>{info.checkboxes}</p>;
 							})}
 						</div>
 
-						<div className="modal-answer2">
-							<div className="modal-question3 d-flex justify-content-center">
+						<div className="modal-answer-p-page text-white">
+							<div className="modal-question-p-page d-flex justify-content-center">
 								<p className="secondquestion-modal text-white  mt-3">
 									Tell us more about your experience
 								</p>

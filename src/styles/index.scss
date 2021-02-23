@@ -592,12 +592,13 @@ i{
 .profileButton{
     margin-left:150px;
     font-size:20px;
+    
 }
 
 .avatar{
     border-radius:50%;
     background-color:white;
-    margin-top:200px;
+    margin-top:50px;
     height:32%;
     width:40%;
     margin-left:80px;
@@ -624,7 +625,7 @@ i{
   position: relative;
   overflow: hidden;
   margin-right:200px;
-  margin-top:-400px;
+  margin-top:-500px;
  
 }
 .inner-line {
@@ -635,7 +636,7 @@ i{
   top: 30%;
   box-shadow: 0px 0px 30px 20px grey;
   margin-right:200px;
-  margin-top:-400px;
+  margin-top:-500px;
   
 }
   .blackout-modal2 {
@@ -648,7 +649,7 @@ i{
 
 .questions2{
     margin-left:500px;
-    margin-top:-900px;
+    margin-top:-1000px;
     width:250px;
    
     font-size: 10px;
@@ -660,11 +661,15 @@ i{
 // modal on profile page
 
 .firstquestion-modal2{
-    font-size:20px;
+    font-size:30px;
+    margin-right:-100px;
+    margin-top:-100px;
    
 }
 .secondquestion-modal{
-    font-size:20px;
+    font-size:30px;
+    margin-right:-100px;
+   
   
 }
 .blackout-modal2{
@@ -672,11 +677,7 @@ i{
     margin-left:500px;
     margin-top:-900px;
 }
-.firstquestion-modal2{
-    font-size:20px;
-    
-   
-}
+
 
 
 .testimonial-input{
@@ -692,6 +693,7 @@ i{
 }
 .testimonial-title2{
     margin-left:300px;
+    margin-top:-500px;
 }
 
 .uploadPhoto{
@@ -700,5 +702,52 @@ i{
 
 }
 
+
 //progressbar
 
+h2{
+  color: white;
+  font-size: 1.8em;
+  margin-bottom: 15px;
+  margin-top:40px;
+  margin-left:60px;
+  
+}
+.outer{
+  display: flex;
+  align-items: center;
+  height: 20px;
+  width: 300px;
+  border: 5px solid white;
+  border-radius: 50px;
+  background: white;
+  margin-left:50px;
+}
+.inner{
+  height: 20px;
+  width: 250px;
+  background: lighten(black, 10);
+  border-radius: 25px;
+  transition: width 100ms ease-out;
+}
+.progressButton{
+ 
+  cursor: pointer;
+
+  border: 5px solid darken(black, 6);
+  border-radius: 5px;
+  background: black;
+  margin-top:2px;
+  color: white;
+  width: 110px;
+  font-size:30px;
+  padding: 10px;
+  margin-left:123px;
+  font-weight: bold;
+  text-align:center;
+  outline: none;
+  transition: 50ms ease-out;
+  &:hover{
+    transform: scale(1.04)}
+  &:active{
+    transform: scale(1.01);}}
