@@ -14,6 +14,7 @@ export const Modal = () => {
 		experience: "",
 		checkboxes: []
 	});
+	console.log(info);
 
 	return (
 		<>
@@ -54,10 +55,17 @@ export const Modal = () => {
 												className="form-check-input"
 												type="checkbox"
 												id="inlineCheckbox1"
-												value={info.checkboxes}
-												name="checkboxes"
+												// value={info.experience}
+												// name="experience"
+												// onChange={e => {
+												// 	setInfo({ ...info, experience: e.target.value });
+												// }}
+												value="uncomfortable"
 												onChange={e => {
-													setInfo({ ...info, checkboxes: e.target.value });
+													setInfo({
+														...info,
+														checkboxes: [...info.checkboxes, e.target.value]
+													});
 												}}
 											/>
 											<label className="form-check-label text-white" htmlFor="inlineCheckbox1 ">
@@ -69,10 +77,17 @@ export const Modal = () => {
 												className="form-check-input"
 												type="checkbox"
 												id="inlineCheckbox1"
-												value={info.checkboxes}
-												name="checkboxes"
+												// 		value={info.experience}
+												// name="experience"
+												// onChange={e => {
+												// 	setInfo({ ...info, experience: e.target.value });
+												// }}
+												value="scared"
 												onChange={e => {
-													setInfo({ ...info, checkboxes: e.target.value });
+													setInfo({
+														...info,
+														checkboxes: [...info.checkboxes, e.target.value]
+													});
 												}}
 											/>
 											<label className="form-check-label text-white" htmlFor="inlineCheckbox1 ">
@@ -84,10 +99,25 @@ export const Modal = () => {
 												className="form-check-input"
 												type="checkbox"
 												id="inlineCheckbox1"
-												value={info.checkboxes}
-												name="checkboxes"
+												value="terrified"
+												// onChange={e => {
+												// 	setInfo({ ...info, experience: e.target.value });
+												// }}
 												onChange={e => {
-													setInfo({ ...info, checkboxes: e.target.value });
+													let filterInfo = info.checkboxes.filter(checkbox => {
+														return e.target.value !== checkbox;
+													});
+													if (filterInfo.length < info.checkboxes.length) {
+														setInfo({
+															...info,
+															checkboxes: filterInfo
+														});
+													} else {
+														setInfo({
+															...info,
+															checkboxes: [...info.checkboxes, e.target.value]
+														});
+													}
 												}}
 											/>
 											<label className="form-check-label text-white" htmlFor="inlineCheckbox1 ">
@@ -107,9 +137,14 @@ export const Modal = () => {
 												className="form-control "
 												style={{ width: 300, height: 50 }}
 												value={info.experience}
-												name="experience"
+												// onChange={e => {
+												// 	setInfo({ ...info, experience: e.target.value });
+												// }}
 												onChange={e => {
-													setInfo({ ...info, experience: e.target.value });
+													setInfo({
+														...info,
+														experience: e.target.value
+													});
 												}}
 											/>
 										</div>
