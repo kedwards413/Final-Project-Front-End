@@ -33,11 +33,7 @@ export const Home = () => {
 			</div>
 			{/* <div className="fade_rule1 mt-5 mb-5" /> */}
 			<div className="vid">
-				<video
-					src="https://st2.depositphotos.com/1396922/8163/v/600/depositphotos_81639676-stock-video-techno-rorschach-ink-blot-test.mp4"
-					autoPlay
-					loop
-				/>{" "}
+				<img src="https://i.pinimg.com/originals/ab/a2/70/aba2707085db0239e6f1964ff3882556.gif" />{" "}
 			</div>
 			<About />
 
