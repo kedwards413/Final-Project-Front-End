@@ -32,10 +32,17 @@ export const Home = () => {
 				</div>
 			</div>
 			{/* <div className="fade_rule1 mt-5 mb-5" /> */}
-
+			<div className="vid">
+				<video
+					src="https://st2.depositphotos.com/1396922/8163/v/600/depositphotos_81639676-stock-video-techno-rorschach-ink-blot-test.mp4"
+					autoPlay
+					loop
+				/>{" "}
+			</div>
 			<About />
 
 			{/* <div className="fade_rule mt-5" /> */}
+
 			<div className="titleCard-background container-fluid d-flex align-content flex-wrap ">
 				<TitleCard title="Arachnophobia" subtitle="FEAR OF SPIDERS" />
 				<TitleCard title="Social Phobia" subtitle="FEAR OF SOCIAL INTERACTION" />

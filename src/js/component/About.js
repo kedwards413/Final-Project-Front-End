@@ -15,6 +15,7 @@ export const About = () => {
 	return (
 		<>
 			{/* <Scroll /> */}
+
 			<div className="about-background">
 				<h1 className="aboutTitle"> Our Story </h1>
 				<p className="aboutText ">

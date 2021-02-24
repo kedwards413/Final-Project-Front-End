@@ -317,6 +317,7 @@ body{
    font-size:30px;
     width:70%;
     margin-bottom:40px;
+   
 }
 .about-background{
     background-color:rgba(5, 5, 5, 0.808);
@@ -327,20 +328,39 @@ body{
     top:0;
     height:900px;
     width:100%;
+   
 }
-.titleCard-background{
-     background-color:rgb(14, 13, 13);
-   z-index:4;
+
+.vid{
+     z-index:3;
+    margin-top:570px;
     position:sticky;
     position: -webkit-sticky;
     top:0;
-    
+    height:900px;
+    width:100%;
+
+}
+video{
+    width:100%;
+    height:900px;
+}
+.titleCard-background{
+     background-color:rgb(14, 13, 13);
+  
+    position:sticky;
+    position: -webkit-sticky;
+    top:0;
+    z-index:4;
     height:800px;
        width:100%;
        padding-top:110px;
    padding-bottom:240px;
+  
 
 }
+
+
 
 .card{
     background-color:rgb(14, 13, 13);
@@ -348,7 +368,7 @@ body{
      transition: all 1s ease-in-out;
     border-color:rgb(14, 13, 13);
     margin-top:100px;
-    
+  
     
     
     
@@ -367,6 +387,7 @@ body{
 }
 .card-body{
     background-color:rgb(14, 13, 13);
+   
    
   
 

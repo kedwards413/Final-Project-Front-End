@@ -8,7 +8,7 @@ export const Audio = () => {
 
 	const [play] = useSound(boopSfx, { volume: 0.01 });
 
-	return <i className="fas fa-volume-down audioButton" onClick={play} />;
+	return <i className="fas fa-volume-down audioButton" loop onClick={play} />;
 
 	// onClick={() => (click ? { play } : setClick(!click))} />;
 };
