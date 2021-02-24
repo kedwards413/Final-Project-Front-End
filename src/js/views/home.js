@@ -32,8 +32,8 @@ export const Home = () => {
 				</div>
 			</div>
 			{/* <div className="fade_rule1 mt-5 mb-5" /> */}
-			<div className="vid">
-				<img src="https://i.pinimg.com/originals/ab/a2/70/aba2707085db0239e6f1964ff3882556.gif" />{" "}
+			<div className="secondDiv-image">
+				<img className="divGif" src="https://thumbs.gfycat.com/GiganticSlushyLemming.webp" />{" "}
 			</div>
 			<About />
 
