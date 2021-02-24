@@ -36,7 +36,7 @@ export const Home = () => {
 			<About />
 
 			{/* <div className="fade_rule mt-5" /> */}
-			<div className="titleCard-background container-fluid d-flex align-content flex-wrap m-5">
+			<div className="titleCard-background container-fluid d-flex align-content flex-wrap ">
 				<TitleCard title="Arachnophobia" subtitle="FEAR OF SPIDERS" />
 				<TitleCard title="Social Phobia" subtitle="FEAR OF SOCIAL INTERACTION" />
 				<TitleCard title="Acrophobia" subtitle="FEAR OF HEIGHTS" />

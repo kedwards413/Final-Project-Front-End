@@ -319,7 +319,7 @@ body{
     margin-bottom:40px;
 }
 .about-background{
-    background-color:rgba(5, 5, 5, 0.815);
+    background-color:rgba(5, 5, 5, 0.808);
     z-index:3;
     margin-top:570px;
     position:sticky;
@@ -329,30 +329,34 @@ body{
     width:100%;
 }
 .titleCard-background{
-     background-color:white;
+     background-color:rgb(14, 13, 13);
    z-index:4;
     position:sticky;
     position: -webkit-sticky;
     top:0;
-    color:pink;
-    height:600px;
     
+    height:800px;
+       width:100%;
+       padding-top:110px;
+   padding-bottom:240px;
 
 }
 
 .card{
-    background-color:rgba(0,0,0,0.253);
+    background-color:rgb(14, 13, 13);
     border-radius:40px;
      transition: all 1s ease-in-out;
-   
-     margin:50px;
-   
+    border-color:rgb(14, 13, 13);
+    margin-top:100px;
+    
+    
+    
     
     
 }
 
 .card:hover{
-   background:black;
+   background:rgb(14, 13, 13);
      transform: scale(1.2);
       transition: all 1s ease-in-out;
         // box-shadow: -35px 0px 60px 8px rgba(255,255,255,1);
@@ -361,8 +365,16 @@ body{
  
      
 }
+.card-body{
+    background-color:rgb(14, 13, 13);
+   
+  
+
+   
+   
+}
 .card-subtitle{
-    color:rgb(124, 124, 124);
+    color:rgb(161, 159, 159);
     text-decoration:none
 }
 .card-title{
@@ -509,12 +521,12 @@ i{
     font-size:70px;
     letter-spacing:4px;
     color:rgb(218, 216, 216);
-   
-    margin-bottom:20px;
+   padding-top:100px;
+   margin-bottom:-70px;
      background-color:rgba(0, 0, 0, 0.836);
         position:sticky;
     position: -webkit-sticky;
-    top:7000;
+   top:0;
     z-index:2000px;
     
     
@@ -524,8 +536,9 @@ i{
    
 }
 .test-bg{
-    background-color:yellow;
+    background-color:black;
     z-index:9000;
+   
 }
 //   width: 70%;
 //     height: 500px;
