@@ -49,10 +49,10 @@ export const Modal = () => {
 											How are you feeling right now?
 										</p>
 									</div>
-									<div className="modal-checkbox d-flex justify-content-center">
+									<div className="modal-checkbox d-flex justify-content-center text-white">
 										<div className="form-check form-check-inline">
 											<input
-												className="form-check-input"
+												className="form-check-input "
 												type="checkbox"
 												id="inlineCheckbox1"
 												// value={info.experience}
@@ -68,13 +68,13 @@ export const Modal = () => {
 													});
 												}}
 											/>
-											<label className="form-check-label text-white" htmlFor="inlineCheckbox1 ">
+											<label className="form-check-label " htmlFor="inlineCheckbox1 ">
 												Uncomfortable
 											</label>
 										</div>
 										<div className="form-check form-check-inline">
 											<input
-												className="form-check-input"
+												className="form-check-input "
 												type="checkbox"
 												id="inlineCheckbox1"
 												// 		value={info.experience}
@@ -90,13 +90,13 @@ export const Modal = () => {
 													});
 												}}
 											/>
-											<label className="form-check-label text-white" htmlFor="inlineCheckbox1 ">
+											<label className="form-check-label " htmlFor="inlineCheckbox1 ">
 												Scared
 											</label>
 										</div>
-										<div className="form-check form-check-inline">
+										<div className="form-check form-check-inline ">
 											<input
-												className="form-check-input"
+												className="form-check-input "
 												type="checkbox"
 												id="inlineCheckbox1"
 												value="terrified"
@@ -127,7 +127,7 @@ export const Modal = () => {
 									</div>
 									<div className="modal-answer2">
 										<div className="modal-question3 d-flex justify-content-center">
-											<p className="secondquestion-modal text-white pt-5">
+											<p className="secondquestion-modal text-white pt-5 ">
 												Tell us more about your experience
 											</p>
 										</div>

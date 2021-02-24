@@ -35,28 +35,31 @@ export const Testimonials = () => {
 	};
 	return (
 		<>
-			<div className="testimonial-title  d-flex justify-content-center  ">Testimonials</div>
+			<div className="test-bg">
+				<div className="testimonial-title  d-flex justify-content-center  ">Testimonials</div>
+				<div className="testimonial-title-background">
+					<div className="testimonials ">
+						{testimonialArr.map((item, i) => {
+							return (
+								<div key={i} className="arr " style={{ transform: `translateX(${x}%)` }}>
+									{item}
+									<p className=" testimonial-text pt-3 pl-3 pb-4 pr-2">
+										EXAMPLE QUOTES WOULD NOT HARD CODED HOW DO WE IMPORT IMAGE AND QUOTE FROM
+										SUBMITTING TESTIMONIAL. FOR IMAGES WE NEED TO HAVE A PREDETERMINED SIZE FOR
+										IMAGE. AND WORD LIMIT. COOL
+									</p>
+								</div>
+							);
+						})}
 
-			<div className="testimonials ">
-				{testimonialArr.map((item, i) => {
-					return (
-						<div key={i} className="arr " style={{ transform: `translateX(${x}%)` }}>
-							{item}
-							<p className=" testimonial-text pt-3 pl-3 pb-4 pr-2">
-								EXAMPLE QUOTES WOULD NOT HARD CODED HOW DO WE IMPORT IMAGE AND QUOTE FROM SUBMITTING
-								TESTIMONIAL. FOR IMAGES WE NEED TO HAVE A PREDETERMINED SIZE FOR IMAGE. AND WORD LIMIT.
-								COOL
-							</p>
-						</div>
-					);
-				})}
-
-				<button className="leftButton" onClick={goLeft}>
-					<i className="fas fa-chevron-left" />
-				</button>
-				<button className="rightButton" onClick={goRight}>
-					<i className="fas fa-chevron-right" />
-				</button>
+						<button className="leftButton" onClick={goLeft}>
+							<i className="fas fa-chevron-left" />
+						</button>
+						<button className="rightButton" onClick={goRight}>
+							<i className="fas fa-chevron-right" />
+						</button>
+					</div>
+				</div>
 			</div>
 		</>
 	);

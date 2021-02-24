@@ -1,4 +1,5 @@
 import React, { useRef } from "react";
+// import { Scroll } from "../component/Scroll";
 
 export const About = () => {
 	//     const Field = ({ ... }: FieldProps) => {
@@ -9,11 +10,12 @@ export const About = () => {
 	//     </div>
 	//   );
 	// };
-	const titleRef = useRef();
+	// const titleRef = useRef();
+
 	return (
 		<>
-			{" "}
-			<div>
+			{/* <Scroll/> */}
+			<div className="about-background">
 				<h1 className="aboutTitle"> Our Story </h1>
 				<p className="aboutText ">
 					fearLESS was designed to help people overcome their phobia through exposure therapy. Users will
