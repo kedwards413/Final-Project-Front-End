@@ -28,10 +28,10 @@ export const Testimonials = () => {
 	];
 
 	const goLeft = () => {
-		x === 0 ? setX(-100 * (testimonialArr.length - 1)) : setX(x + 100);
+		x === 0 ? setX(-100 * testimonialArr.length - 1) : setX(x + testimonialArr.length);
 	};
 	const goRight = () => {
-		x === -100 * (testimonialArr.length - 1) ? setX(0) : setX(x - 100);
+		x === -100 * testimonialArr.length - 1 ? setX(0) : setX(x - testimonialArr.length);
 	};
 	return (
 		<>
