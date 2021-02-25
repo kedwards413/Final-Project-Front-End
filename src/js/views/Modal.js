@@ -14,7 +14,6 @@ export const Modal = () => {
 		experience: "",
 		checkboxes: []
 	});
-	console.log(info);
 
 	return (
 		<>
