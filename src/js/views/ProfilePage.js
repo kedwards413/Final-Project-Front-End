@@ -11,7 +11,7 @@ export const ProfilePage = () => {
 	const { store, actions } = useContext(Context);
 	return (
 		<>
-			<div className="main mt-5 " style={{ width: 600, height: 700 }}>
+			<div className="main mt-5 bg-white" style={{ width: 600, height: 700 }}>
 				<div className="avatar" />
 				<div className="personId ">
 					<h1 className="person-name d-flex justify-content-center mt-3 text-white">Monica Lopez</h1>
@@ -25,7 +25,7 @@ export const ProfilePage = () => {
 					<div className="inner-line" />
 				</div>
 				{/* START QUESTIONS.js */}
-				<div className="container-questions2 w-50 p-3">
+				<div className="container-questions2 w-50 p-3 ">
 					<div className="questions2 d-flex justify-content-end">
 						<div>
 							<h1 className="text-center mt-5 text-white">Patient Questionnaire</h1>
@@ -123,13 +123,15 @@ export const ProfilePage = () => {
 					</div>
 				</div>
 				{/* END MODALQUESTIONS.JS */}
-				<div className="testimonial-input ">
+				<div className="testimonial-input bg-white">
 					<h1 className=" text-white testimonial-title2">Testimonial</h1>
 					<input
 						className="testimonial-finalInput d-flex justify-content-center"
 						style={{ width: 800, height: 200 }}
 					/>
 					<button className="uploadPhoto mt-3"> Share with Us</button>
+				</div>
+				<div>
 					<ImageUpload />
 				</div>
 			</div>
