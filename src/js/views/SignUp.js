@@ -3,6 +3,14 @@ import { Link } from "react-router-dom";
 
 export const SignUp = () => {
 	const [user, setUser] = useState("");
+    const [type, setType] = useState("");
+    const [newPatientAccount, setNewPatientAccount] = useState({
+		firstName: "",
+		lastName: "",
+		email: "",
+        phone: "",
+        
+	});
 	return (
 		<>
 			{user == "therapist" ? (
@@ -44,10 +52,6 @@ export const SignUp = () => {
 							<div className="user-box">
 								<input type="password" name="" required="" />
 								<label>Password</label>
-							</div>
-							<div className="user-box">
-								<input type="password" name="" required="" />
-								<label>Re-enter password</label>
 							</div>
 							<a href="#">
 								<span />
@@ -96,10 +100,6 @@ export const SignUp = () => {
 								<div className="user-box">
 									<input type="password" name="" required="" />
 									<label>Password</label>
-								</div>
-								<div className="user-box">
-									<input type="password" name="" required="" />
-									<label>Re-enter password</label>
 								</div>
 								<a href="#">
 									<span />

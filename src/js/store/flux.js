@@ -1,20 +1,29 @@
 const getState = ({ getStore, getActions, setStore }) => {
 	return {
 		store: {
-			demo: [
-				{
-					title: "FIRST",
-					background: "white",
-					initial: "white"
-				},
-				{
-					title: "SECOND",
-					background: "white",
-					initial: "white"
-				}
-			]
+			account: []
 		},
+
 		actions: {
+            getInitialData: () => {
+				fetch("")
+					.then(function(response) {
+						if (!response.ok) {
+							throw Error(response.statusText);
+						}
+						// Read the response as json.
+						return response.json();
+					})
+					.then(function(responseAsJson) {
+						//setStore({ characters: responseAsJson.results });
+						setStore({ account: responseAsJson });
+						console.log(responseAsJson);
+					})
+					.catch(function(error) {
+						console.log("Looks like there was a problem: \n", error);
+					});
+			}
+		},
 			addAccount: accountToAdd => {
 				const tempStore = getStore();
 				console.log(accountToAdd);
@@ -28,8 +37,10 @@ const getState = ({ getStore, getActions, setStore }) => {
 					.then(response => response.json())
 					.then(() => {
 						getActions().getInitialData();
-					});
-			},
+                    });
+                
+            },
+            
 			// Use getActions to call a function within a fuction
 			exampleFunction: () => {
 				getActions().changeColor(0, "green");
@@ -55,6 +66,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 			}
 		}
 	};
-};
+
+
 
 export default getState;
