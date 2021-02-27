@@ -11,7 +11,7 @@ export const ProfilePage = () => {
 	const { store, actions } = useContext(Context);
 	return (
 		<>
-			<div className="main mt-5 bg-white" style={{ width: 600, height: 700 }}>
+			<div className="main mt-5 bg-dark" style={{ width: 600, height: 700 }}>
 				<div className="avatar" />
 				<div className="personId ">
 					<h1 className="person-name d-flex justify-content-center mt-3 text-white">Monica Lopez</h1>
