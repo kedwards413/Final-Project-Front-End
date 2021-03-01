@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 // import { Link } from "react-router-dom";
 // import { Questions } from "../views/Questions";
 // import { ModalQuestions } from "../views/ModalQuestions";
@@ -9,16 +9,24 @@ import { ImageUpload } from "../views/ImageUpload";
 
 export const ProfilePage = () => {
 	const { store, actions } = useContext(Context);
+	const [state, setState] = useState(null);
 	return (
 		<>
-			<div className="main mt-5 bg-dark" style={{ width: 600, height: 700 }}>
-				<div className="avatar" />
+			<div className="main mt-5" style={{ width: 400, height: 700 }}>
+				<div className="avatar">
+					<img id="output" style={{ width: "100%" }} src={state} />
+				</div>
 				<div className="personId ">
 					<h1 className="person-name d-flex justify-content-center mt-3 text-white">Monica Lopez</h1>
 					<h2 className="phobiaName d-flex justify-content-center mt-4 text-white">Arachnaphobic</h2>
-					<button className="profileButton d-flex justify-content-center mt-4 text-black">
-						Edit Profile
-					</button>
+					<input
+						className="profileButton d-flex justify-content-center mt-4 text-black  "
+						type="file"
+						id="input "
+						accept="image/*"
+						onChange={event => setState(URL.createObjectURL(event.target.files[0]))}
+						value=""
+					/>
 					<Progress />
 				</div>
 				<div className="outer-line">

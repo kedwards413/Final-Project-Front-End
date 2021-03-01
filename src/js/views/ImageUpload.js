@@ -7,7 +7,7 @@ export function ImageUpload() {
 		<div>
 			<input
 				type="file"
-				className="custom-file-input  "
+				className="custom-file-input text-black bg-light "
 				id="input "
 				accept="image/*"
 				onChange={event => setState(URL.createObjectURL(event.target.files[0]))}
