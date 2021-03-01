@@ -137,7 +137,7 @@ export const Modal = () => {
 												style={{ width: 300, height: 50 }}
 												value={info.experience}
 												// onChange={e => {
-												// 	setInfo({ ...info, experience: e.target.value });
+												// 	setInfo({ ...info, vcb hyhhyhg    yhexperience: e.target.value });
 												// }}
 												onChange={e => {
 													setInfo({
@@ -163,6 +163,7 @@ export const Modal = () => {
 											setShowImageBlack(!showImage);
 											setShowTextBlack(!showText);
 											actions.addingModalInfo(info);
+											setInfo("");
 										}}>
 										Continue
 									</button>
