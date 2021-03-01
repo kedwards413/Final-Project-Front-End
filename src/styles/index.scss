@@ -720,6 +720,7 @@ i{
 
    
 }
+
 .person-name{
    display:flex;
    justify-content:center;
@@ -886,9 +887,10 @@ h2{
 }
 .custom-file-input::-webkit-file-upload-button {
   visibility: hidden;
-
-
+  
 }
+
+
 .custom-file-input::before {
   content: 'Select the Image';
 //   display: inline-block;

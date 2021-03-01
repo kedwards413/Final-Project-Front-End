@@ -5,7 +5,7 @@ import React, { useContext, useState } from "react";
 // import { ModalQuestionsProfilePage } from "../views/ModalQuestionsProfilePage";
 import { Progress } from "../views/ProgressBar";
 import { Context } from "../store/appContext";
-import { ImageUpload } from "../views/ImageUpload";
+import { TestimonialImageUpload } from "../views/TestimonialImageUpload";
 
 export const ProfilePage = () => {
 	const { store, actions } = useContext(Context);
@@ -19,6 +19,7 @@ export const ProfilePage = () => {
 				<div className="personId ">
 					<h1 className="person-name d-flex justify-content-center mt-3 text-white">Monica Lopez</h1>
 					<h2 className="phobiaName d-flex justify-content-center mt-4 text-white">Arachnaphobic</h2>
+
 					<input
 						className="profileButton d-flex justify-content-center mt-4 text-black  "
 						type="file"
@@ -27,6 +28,7 @@ export const ProfilePage = () => {
 						onChange={event => setState(URL.createObjectURL(event.target.files[0]))}
 						value=""
 					/>
+
 					<Progress />
 				</div>
 				<div className="outer-line">
@@ -140,7 +142,7 @@ export const ProfilePage = () => {
 					<button className="uploadPhoto mt-3"> Share with Us</button>
 				</div>
 				<div>
-					<ImageUpload />
+					<TestimonialImageUpload />
 				</div>
 			</div>
 		</>
