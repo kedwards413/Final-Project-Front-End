@@ -22,7 +22,7 @@ export const Navbar = () => {
 					<Link to="/login">
 						<span className="navbar-brand text-white mr-5">LOGIN</span>
 					</Link>
-					<Link to="">
+					<Link to="/signup">
 						<button className="btn btn-dark mr-2">SIGN UP</button>
 					</Link>
 				</div>
