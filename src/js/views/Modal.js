@@ -15,6 +15,23 @@ export const Modal = () => {
 		checkboxes: []
 	});
 
+	const checkBoxClearing = e => {
+		let filterInfo = info.checkboxes.filter(checkbox => {
+			return e.target.value !== checkbox;
+		});
+		if (filterInfo.length < info.checkboxes.length) {
+			setInfo({
+				...info,
+				checkboxes: filterInfo
+			});
+		} else {
+			setInfo({
+				...info,
+				checkboxes: [...info.checkboxes, e.target.value]
+			});
+		}
+	};
+
 	return (
 		<>
 			{modalIndex < lengthCards ? (
@@ -61,10 +78,7 @@ export const Modal = () => {
 												// }}
 												value="uncomfortable"
 												onChange={e => {
-													setInfo({
-														...info,
-														checkboxes: [...info.checkboxes, e.target.value]
-													});
+													checkBoxClearing(e);
 												}}
 											/>
 											<label className="form-check-label " htmlFor="inlineCheckbox1 ">
@@ -83,10 +97,7 @@ export const Modal = () => {
 												// }}
 												value="scared"
 												onChange={e => {
-													setInfo({
-														...info,
-														checkboxes: [...info.checkboxes, e.target.value]
-													});
+													checkBoxClearing(e);
 												}}
 											/>
 											<label className="form-check-label " htmlFor="inlineCheckbox1 ">
@@ -103,20 +114,7 @@ export const Modal = () => {
 												// 	setInfo({ ...info, experience: e.target.value });
 												// }}
 												onChange={e => {
-													let filterInfo = info.checkboxes.filter(checkbox => {
-														return e.target.value !== checkbox;
-													});
-													if (filterInfo.length < info.checkboxes.length) {
-														setInfo({
-															...info,
-															checkboxes: filterInfo
-														});
-													} else {
-														setInfo({
-															...info,
-															checkboxes: [...info.checkboxes, e.target.value]
-														});
-													}
+													checkBoxClearing(e);
 												}}
 											/>
 											<label className="form-check-label text-white" htmlFor="inlineCheckbox1 ">
@@ -163,7 +161,7 @@ export const Modal = () => {
 											setShowImageBlack(!showImage);
 											setShowTextBlack(!showText);
 											actions.addingModalInfo(info);
-											setInfo("");
+											setInfo({ ...info, experience: "" });
 										}}>
 										Continue
 									</button>

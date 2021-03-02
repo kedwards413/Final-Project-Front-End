@@ -9,6 +9,7 @@ import { TestimonialImageUpload } from "../views/TestimonialImageUpload";
 
 export const ProfilePage = () => {
 	const { store, actions } = useContext(Context);
+	console.log(store.modalInfo);
 	const [state, setState] = useState(null);
 	return (
 		<>
