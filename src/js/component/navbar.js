@@ -35,11 +35,7 @@ export const Navbar = () => {
 						<span className="navbar-brand text-white mr-5">LOGIN</span>
 					</Link>
 					<Link to="/signup">
-<<<<<<< HEAD
 						<button className="btn btn-dark mr-2 btn-sm mb-1">SIGN UP</button>
-=======
-						<button className="btn btn-dark mr-2">SIGN UP</button>
->>>>>>> master
 					</Link>
 				</div>
 			</div>
