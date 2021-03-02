@@ -13,9 +13,15 @@ export const Questions = () => {
 		<div className="container w-50 p-3">
 			<div className="questions">
 				<div>
+<<<<<<< HEAD
 					<h1 className="text-center mt-5 text-white">Patient Questionnaire</h1>
 					<div>
 						<div className="user-box text-white">
+=======
+					<h1 className="text-center mt-5">Patient Questionnaire</h1>
+					<div>
+						<div className="user-box">
+>>>>>>> master
 							<label>Please select your phobia from the dropdown.</label>
 							<select
 								className="form-control"
@@ -30,7 +36,11 @@ export const Questions = () => {
 								<option>Social Phobia - Fear of social interaction</option>
 							</select>
 						</div>
+<<<<<<< HEAD
 						<div className="user-box text-white">
+=======
+						<div className="user-box">
+>>>>>>> master
 							<label>How severe is your phobia? Please choose between 1-5</label>
 							<select
 								className="form-control"
@@ -44,7 +54,11 @@ export const Questions = () => {
 								<option>5 - Severe </option>
 							</select>
 						</div>
+<<<<<<< HEAD
 						<div className="user-box text-white">
+=======
+						<div className="user-box">
+>>>>>>> master
 							<label>Have you ever sought help for your phobia? </label>
 							<select
 								className="form-control"
@@ -56,7 +70,11 @@ export const Questions = () => {
 								<option>No - I have never sought help</option>
 							</select>
 						</div>
+<<<<<<< HEAD
 						<div className="user-box text-white">
+=======
+						<div className="user-box">
+>>>>>>> master
 							<label>What do you wish to accomplish while using fearLESS?</label>
 							<input
 								type="text"

@@ -3,6 +3,18 @@ import { Link } from "react-router-dom";
 
 export const SignUp = () => {
 	const [user, setUser] = useState("");
+<<<<<<< HEAD
+=======
+	const [type, setType] = useState("");
+	const [newUser, setNewUser] = useState({
+		firstName: "",
+		lastName: "",
+		email: "",
+		phone: "",
+		userName: "",
+		password: ""
+	});
+>>>>>>> master
 	return (
 		<>
 			{user == "therapist" ? (
@@ -45,10 +57,13 @@ export const SignUp = () => {
 								<input type="password" name="" required="" />
 								<label>Password</label>
 							</div>
+<<<<<<< HEAD
 							<div className="user-box">
 								<input type="password" name="" required="" />
 								<label>Re-enter password</label>
 							</div>
+=======
+>>>>>>> master
 							<a href="#">
 								<span />
 								<span />
@@ -74,6 +89,7 @@ export const SignUp = () => {
 							<h2>Patient Sign Up</h2>
 							<form>
 								<div className="user-box">
+<<<<<<< HEAD
 									<input type="text" name="" required="" />
 									<label>First Name</label>
 								</div>
@@ -101,6 +117,61 @@ export const SignUp = () => {
 									<input type="password" name="" required="" />
 									<label>Re-enter password</label>
 								</div>
+=======
+									<input
+										type="text"
+										name=""
+										required=""
+										onChange={event => setNewUser({ ...newUser, firstName: event.target.value })}
+									/>
+									<label>First Name</label>
+								</div>
+								<div className="user-box">
+									<input
+										type="text"
+										name=""
+										required=""
+										onChange={event => setNewUser({ ...newUser, lastName: event.target.value })}
+									/>
+									<label>Last Name</label>
+								</div>
+								<div className="user-box">
+									<input
+										type="text"
+										name=""
+										required=""
+										onChange={event => setNewUser({ ...newUser, email: event.target.value })}
+									/>
+									<label>Email</label>
+								</div>
+								<div className="user-box">
+									<input
+										type="text"
+										name=""
+										required=""
+										onChange={event => setNewUser({ ...newUser, phone: event.target.value })}
+									/>
+									<label>Phone number</label>
+								</div>
+								<div className="user-box">
+									<input
+										type="text"
+										name=""
+										required=""
+										onChange={event => setNewUser({ ...newUser, userName: event.target.value })}
+									/>
+									<label>Username</label>
+								</div>
+								<div className="user-box">
+									<input
+										type="password"
+										name=""
+										required=""
+										onChange={event => setNewUser({ ...newUser, password: event.target.value })}
+									/>
+									<label>Password</label>
+								</div>
+>>>>>>> master
 								<a href="#">
 									<span />
 									<span />
