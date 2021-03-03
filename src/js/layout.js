@@ -12,17 +12,13 @@ import { ProfilePage } from "./views/ProfilePage";
 import { Questions } from "./views/Questions";
 // import { ModalQuestions } from "./views/ModalQuestions";
 // import { ModalQuestionsProfilePage } from "./views/ModalQuestionsProfilePage";
-import { SignUp } from "./views/SignUp";
 
 import { Navbar } from "./component/navbar";
 import { Footer } from "./component/footer";
-<<<<<<< HEAD
 import { About } from "./component/About";
-=======
 import { SignUp } from "./views/SignUp";
-import { Questions } from "./views/Questions";
+
 import { Profile } from "./views/Profile";
->>>>>>> master
 
 //create your first component
 const Layout = () => {
@@ -57,7 +53,6 @@ const Layout = () => {
 						</Route>
 
 						<Route exact path="/modal">
-<<<<<<< HEAD
 							<Modal />
 						</Route>
 						{/* <Route exact path="/modalquestions">
@@ -65,16 +60,15 @@ const Layout = () => {
 						</Route> */}
 						<Route exact path="/profilepage">
 							<ProfilePage />
-=======
-							<Modal
+							{/* <Modal
 								text="
                             Congratulations on taking your first step to conquering your fear. There will be a series of
                             missions increasing in difficulty that will help you overcome your phobia. Visuals may
                             accompany some of the following steps, so if at anytime it gets to intense for you, click on
                             the button stop and the screen will black out. When youre ready, you can proceed."
 								button="Start"
-							/>
-                            </Route>
+							/> */}
+						</Route>
 						<Route exact path="/signup">
 							<SignUp />
 						</Route>
@@ -83,7 +77,6 @@ const Layout = () => {
 						</Route>
 						<Route exact path="/profile">
 							<Profile />
->>>>>>> master
 						</Route>
 						<Route exact path="/single/:theid">
 							<Single />

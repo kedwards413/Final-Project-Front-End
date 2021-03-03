@@ -56,10 +56,8 @@ const getState = ({ getStore, getActions, setStore }) => {
 					text:
 						"YOU DID IT! Congratulations! You've come closer than before to overcoming your fear. The more you expose yourself safely to your fears, the stronger you will feel knowing that fear cannot control you. Press the button and sign up for a free one-time session with a therapist! ",
 					button: "see your progress"
-                }
-            
-            ]
-        
+				}
+			]
 		},
 
 		actions: {
@@ -75,7 +73,6 @@ const getState = ({ getStore, getActions, setStore }) => {
 				/**
 			account: []
 		},
-
 		actions: {
 			getInitialData: () => {
 				fetch("")
@@ -111,7 +108,6 @@ const getState = ({ getStore, getActions, setStore }) => {
 					getActions().getInitialData();
 				});
 		},
-
 		// Use getActions to call a function within a fuction
 		exampleFunction: () => {
 			getActions().changeColor(0, "green");
@@ -120,24 +116,23 @@ const getState = ({ getStore, getActions, setStore }) => {
 			/**
 					fetch().then().then(data => setStore({ "foo": data.bar }))
 				*/
-		},
-		changeColor: (index, color) => {
-			//get the store
-			const store = getStore();
+			},
+			changeColor: (index, color) => {
+				//get the store
+				const store = getStore();
 
-			//we have to loop the entire demo array to look for the respective index
-			//and change its color
-			const demo = store.demo.map((elm, i) => {
-				if (i === index) elm.background = color;
-				return elm;
-			});
+				//we have to loop the entire demo array to look for the respective index
+				//and change its color
+				const demo = store.demo.map((elm, i) => {
+					if (i === index) elm.background = color;
+					return elm;
+				});
 
-			//reset the global store
-			setStore({ demo: demo });
+				//reset the global store
+				setStore({ demo: demo });
+			}
 		}
-    }
-}
+	};
 };
-
 
 export default getState;
