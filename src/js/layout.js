@@ -17,6 +17,7 @@ import { Navbar } from "./component/navbar";
 import { Footer } from "./component/footer";
 import { About } from "./component/About";
 import { SignUp } from "./views/SignUp";
+import { Login } from "./views/Login";
 
 import { Profile } from "./views/Profile";
 
@@ -44,9 +45,6 @@ const Layout = () => {
 						<Route exact path="/demo">
 							<Demo />
 						</Route>
-						<Route exact path="signup">
-							<SignUp />
-						</Route>
 
 						<Route exact path="patientquestionnaire">
 							<Questions />
@@ -69,11 +67,11 @@ const Layout = () => {
 								button="Start"
 							/> */}
 						</Route>
+						<Route exact path="/login">
+							<Login />
+						</Route>
 						<Route exact path="/signup">
 							<SignUp />
-						</Route>
-						<Route exact path="/patientquestionnaire">
-							<Questions />
 						</Route>
 						<Route exact path="/profile">
 							<Profile />
