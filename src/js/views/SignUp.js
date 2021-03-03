@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 
 export const SignUp = () => {
@@ -84,6 +84,7 @@ export const SignUp = () => {
 							<form>
 								<div className="user-box">
 									<input
+										value={newUser.firstName}
 										type="text"
 										name=""
 										required=""
@@ -93,6 +94,7 @@ export const SignUp = () => {
 								</div>
 								<div className="user-box">
 									<input
+										value={newUser.lastName}
 										type="text"
 										name=""
 										required=""
@@ -102,6 +104,7 @@ export const SignUp = () => {
 								</div>
 								<div className="user-box">
 									<input
+										value={newUser.email}
 										type="text"
 										name=""
 										required=""
@@ -111,6 +114,7 @@ export const SignUp = () => {
 								</div>
 								<div className="user-box">
 									<input
+										value={newUser.phone}
 										type="text"
 										name=""
 										required=""
@@ -120,6 +124,7 @@ export const SignUp = () => {
 								</div>
 								<div className="user-box">
 									<input
+										value={newUser.userName}
 										type="text"
 										name=""
 										required=""
@@ -129,6 +134,7 @@ export const SignUp = () => {
 								</div>
 								<div className="user-box">
 									<input
+										value={newUser.password}
 										type="password"
 										name=""
 										required=""
