@@ -199,9 +199,12 @@ export const Modal = () => {
 					</div>
 				)
 			) : (
-				<p className="titleCard-background  container-fluid d-flex align-content flex-wrap ">
-					You need to login
-				</p>
+				<div className="warning">
+					<p className="login-warning">
+						Please <Link to="/signup">sign up</Link> or <Link to="/login">login</Link> to start a mission
+					</p>
+					<div />
+				</div>
 			)}
 		</>
 	);

@@ -1259,7 +1259,19 @@ h2{
 }
   }
 
-  .login-warning{
-      color:white;
-      text-align: center;
+  .warning{
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
+  .login-warning{
+      height: 200px;
+  line-height: 200px;
+  text-align: center;
+  color: white;
+  }
+
+ 
