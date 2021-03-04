@@ -2,8 +2,18 @@ import React, { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 
 export const SignUp = () => {
-	const [user, setUser] = useState("");
-	const [type, setType] = useState("");
+    const [user, setUser] = useState("");
+    
+	const [therapist, setTherapist] = useState({
+        firstName:"",
+        lastName:"",
+        email:"",
+        phone:"",
+        license:"",
+        userName:"",
+        password:""
+    });
+
 	const [newUser, setNewUser] = useState({
 		firstName: "",
 		lastName: "",
@@ -27,36 +37,33 @@ export const SignUp = () => {
 						<h2>Therapist Sign Up</h2>
 						<form>
 							<div className="user-box">
-								<input type="text" name="" required="" />
+								<input type="text" name="" required="" value={therapist.firstName} onChange={event => setTherapist({ ...therapist, firstName: event.target.value })}
+									/>/>
 								<label>First Name</label>
 							</div>
 							<div className="user-box">
-								<input type="text" name="" required="" />
+								<input type="text" name="" required="" value={therapist.lastName} onChange={event => setTherapist({ ...therapist, lastName: event.target.value })}/>
 								<label>Last Name</label>
 							</div>
 							<div className="user-box">
-								<input type="text" name="" required="" />
+								<input type="text" name="" required="" value={therapist.license} onChange={event => setTherapist({ ...therapist, license: event.target.value })}/>
 								<label>License number</label>
 							</div>
 							<div className="user-box">
-								<input type="text" name="" required="" />
+								<input type="text" name="" required="" value={therapist.phone} onChange={event => setTherapist({ ...therapist, phone: event.target.value })}/>
 								<label>Phone Number</label>
 							</div>
 							<div className="user-box">
-								<input type="text" name="" required="" />
+								<input type="text" name="" required="" value={therapist.email} onChange={event => setTherapist({ ...therapist, email: event.target.value })}/>
 								<label>Email</label>
 							</div>
 							<div className="user-box">
-								<input type="text" name="" required="" />
+								<input type="text" name="" required="" value={therapist.username} onChange={event => setTherapist({ ...therapist, userName: event.target.value })}/>
 								<label>Username</label>
 							</div>
 							<div className="user-box">
-								<input type="password" name="" required="" />
+								<input type="password" name="" required="" value={therapist.password} onChange={event => setTherapist({ ...therapist, password: event.target.value })}/>
 								<label>Password</label>
-							</div>
-							<div className="user-box">
-								<input type="password" name="" required="" />
-								<label>Re-enter password</label>
 							</div>
 							<a href="#">
 								<span />
