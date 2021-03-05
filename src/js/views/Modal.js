@@ -15,23 +15,6 @@ export const Modal = () => {
 		checkboxes: []
 	});
 
-	const checkBoxClearing = e => {
-		let filterInfo = info.checkboxes.filter(checkbox => {
-			return e.target.value !== checkbox;
-		});
-		if (filterInfo.length < info.checkboxes.length) {
-			setInfo({
-				...info,
-				checkboxes: filterInfo
-			});
-		} else {
-			setInfo({
-				...info,
-				checkboxes: [...info.checkboxes, e.target.value]
-			});
-		}
-	};
-
 	return (
 		<>
 			{modalIndex < lengthCards ? (
@@ -71,14 +54,12 @@ export const Modal = () => {
 												className="form-check-input "
 												type="checkbox"
 												id="inlineCheckbox1"
-												// value={info.experience}
-												// name="experience"
-												// onChange={e => {
-												// 	setInfo({ ...info, experience: e.target.value });
-												// }}
 												value="uncomfortable"
 												onChange={e => {
-													checkBoxClearing(e);
+													setInfo({
+														...info,
+														checkboxes: e.target.value
+													});
 												}}
 											/>
 											<label className="form-check-label " htmlFor="inlineCheckbox1 ">
@@ -87,17 +68,15 @@ export const Modal = () => {
 										</div>
 										<div className="form-check form-check-inline">
 											<input
-												className="form-check-input "
+												className="form-check-input"
 												type="checkbox"
 												id="inlineCheckbox1"
-												// 		value={info.experience}
-												// name="experience"
-												// onChange={e => {
-												// 	setInfo({ ...info, experience: e.target.value });
-												// }}
 												value="scared"
 												onChange={e => {
-													checkBoxClearing(e);
+													setInfo({
+														...info,
+														checkboxes: e.target.value
+													});
 												}}
 											/>
 											<label className="form-check-label " htmlFor="inlineCheckbox1 ">
@@ -110,11 +89,11 @@ export const Modal = () => {
 												type="checkbox"
 												id="inlineCheckbox1"
 												value="terrified"
-												// onChange={e => {
-												// 	setInfo({ ...info, experience: e.target.value });
-												// }}
 												onChange={e => {
-													checkBoxClearing(e);
+													setInfo({
+														...info,
+														checkboxes: e.target.value
+													});
 												}}
 											/>
 											<label className="form-check-label text-white" htmlFor="inlineCheckbox1 ">
@@ -134,9 +113,6 @@ export const Modal = () => {
 												className="form-control "
 												style={{ width: 300, height: 50 }}
 												value={info.experience}
-												// onChange={e => {
-												// 	setInfo({ ...info, vcb hyhhyhg    yhexperience: e.target.value });
-												// }}
 												onChange={e => {
 													setInfo({
 														...info,

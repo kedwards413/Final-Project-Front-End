@@ -1,8 +1,13 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import PropTypes, { string } from "prop-types";
+import { Context } from "../store/appContext";
 
 export const Progress = () => {
+	const { store, actions } = useContext(Context);
+	console.log(store.modalInfo);
 	const [state, setState] = useState(10);
+	const isProgressing = store.modalInfo.map(item => item.checkboxes).includes("uncomfortable");
+
 	return (
 		<>
 			<h2>{state == 100 ? `100% Complete!` : `${state}%`}</h2>
@@ -10,7 +15,7 @@ export const Progress = () => {
 			<ProgressButton
 				progress={state}
 				makeProgress={() => {
-					state < 100 ? setState(state + 10) : setState(0);
+					state < 100 ? setState(isProgressing && state + 40) : setState(0);
 				}}
 			/>
 		</>
