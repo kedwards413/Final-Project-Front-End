@@ -6,11 +6,16 @@ import React, { useContext, useState } from "react";
 import { Progress } from "../views/ProgressBar";
 import { Context } from "../store/appContext";
 import { TestimonialImageUpload } from "../views/TestimonialImageUpload";
+import { Link } from "react-router-dom";
 
 export const ProfilePage = () => {
 	const { store, actions } = useContext(Context);
-	console.log(store.modalInfo);
+
 	const [state, setState] = useState(null);
+	const [data, setData] = useState(null);
+	const manageData = props => {
+		setData(!data);
+	};
 	return (
 		<>
 			<div className="main mt-5" style={{ width: 400, height: 700 }}>
@@ -137,12 +142,14 @@ export const ProfilePage = () => {
 				<div className="testimonial-input bg-white">
 					<h1 className=" text-white testimonial-title2">Testimonial</h1>
 					<input
-						className="testimonial-finalInput d-flex justify-content-center"
+						className="testimonial-finalInput d-flex justify-content-center text-white"
 						style={{ width: 800, height: 200 }}
-					/>
-					<button className="uploadPhoto mt-3"> Share with Us</button>
+					/>{" "}
+					<Link to="./testimonials" onClick={() => manageData(props)} className="uploadPhoto mt-3 text-white">
+						Share with Us
+					</Link>
 				</div>
-				<div>
+				<div className="profileTestimonialImage">
 					<TestimonialImageUpload />
 				</div>
 			</div>

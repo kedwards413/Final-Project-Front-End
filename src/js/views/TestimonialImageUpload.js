@@ -2,7 +2,7 @@ import React, { useState } from "react";
 
 export const TestimonialImageUpload = () => {
 	const [state, setState] = useState(null);
-	console.log(state);
+
 	return (
 		<div>
 			<button>

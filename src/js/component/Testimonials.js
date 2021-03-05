@@ -44,6 +44,7 @@ export const Testimonials = () => {
 							return (
 								<div key={i} className="arr " style={{ transform: `translateX(${x}%)` }}>
 									{item}
+
 									<p className=" testimonial-text pt-3 pl-3 pb-4 pr-2">
 										EXAMPLE QUOTES WOULD NOT HARD CODED HOW DO WE IMPORT IMAGE AND QUOTE FROM
 										SUBMITTING TESTIMONIAL. FOR IMAGES WE NEED TO HAVE A PREDETERMINED SIZE FOR
