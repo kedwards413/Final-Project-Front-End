@@ -52,7 +52,7 @@ const Layout = () => {
 							<Login />
 						</Route>
 
-						<Route exact path="patientquestionnaire">
+						<Route exact path="/patientquestionnaire">
 							<Questions />
 						</Route>
 
@@ -73,15 +73,7 @@ const Layout = () => {
 								button="Start"
 							/> */}
 						</Route>
-						<Route exact path="/signup">
-							<SignUp />
-						</Route>
-						<Route exact path="/patientquestionnaire">
-							<Questions />
-						</Route>
-						<Route exact path="/profile">
-							<Profile />
-						</Route>
+
 						<Route exact path="/single/:theid">
 							<Single />
 						</Route>

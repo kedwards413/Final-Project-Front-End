@@ -6,7 +6,7 @@ export const Progress = () => {
 	const { store, actions } = useContext(Context);
 	console.log(store.modalInfo);
 	const [state, setState] = useState(10);
-	const isProgressing = store.modalInfo.map(item => item.checkboxes).includes("uncomfortable");
+	const isProgressing = store.modalInfo.map(item => item.checkboxes).includes("neutral");
 
 	return (
 		<>
