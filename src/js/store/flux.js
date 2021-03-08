@@ -27,7 +27,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 				{
 					imageUrl: "https://s.hdnux.com/photos/01/13/13/45/19708276/8/rawImage.jpg",
 					text:
-						"The VAST majority of spiders are not harmful to humans. Instead their webs catch mosqitoes. Mosquitoes kill more humans than any other animal. When you are ready, press 'next' and you will begin your first mission",
+						"The VAST majority of spiders are not harmful to humans. Instead their webs catch mosqitoes, which kill more humans than any other animal. "\n", When you are ready, press 'next' and you will begin your first mission",
 					button: ""
 				},
 
