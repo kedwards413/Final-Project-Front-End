@@ -100,7 +100,25 @@ export const Modal = () => {
 												Terrified
 											</label>
 										</div>
+										<div className="form-check form-check-inline">
+											<input
+												className="form-check-input"
+												type="checkbox"
+												id="inlineCheckbox1"
+												value="neutral"
+												onChange={e => {
+													setInfo({
+														...info,
+														checkboxes: e.target.value
+													});
+												}}
+											/>
+											<label className="form-check-label " htmlFor="inlineCheckbox1 ">
+												Neutral
+											</label>
+										</div>
 									</div>
+
 									<div className="modal-answer2 text-center">
 										<div className="modal-question3 d-flex justify-content-center ">
 											<p className="secondquestion-modal text-white pt-5  ">
