@@ -5,17 +5,25 @@ import { Context } from "../store/appContext";
 export const Progress = () => {
 	const { store, actions } = useContext(Context);
 	console.log(store.modalInfo);
-	const [state, setState] = useState(10);
+	const [state, setState] = useState(0);
 	const isProgressing = store.modalInfo.map(item => item.checkboxes).includes("neutral");
 
+	console.log(isProgressing);
 	return (
 		<>
-			<h2>{state == 100 ? `100% Complete!` : `${state}%`}</h2>
+			<h2>{state == 99 ? `100% Complete!` : `${state}%`}</h2>
 			<ProgressBar width={state} />
 			<ProgressButton
 				progress={state}
 				makeProgress={() => {
-					state < 100 ? setState(isProgressing && state + 40) : setState(0);
+					let n = 0;
+					for (let i = 0; i < store.modalInfo.length; i++) {
+						if (store.modalInfo[i].checkboxes == "neutral") {
+							n++;
+						}
+					}
+					console.log(n);
+					state < 99 ? setState(isProgressing ? 33 * n : 0) : setState(0);
 				}}
 			/>
 		</>
@@ -36,7 +44,7 @@ const ProgressBar = ({ width }) => (
 
 const ProgressButton = ({ makeProgress, progress }) => (
 	<button className="progressButton " onClick={makeProgress}>
-		{progress == 100 ? " Yay! " : "Progress"}
+		{progress == 99 ? " Yay! " : "Progress"}
 	</button>
 );
 (ProgressBar.propTypes = {
