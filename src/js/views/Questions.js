@@ -2,6 +2,8 @@ import React, { useState, useEffect, useContext } from "react";
 import { Link } from "react-router-dom";
 
 export const Questions = () => {
+
+    
 	const [newAccount, setNewAccount] = useState({
 		phobia: "",
 		severity: "",
@@ -70,7 +72,7 @@ export const Questions = () => {
 							type="button"
 							className="questionnaire-button form-control mt-5"
 							onClick={() => {
-								actions.addAccount(newAccount);
+								actions.addUser(newAccount);
 							}}>
 							Save and create account
 						</button>

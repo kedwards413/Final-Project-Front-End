@@ -67,56 +67,77 @@ const getState = ({ getStore, getActions, setStore }) => {
 			},
 
 			// Use getActions to call a function within a fuction
-			exampleFunction: () => {
-				getActions().changeColor(0, "green");
+			actions: {
+				getInitialData: () => {
+					fetch("")
+						.then(function(response) {
+							if (!response.ok) {
+								throw Error(response.statusText);
+							}
+							// Read the response as json.
+							return response.json();
+						})
+						.then(function(responseAsJson) {
+							//setStore({ characters: responseAsJson.results });
+							setStore({ account: responseAsJson });
+							console.log(responseAsJson);
+						})
+						.catch(function(error) {
+							console.log("Looks like there was a problem: \n", error);
+						});
+				}
 			},
-			loadSomeData: () => {
-				/**
-			account: []
-		},
-		actions: {
-			getInitialData: () => {
-				fetch("")
-					.then(function(response) {
+			
+			// Use getActions to call a function within a fuction
+			/**
+					fetch().then().then(data => setStore({ "foo": data.bar }))
+                */
+            addPatient: () => {
+		fetch("https://3000-pink-toad-rnysz19w.ws-us03.gitpod.io/" + "patient", {
+			method: "POST",
+			body: JSON.stringify({
+				user_id: "3",
+				wishfearLESS: "Get better in my phobia",
+				previous_help: false,
+				zc: "33494"
+			}),
+			headers: {
+				"Content-Type": "application/json"
+			}
+		})
+			.then(response => {
+				if (!response.ok) {
+					throw Error(response.statusText);
+				}
+				return response.json();
+			})
+			.then(response => console.log("Success:", JSON.stringify(response)))
+			.catch(error => console.error("Error:", error));
+		
+	},
+			addUser: (firstName, lastName, phone, userName, email, password) => {
+				fetch("https://3000-pink-toad-rnysz19w.ws-us03.gitpod.io/" + "user", {
+					method: "POST",
+					body: JSON.stringify({
+						fisrt_name: firstName,
+						last_name: lastName,
+						phone_number: phone,
+						user_name: userName,
+						email: email,
+						password: password
+					}), // data can be `string` or {object}!
+					headers: {
+						"Content-Type": "application/json"
+					}
+				})
+					.then(response => {
 						if (!response.ok) {
 							throw Error(response.statusText);
 						}
-						// Read the response as json.
 						return response.json();
 					})
-					.then(function(responseAsJson) {
-						//setStore({ characters: responseAsJson.results });
-						setStore({ account: responseAsJson });
-						console.log(responseAsJson);
-					})
-					.catch(function(error) {
-						console.log("Looks like there was a problem: \n", error);
-					});
-			}
-		},
-		addAccount: accountToAdd => {
-			const tempStore = getStore();
-			console.log(accountToAdd);
-			fetch("", {
-				method: "POST",
-				headers: {
-					"Content-Type": "application/json"
-				},
-				body: JSON.stringify(accountToAdd)
-			})
-				.then(response => response.json())
-				.then(() => {
-					getActions().getInitialData();
-				});
-		},
-		// Use getActions to call a function within a fuction
-		exampleFunction: () => {
-			getActions().changeColor(0, "green");
-		},
-		loadSomeData: () => {
-			/**
-					fetch().then().then(data => setStore({ "foo": data.bar }))
-				*/
+					.then(response => console.log("Success:", JSON.stringify(response)))
+					.catch(error => console.error("Error:", error));
 			},
 			changeColor: (index, color) => {
 				//get the store

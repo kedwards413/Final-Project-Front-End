@@ -1,7 +1,9 @@
 import React, { useContext, useState } from "react";
 import { Link } from "react-router-dom";
+import { Context } from "../store/appContext";
 
 export const SignUp = () => {
+	const { store, actions } = useContext(Context);
 	const [user, setUser] = useState("");
 
 	const [therapist, setTherapist] = useState({
@@ -9,7 +11,7 @@ export const SignUp = () => {
 		lastName: "",
 		email: "",
 		phone: "",
-		license: "",
+		zipcode: "",
 		userName: "",
 		password: ""
 	});
@@ -62,10 +64,10 @@ export const SignUp = () => {
 									type="text"
 									name=""
 									required=""
-									value={therapist.license}
-									onChange={event => setTherapist({ ...therapist, license: event.target.value })}
+									value={therapist.zipcode}
+									onChange={event => setTherapist({ ...therapist, zipcode: event.target.value })}
 								/>
-								<label>License number</label>
+								<label>Zipcode</label>
 							</div>
 							<div className="user-box">
 								<input
@@ -112,7 +114,7 @@ export const SignUp = () => {
 								<span />
 								<span />
 								<span />
-								Create Account
+								<Link to="/therapistprofile">Create account</Link>
 							</a>
 						</form>
 					</div>
@@ -194,7 +196,20 @@ export const SignUp = () => {
 								<a href="#">
 									<span />
 									<span />
-									<Link to="/patientquestionnaire">Save and proceed to patient questionnaire</Link>
+									<Link
+										to="/patientquestionnaire"
+										onClick={() => {
+											actions.addUser(
+												newUser.firstName,
+												newUser.lastName,
+												newUser.phone,
+												newUser.email,
+												newUser.userName,
+												newUser.password
+											);
+										}}>
+										Save and proceed to patient questionnaire
+									</Link>
 								</a>
 							</form>
 						</div>
