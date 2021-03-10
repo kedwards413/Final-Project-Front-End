@@ -11,6 +11,7 @@ export const Modal = () => {
 	const [showText, setShowTextBlack] = useState(true);
 	var lengthCards = store.modalCards.length - 1;
 	const [info, setInfo] = useState({
+		title: "",
 		experience: "",
 		checkboxes: []
 	});
@@ -155,7 +156,11 @@ export const Modal = () => {
 											setShowImageBlack(!showImage);
 											setShowTextBlack(!showText);
 											actions.addingModalInfo(info);
-											setInfo({ ...info, experience: "" });
+											setInfo({
+												...info,
+												experience: "",
+												title: store.modalCards[modalIndex].title
+											});
 										}}>
 										Continue
 									</button>
