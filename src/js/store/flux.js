@@ -87,34 +87,34 @@ const getState = ({ getStore, getActions, setStore }) => {
 						});
 				}
 			},
-			
+
 			// Use getActions to call a function within a fuction
 			/**
 					fetch().then().then(data => setStore({ "foo": data.bar }))
                 */
-            addPatient: () => {
-		fetch("https://3000-pink-toad-rnysz19w.ws-us03.gitpod.io/" + "patient", {
-			method: "POST",
-			body: JSON.stringify({
-				user_id: "3",
-				wishfearLESS: "Get better in my phobia",
-				previous_help: false,
-				zc: "33494"
-			}),
-			headers: {
-				"Content-Type": "application/json"
-			}
-		})
-			.then(response => {
-				if (!response.ok) {
-					throw Error(response.statusText);
-				}
-				return response.json();
-			})
-			.then(response => console.log("Success:", JSON.stringify(response)))
-			.catch(error => console.error("Error:", error));
-		
-	},
+			addPatient: (phobia, severity, help, goal) => {
+				fetch("https://3000-pink-toad-rnysz19w.ws-us03.gitpod.io/" + "patient", {
+					method: "POST",
+					body: JSON.stringify({
+						user_id: "3",
+						phobia: phobia,
+						wishfearless: goal,
+						previous_help: help,
+						severity: severity
+					}),
+					headers: {
+						"Content-Type": "application/json"
+					}
+				})
+					.then(response => {
+						if (!response.ok) {
+							throw Error(response.statusText);
+						}
+						return response.json();
+					})
+					.then(response => console.log("Success:", JSON.stringify(response)))
+					.catch(error => console.error("Error:", error));
+			},
 			addUser: (firstName, lastName, phone, userName, email, password) => {
 				fetch("https://3000-pink-toad-rnysz19w.ws-us03.gitpod.io/" + "user", {
 					method: "POST",

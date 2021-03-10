@@ -29,7 +29,9 @@ export const Navbar = () => {
 						ABOUT
 					</span>
 				</Link>
-
+                <Link to="/signup">
+						<button className="btn btn-dark mr-2 btn-sm mb-1">THERAPISTS</button>
+					</Link>
 				<div className="ml-auto">
 					<Link to="/login">
 						<span className="navbar-brand text-white mr-5">LOGIN</span>

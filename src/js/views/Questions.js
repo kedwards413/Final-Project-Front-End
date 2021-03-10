@@ -1,9 +1,9 @@
 import React, { useState, useEffect, useContext } from "react";
 import { Link } from "react-router-dom";
+import { Context } from "../store/appContext";
 
 export const Questions = () => {
-
-    
+	const { store, actions } = useContext(Context);
 	const [newAccount, setNewAccount] = useState({
 		phobia: "",
 		severity: "",
@@ -24,6 +24,7 @@ export const Questions = () => {
 								required
 								placeholder="Enter email"
 								onChange={event => setNewAccount({ ...newAccount, phobia: event.target.value })}>
+								<option>Make a selection </option>
 								<option>Acrophobia - Fear of heights </option>
 								<option>Arachnophobia - Fear of spiders</option>
 								<option>Astraphobia - Fear of thunder and lightning</option>
@@ -39,6 +40,7 @@ export const Questions = () => {
 								placeholder="Choose severity"
 								required
 								onChange={event => setNewAccount({ ...newAccount, severity: event.target.value })}>
+								<option>Make a selection </option>
 								<option>1 - Mild </option>
 								<option>2</option>
 								<option>3</option>
@@ -53,6 +55,7 @@ export const Questions = () => {
 								required
 								placeholder="Yes or no"
 								onChange={event => setNewAccount({ ...newAccount, help: event.target.value })}>
+								<option>Make a selection </option>
 								<option>Yes - with a therapist</option>
 								<option>Yes - through another app</option>
 								<option>No - I have never sought help</option>
@@ -64,7 +67,7 @@ export const Questions = () => {
 								type="text"
 								required
 								className="form-control"
-								placeholder="Type here"
+								placeholder="Type your response here"
 								onChange={event => setNewAccount({ ...newAccount, goal: event.target.value })}
 							/>
 						</div>
@@ -72,7 +75,12 @@ export const Questions = () => {
 							type="button"
 							className="questionnaire-button form-control mt-5"
 							onClick={() => {
-								actions.addUser(newAccount);
+								actions.addPatient(
+									newAccount.phobia,
+									newAccount.severity,
+									newAccount.goal,
+									newAccount.help
+								);
 							}}>
 							Save and create account
 						</button>

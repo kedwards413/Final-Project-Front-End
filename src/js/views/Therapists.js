@@ -1,12 +1,12 @@
 import React, { useContext, useState } from "react";
 import { Link } from "react-router-dom";
-import { Questions } from "../views/Questions";
-import { ModalQuestions } from "../views/ModalQuestions";
-import { ModalQuestionsProfilePage } from "../views/ModalQuestionsProfilePage";
+import { Questions } from "./Questions";
+import { ModalQuestions } from "./ModalQuestions";
+import { ModalQuestionsProfilePage } from "./ModalQuestionsProfilePage";
 import { Context } from "../store/appContext";
-import { TestimonialImageUpload } from "../views/TestimonialImageUpload";
+import { TestimonialImageUpload } from "./TestimonialImageUpload";
 
-export const TherapistProfile = () => {
+export const Therapists = () => {
 	const { store, actions } = useContext(Context);
 
 	const [state, setState] = useState(null);
