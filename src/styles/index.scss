@@ -604,8 +604,10 @@ i{
 }
 
 .modal{
-    border: 1px solid black;
-      box-shadow:0 0 40px 15px white;
+   
+      box-shadow:0 0 25px 7px white;
+      
+        
     display:flex;
      justify-content:center;
      border-radius:25px;
@@ -625,6 +627,7 @@ i{
     left: 0;
     height:730px;
     width:100%;
+    
    
    
 }
