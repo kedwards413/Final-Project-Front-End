@@ -122,10 +122,11 @@ export const ProfilePage = () => {
 							<p className="firstquestion-modal2 text-center text-white pt-5">
 								How are you feeling right now?
 							</p>
-
-							{store.modalInfo.map((info, index) => {
-								return <p key={index}>{info.checkboxes}</p>;
-							})}
+							<div className="text-white">
+								{store.modalInfo.map((info, index) => {
+									return <p key={index}>{info.checkboxes}</p>;
+								})}
+							</div>
 						</div>
 
 						<div className="modal-answer-p-page text-white">
