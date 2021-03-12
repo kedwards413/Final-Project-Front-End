@@ -4,11 +4,11 @@ import { Context } from "../store/appContext";
 
 export const Progress = () => {
 	const { store, actions } = useContext(Context);
-	console.log(store.modalInfo);
+	// console.log(store.modalInfo);
 	const [state, setState] = useState(0);
 	const isProgressing = store.modalInfo.map(item => item.checkboxes).includes("neutral");
 
-	console.log(isProgressing);
+	// console.log(isProgressing);
 	return (
 		<>
 			<h2>{state == 99 ? `100% Complete!` : `${state}%`}</h2>
@@ -22,7 +22,7 @@ export const Progress = () => {
 							n++;
 						}
 					}
-					console.log(n);
+
 					state < 99 ? setState(isProgressing ? 33 * n : 0) : setState(0);
 				}}
 			/>

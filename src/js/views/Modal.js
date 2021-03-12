@@ -19,7 +19,7 @@ export const Modal = () => {
 	var month = d.getUTCMonth() + 1;
 	var day = d.getUTCDate();
 	var year = d.getUTCFullYear();
-	var a = year + "/" + month + "/" + day;
+	var a = month + "/" + day + "/" + year;
 
 	return (
 		<>
@@ -55,9 +55,9 @@ export const Modal = () => {
 										</p>
 									</div>
 									<div className="modal-checkbox d-flex justify-content-center text-white">
-										<div className="form-check form-check-inline">
+										<div className="form-check form-check-inline ">
 											<input
-												className="form-check-input "
+												className="form-check-input text-white"
 												type="checkbox"
 												id="inlineCheckbox1"
 												value="uncomfortable"
