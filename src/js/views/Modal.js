@@ -15,6 +15,11 @@ export const Modal = () => {
 		experience: "",
 		checkboxes: []
 	});
+	var d = new Date();
+	var month = d.getUTCMonth() + 1;
+	var day = d.getUTCDate();
+	var year = d.getUTCFullYear();
+	var a = year + "/" + month + "/" + day;
 
 	return (
 		<>
@@ -59,7 +64,7 @@ export const Modal = () => {
 												onChange={e => {
 													setInfo({
 														...info,
-														checkboxes: e.target.value
+														checkboxes: e.target.value + a
 													});
 												}}
 											/>
@@ -76,7 +81,7 @@ export const Modal = () => {
 												onChange={e => {
 													setInfo({
 														...info,
-														checkboxes: e.target.value
+														checkboxes: e.target.value + a
 													});
 												}}
 											/>
@@ -93,7 +98,7 @@ export const Modal = () => {
 												onChange={e => {
 													setInfo({
 														...info,
-														checkboxes: e.target.value
+														checkboxes: e.target.value + a
 													});
 												}}
 											/>
@@ -110,7 +115,7 @@ export const Modal = () => {
 												onChange={e => {
 													setInfo({
 														...info,
-														checkboxes: e.target.value
+														checkboxes: e.target.value + a
 													});
 												}}
 											/>
