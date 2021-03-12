@@ -1072,23 +1072,27 @@ h2{
 
     //IMAGE UPLOAD
 
-    .button-image{
-  margin:10px;
-    display: inline-block;
-  background: linear-gradient(top, #f9f9f9, #e3e3e3);
-  border: 1px solid #999;
-  border-radius: 3px;
-  padding: 5px 8px;
-  outline: none;
+//     .button-image{
+//   margin:10px;
+//     display: inline-block;
+//   background: linear-gradient(top, #f9f9f9, #e3e3e3);
+//   border: 1px solid #999;
+//   border-radius: 3px;
+//   padding: 5px 8px;
+//   outline: none;
  
 
 
-}
+// }
 .custom-file-input::-webkit-file-upload-button {
   visibility: hidden;
+
   
 }
-
+.custom-file-input{
+    margin-top:-40px;
+   
+}
 
 .custom-file-input::before {
   content: 'Select the Image';

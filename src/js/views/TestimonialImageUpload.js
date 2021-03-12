@@ -5,7 +5,7 @@ export const TestimonialImageUpload = () => {
 
 	return (
 		<div>
-			<button>
+			<button style={{ marginLeft: 800, height: 40, width: 120 }}>
 				<input
 					type="file"
 					className="custom-file-input text-black bg-light  d-flex justify-content-center"
