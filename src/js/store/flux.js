@@ -4,6 +4,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 	return {
 		store: {
 			modalInfo: [],
+			testimonials: [],
 
 			demo: [
 				{
@@ -69,6 +70,10 @@ const getState = ({ getStore, getActions, setStore }) => {
 		actions: {
 			addingModalInfo: info => {
 				setStore({ modalInfo: [...getStore().modalInfo, info] });
+			},
+
+			addingTestimonials: testimony => {
+				setStore({ testimonials: [...getStore().testimonials, testimony] });
 			},
 
 			// Use getActions to call a function within a fuction

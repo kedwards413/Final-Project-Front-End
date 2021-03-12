@@ -12,9 +12,12 @@ export const ProfilePage = () => {
 	const { store, actions } = useContext(Context);
 
 	const [state, setState] = useState(null);
-	const [data, setData] = useState(null);
-	const manageData = props => {
-		setData(!data);
+	const [data, setData] = useState({
+		testimony: ""
+	});
+	const manageData = () => {
+		actions.addingTestimonials(data);
+		setData({ testimony: "" });
 	};
 	return (
 		<>
@@ -142,10 +145,12 @@ export const ProfilePage = () => {
 				<div className="testimonial-input bg-white">
 					<h1 className=" text-white testimonial-title2">Testimonial</h1>
 					<input
-						className="testimonial-finalInput d-flex justify-content-center text-white"
+						onChange={e => setData({ testimony: e.target.value })}
+						value={data.testimony}
+						className="testimonial-finalInput d-flex justify-content-center text-dark"
 						style={{ width: 800, height: 200 }}
 					/>{" "}
-					<Link to="./testimonials" onClick={() => manageData(props)} className="uploadPhoto mt-3 text-white">
+					<Link to="./testimonials" onClick={() => manageData()} className="uploadPhoto mt-3 text-white">
 						Share with Us
 					</Link>
 				</div>

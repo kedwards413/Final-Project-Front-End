@@ -18,6 +18,7 @@ import { Footer } from "./component/footer";
 import { About } from "./component/About";
 import { SignUp } from "./views/SignUp";
 import { Login } from "./views/Login";
+import { Testimonials } from "./component/Testimonials";
 
 import { Profile } from "./views/Profile";
 
@@ -55,10 +56,13 @@ const Layout = () => {
 						<Route exact path="/patientquestionnaire">
 							<Questions />
 						</Route>
-
+						<Route exact path="/testimonials">
+							<Testimonials />
+						</Route>
 						<Route exact path="/modal">
 							<Modal />
 						</Route>
+
 						{/* <Route exact path="/modalquestions">
 							<ModalQuestions />
 						</Route> */}
