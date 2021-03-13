@@ -18,6 +18,7 @@ export const About = () => {
 
 			<div className="about-background">
 				<h1 className="aboutTitle"> Our Story </h1>
+				<div className="fade_rule_about" />
 				<p className="aboutText ">
 					fearLESS was designed to help people overcome their phobia through exposure therapy. Users will
 					complete a series of missions that increase in difficulty with each step. When the user has finished
