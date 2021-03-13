@@ -16,7 +16,7 @@ export const SearchBar = () => {
 						onChange={e => setSearch(e.target.value)}
 						type="text"
 						className="form-control mr-sm-2 mt-5 "
-						placeholder="Search Therapists"
+						placeholder="Zip Code or Phobia"
 						aria-label="Search"
 					/>
 					{/* <button
