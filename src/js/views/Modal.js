@@ -64,7 +64,7 @@ export const Modal = () => {
 												onChange={e => {
 													setInfo({
 														...info,
-														checkboxes: e.target.value + a
+														checkboxes: e.target.value + " - " + a
 													});
 												}}
 											/>
@@ -81,7 +81,7 @@ export const Modal = () => {
 												onChange={e => {
 													setInfo({
 														...info,
-														checkboxes: e.target.value + a
+														checkboxes: e.target.value + " - " + a
 													});
 												}}
 											/>
@@ -98,10 +98,10 @@ export const Modal = () => {
 												onChange={e => {
 													setInfo({
 														...info,
-														checkboxes: e.target.value + a
+														checkboxes: e.target.value + " - " + a
 													});
 												}}
-											/>
+											/>{" "}
 											<label className="form-check-label text-white" htmlFor="inlineCheckbox1 ">
 												Terrified
 											</label>
@@ -115,10 +115,10 @@ export const Modal = () => {
 												onChange={e => {
 													setInfo({
 														...info,
-														checkboxes: e.target.value + a
+														checkboxes: e.target.value + " - " + a
 													});
 												}}
-											/>
+											/>{" "}
 											<label className="form-check-label " htmlFor="inlineCheckbox1 ">
 												Neutral
 											</label>

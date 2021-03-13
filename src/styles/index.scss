@@ -795,15 +795,24 @@ i{
 .firstquestion-modal2{
     font-size:30px;
     margin-right:-100px;
-    margin-top:-100px;
+    margin-top:-80px;
     
    
 }
 .secondquestion-modal{
+   
     font-size:30px;
     margin-right:-100px;
+}
+.secondquestion-modal-answers{
+    margin-top: 100px;
+    font-size:20px;
+}
+.firstquestion-modal-answers {
+    font-size:20px;
 
 }
+
 
 
 
@@ -997,7 +1006,7 @@ i{
 
 
 .testimonial-input{
-    // position: absolute;
+    // position: relative;
     // top: 0;
     // left: 0;
     // height:730px;

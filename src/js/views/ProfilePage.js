@@ -122,7 +122,7 @@ export const ProfilePage = () => {
 							<p className="firstquestion-modal2 text-center text-white pt-5">
 								How are you feeling right now?
 							</p>
-							<div className="text-white">
+							<div className="firstquestion-modal-answers text-white">
 								{store.modalInfo.map((info, index) => {
 									return <p key={index}>{info.checkboxes}</p>;
 								})}
@@ -131,12 +131,14 @@ export const ProfilePage = () => {
 
 						<div className="modal-answer-p-page text-white">
 							<div className="modal-question-p-page d-flex justify-content-center">
-								<p className="secondquestion-modal text-white  mt-3">
+								<p className="secondquestion-modal text-white  mt-5">
 									Tell us more about your experience
 								</p>
-								{store.modalInfo.map((info, index) => {
-									return <p key={index}>{info.experience}</p>;
-								})}
+								<div className="secondquestion-modal-answers">
+									{store.modalInfo.map((info, index) => {
+										return <p key={index}>{info.experience}</p>;
+									})}
+								</div>
 							</div>
 						</div>
 					</div>
