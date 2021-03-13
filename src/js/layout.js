@@ -10,7 +10,6 @@ import injectContext from "./store/appContext";
 import { Modal } from "./views/Modal";
 import { ProfilePage } from "./views/ProfilePage";
 import { Questions } from "./views/Questions";
-import { Therapists } from "./views/Therapists";
 // import { ModalQuestions } from "./views/ModalQuestions";
 // import { ModalQuestionsProfilePage } from "./views/ModalQuestionsProfilePage";
 
@@ -49,9 +48,6 @@ const Layout = () => {
 
 						<Route exact path="/patientquestionnaire">
 							<Questions />
-						</Route>
-						<Route exact path="/therapists">
-							<Therapists />
 						</Route>
 						<Route exact path="/modal">
 							<Modal />
