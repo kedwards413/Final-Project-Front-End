@@ -11,12 +11,12 @@ export const SearchBar = () => {
 	return (
 		<div>
 			<div className="float-left" style={{ width: "350px" }}>
-				<form className="form-inline my-2 my-lg-0 m-4">
+				<form className="form-inline-therapist my-2 my-lg-0 ">
 					<input
 						onChange={e => setSearch(e.target.value)}
 						type="text"
-						className="form-control mr-sm-2"
-						placeholder="Search Freelancers"
+						className="form-control mr-sm-2 mt-5 "
+						placeholder="Search Therapists"
 						aria-label="Search"
 					/>
 					{/* <button
@@ -28,9 +28,11 @@ export const SearchBar = () => {
 				</form>
 			</div>
 			<div className="container">
-				<div className="jumbotron jumbotron-fluid">
-					<div className="container">
-						<h1 className="display-5 m-3">Search results for Freelancers</h1>
+				<div className="jumbotron_therapist jumbotron-fluid ">
+					<div className="container d-flex-justify-content-center">
+						<h1 className="jumbotron_therapist_title display-5 m-3 text-white ">
+							Search results for Therapists
+						</h1>
 						{store.therapists.map((item, index) => {
 							if (
 								search != "" &&

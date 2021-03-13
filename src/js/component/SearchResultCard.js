@@ -4,7 +4,7 @@ import PropTypes from "prop-types";
 
 export const SearchResultCard = props => {
 	return (
-		<div className="card m-4">
+		<div className="therapist-card float-center" style={{ width: 750 }}>
 			<div className="card-header">
 				<h5>{props.therapist.name}</h5>
 			</div>
