@@ -21,12 +21,6 @@ export const Navbar = () => {
 			<Audio />
 
 			<div className="d-flex justify-content-end ">
-				<Link to="/searchbar">
-					<span>
-						<i className="search-icon fas fa-search mr-2" />
-					</span>
-					<span className="navbar-brand mr-5 text-white"> THERAPISTS</span>
-				</Link>
 				<Link to="/">
 					<span className="navbar-brand  mr-5 text-white">HOME</span>
 				</Link>
@@ -35,7 +29,12 @@ export const Navbar = () => {
 						ABOUT
 					</span>
 				</Link>
-
+				<Link to="/searchbar">
+					<span>
+						<i className="search-icon fas fa-search mr-2" />
+					</span>
+					<span className="navbar-brand mr-5 text-white"> THERAPISTS</span>
+				</Link>
 				<div className="ml-auto">
 					<Link to="/login">
 						<span className="navbar-brand text-white mr-5">LOGIN</span>
