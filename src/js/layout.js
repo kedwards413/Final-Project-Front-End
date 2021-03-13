@@ -19,6 +19,7 @@ import { About } from "./component/About";
 import { SignUp } from "./views/SignUp";
 import { Login } from "./views/Login";
 import { Testimonials } from "./component/Testimonials";
+import { SearchBar } from "./component/SearchBar";
 
 import { Profile } from "./views/Profile";
 
@@ -52,7 +53,9 @@ const Layout = () => {
 						<Route exact path="/login">
 							<Login />
 						</Route>
-
+						<Route exact path="/searchbar">
+							<SearchBar />
+						</Route>
 						<Route exact path="/patientquestionnaire">
 							<Questions />
 						</Route>

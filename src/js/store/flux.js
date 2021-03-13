@@ -3,6 +3,29 @@ import React from "react";
 const getState = ({ getStore, getActions, setStore }) => {
 	return {
 		store: {
+			therapists: [
+				{
+					name: "George",
+					specialty: "Agoraphobia, Social Phobia",
+					email: "gmihov@gmail.com",
+					phone_number: "954-438-4995",
+					zip_code: "33306"
+				},
+				{
+					name: "Paolo",
+					specialty: "Arachnaphobia",
+					email: "plucano@gmail.com",
+					phone_number: "786-931-8944",
+					zip_code: "33160"
+				},
+				{
+					name: "Marcelo",
+					specialty: "Cynophobia, Astraphobia",
+					email: "marcelorig@gmail.com",
+					phone_number: "305-548-8234",
+					zip_code: "33179"
+				}
+			],
 			modalInfo: [],
 			testimonials: [],
 
