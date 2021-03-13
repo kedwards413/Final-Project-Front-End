@@ -127,7 +127,7 @@ export const Modal = () => {
 
 									<div className="modal-answer2 text-center">
 										<div className="modal-question3 d-flex justify-content-center ">
-											<p className="secondquestion-modal text-white pt-5  ">
+											<p className="secondquestion-modal text-white pt-5 mr-3 ">
 												Tell us more about your experience
 											</p>
 										</div>
