@@ -96,7 +96,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 				fetch("https://3000-pink-toad-rnysz19w.ws-us03.gitpod.io/" + "patient", {
 					method: "POST",
 					body: JSON.stringify({
-						user_id: "3",
+						user_id: "4",
 						phobia: phobia,
 						wishfearless: goal,
 						previous_help: help,
@@ -119,13 +119,14 @@ const getState = ({ getStore, getActions, setStore }) => {
 				fetch("https://3000-pink-toad-rnysz19w.ws-us03.gitpod.io/" + "user", {
 					method: "POST",
 					body: JSON.stringify({
-						fisrt_name: firstName,
+						first_name: firstName,
 						last_name: lastName,
 						phone_number: phone,
 						user_name: userName,
 						email: email,
 						password: password
 					}), // data can be `string` or {object}!
+
 					headers: {
 						"Content-Type": "application/json"
 					}

@@ -30,7 +30,9 @@ export const Questions = () => {
 								<option>Astraphobia - Fear of thunder and lightning</option>
 								<option>Claustrophobia - Fear of enclosed spaces</option>
 								<option>Cynophobia - Fear of dogs</option>
-								<option>Social Phobia - Fear of social interaction</option>
+								<option>Trypophobia - Fear of holes</option>
+								<option>Mysophobia – Fear of germs</option>
+								<option>Phasmophobia - Fear of ghosts</option>
 							</select>
 						</div>
 						<div className="user-box text-white">
@@ -82,7 +84,7 @@ export const Questions = () => {
 									newAccount.help
 								);
 							}}>
-							Save and create account
+							<Link to="/profilepage">Save and create account</Link>
 						</button>
 					</div>
 				</div>
