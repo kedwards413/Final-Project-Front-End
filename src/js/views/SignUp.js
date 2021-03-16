@@ -4,7 +4,7 @@ import { Context } from "../store/appContext";
 
 export const SignUp = () => {
 	const { store, actions } = useContext(Context);
-	const [user, setUser] = useState("");
+	const [accountType, setAccountType] = useState("");
 
 	const [therapist, setTherapist] = useState({
 		firstName: "",
@@ -26,13 +26,13 @@ export const SignUp = () => {
 	});
 	return (
 		<>
-			{user == "therapist" ? (
+			{accountType == "therapist" ? (
 				<div className="tab-pane" id="therapists" role="tabpanel" aria-labelledby="therapists-tab">
 					<div className="login-box">
 						<button
 							className="patient-button"
 							onClick={() => {
-								setUser("patient");
+								setAccountType("patient");
 							}}>
 							Click for patient sign up
 						</button>
@@ -94,7 +94,7 @@ export const SignUp = () => {
 									type="text"
 									name=""
 									required=""
-									value={therapist.username}
+									value={therapist.userName}
 									onChange={event => setTherapist({ ...therapist, userName: event.target.value })}
 								/>
 								<label>Username</label>
@@ -114,7 +114,21 @@ export const SignUp = () => {
 								<span />
 								<span />
 								<span />
-								<Link to="/therapistprofile">Create account</Link>
+								<Link
+									to="/therapistprofile"
+									onClick={() => {
+										actions.addTherapist(
+											therapist.firstName,
+											therapist.lastName,
+											therapist.zipcode,
+											therapist.email,
+											therapist.phone,
+											therapist.userName,
+											therapist.password
+										);
+									}}>
+									Create account
+								</Link>
 							</a>
 						</form>
 					</div>
@@ -126,7 +140,7 @@ export const SignUp = () => {
 							<button
 								className="therapist-button"
 								onClick={() => {
-									setUser("therapist");
+									setAccountType("therapist");
 								}}>
 								Click for therapist sign up
 							</button>
