@@ -15,8 +15,8 @@ export const SearchBar = () => {
 					<input
 						onChange={e => setSearch(e.target.value)}
 						type="text"
-						className="form-control mr-sm-2 mt-5 "
-						placeholder="Zip Code or Phobia"
+						className="form-control mr-sm-2 mt-5"
+						placeholder="Zip Code or Phobia "
 						aria-label="Search"
 					/>
 					{/* <button
@@ -30,9 +30,7 @@ export const SearchBar = () => {
 			<div className="container">
 				<div className="jumbotron_therapist jumbotron-fluid ">
 					<div className="container d-flex-justify-content-center">
-						<h1 className="jumbotron_therapist_title display-5 m-3 text-white ">
-							Search results for Therapists
-						</h1>
+						<h1 className="jumbotron_therapist_title display-5 m-3 text-white ">Search for Therapists</h1>
 						{store.therapists.map((item, index) => {
 							if (
 								search != "" &&

@@ -5,21 +5,21 @@ const getState = ({ getStore, getActions, setStore }) => {
 		store: {
 			therapists: [
 				{
-					name: "George",
+					name: "George Mihov",
 					specialty: "Agoraphobia, Social Phobia",
 					email: "gmihov@gmail.com",
 					phone_number: "954-438-4995",
 					zip_code: "33306"
 				},
 				{
-					name: "Paolo",
+					name: "Paolo Lucano",
 					specialty: "Arachnaphobia",
 					email: "plucano@gmail.com",
 					phone_number: "786-931-8944",
 					zip_code: "33160"
 				},
 				{
-					name: "Marcelo",
+					name: "Marcelo Rigliano",
 					specialty: "Cynophobia, Astraphobia",
 					email: "marcelorig@gmail.com",
 					phone_number: "305-548-8234",
