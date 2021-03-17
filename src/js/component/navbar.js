@@ -24,10 +24,8 @@ export const Navbar = () => {
 				<Link to="/">
 					<span className="navbar-brand  mr-5 ">HOME</span>
 				</Link>
-				<Link to="/about" ref={myRef}>
-					<span className="navbar-brand  mr-5 " ref={titleRef} onClick={handleBackClick}>
-						ABOUT
-					</span>
+				<Link to="/about">
+					<span className="navbar-brand  mr-5 ">ABOUT</span>
 				</Link>
 				<Link to="/searchbar">
 					<span className="navbar-brand mr-5 "> THERAPISTS</span>

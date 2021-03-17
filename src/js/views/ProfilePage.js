@@ -22,8 +22,8 @@ export const ProfilePage = () => {
 	return (
 		<>
 			<div className="main mt-5" style={{ width: 400, height: 700 }}>
-				<div className="avatar" style={{ width: 200, height: 190, borderRadius: 100 }}>
-					<img id="output" style={{ width: 200, height: 190, borderRadius: 100 }} src={state} />
+				<div className="avatar" style={{ width: 180, height: 210, borderRadius: 100 }}>
+					<img id="output" style={{ width: 180, height: 210, borderRadius: 100 }} src={state} />
 				</div>
 				<div className="personId ">
 					<h1 className="person-name d-flex justify-content-center mt-3 text-white">Monica Lopez</h1>
