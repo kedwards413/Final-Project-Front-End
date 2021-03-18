@@ -6,7 +6,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 			modalInfo: [],
 			account: [],
 			userLogin: false,
-			currentUser: {},
+			currentUser: [{}],
 
 			demo: [
 				{
@@ -94,14 +94,13 @@ const getState = ({ getStore, getActions, setStore }) => {
 			/**
 					fetch().then().then(data => setStore({ "foo": data.bar }))
                 */
-			addTherapist: () => {
+			addTherapist: (phobia, zipcode) => {
 				fetch("https://3000-pink-toad-rnysz19w.ws-us03.gitpod.io/" + "therapist", {
 					method: "POST",
 					body: JSON.stringify({
 						user_id: "4",
-						ofice_location: "7480 Sw 152 Ave",
-						experience: "uhyidfkshgkdfsdkhjf",
-						languages_spoke: "English"
+						phobia: phobia,
+						zipcode: zipcode
 					}),
 					headers: {
 						"Content-Type": "application/json"
@@ -115,7 +114,6 @@ const getState = ({ getStore, getActions, setStore }) => {
 					})
 					.then(response => console.log("Success:", JSON.stringify(response)))
 					.catch(error => console.error("Error:", error));
-				getTherapists();
 			},
 			addPatient: (phobia, severity, help, goal) => {
 				fetch("https://3000-pink-toad-rnysz19w.ws-us03.gitpod.io/" + "patient", {
@@ -140,17 +138,17 @@ const getState = ({ getStore, getActions, setStore }) => {
 					.then(response => console.log("Success:", JSON.stringify(response)))
 					.catch(error => console.error("Error:", error));
 			},
-			addUser: (firstName, lastName, phone, userName, email, password) => {
+			addUser: (firstName, lastName, phone, email, userName, password, accountType) => {
 				fetch("https://3000-pink-toad-rnysz19w.ws-us03.gitpod.io/" + "user", {
 					method: "POST",
 					body: JSON.stringify({
 						first_name: firstName,
 						last_name: lastName,
 						phone_number: phone,
-						user_name: userName,
 						email: email,
+						user_name: userName,
 						password: password,
-						account_type: 2
+						account_type: accountType
 					}), // data can be `string` or {object}!
 
 					headers: {

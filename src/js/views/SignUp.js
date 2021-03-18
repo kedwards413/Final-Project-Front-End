@@ -4,23 +4,14 @@ import { Context } from "../store/appContext";
 
 export const SignUp = () => {
 	const { store, actions } = useContext(Context);
-	const [accountType, setAccountType] = useState("");
-
-	const [therapist, setTherapist] = useState({
-		firstName: "",
-		lastName: "",
-		email: "",
-		phone: "",
-		zipcode: "",
-		userName: "",
-		password: ""
-	});
+	const [accountType, setAccountType] = useState("patient");
+	console.log("default", accountType);
 
 	const [newUser, setNewUser] = useState({
 		firstName: "",
 		lastName: "",
-		email: "",
 		phone: "",
+		email: "",
 		userName: "",
 		password: ""
 	});
@@ -43,8 +34,8 @@ export const SignUp = () => {
 									type="text"
 									name=""
 									required=""
-									value={therapist.firstName}
-									onChange={event => setTherapist({ ...therapist, firstName: event.target.value })}
+									value={newUser.firstName}
+									onChange={event => setNewUser({ ...newUser, firstName: event.target.value })}
 								/>
 
 								<label>First Name</label>
@@ -54,38 +45,19 @@ export const SignUp = () => {
 									type="text"
 									name=""
 									required=""
-									value={therapist.lastName}
-									onChange={event => setTherapist({ ...therapist, lastName: event.target.value })}
+									value={newUser.lastName}
+									onChange={event => setNewUser({ ...newUser, lastName: event.target.value })}
 								/>
 								<label>Last Name</label>
 							</div>
+
 							<div className="user-box">
 								<input
 									type="text"
 									name=""
 									required=""
-									value={therapist.zipcode}
-									onChange={event => setTherapist({ ...therapist, zipcode: event.target.value })}
-								/>
-								<label>Zipcode</label>
-							</div>
-							<div className="user-box">
-								<input
-									type="text"
-									name=""
-									required=""
-									value={therapist.phone}
-									onChange={event => setTherapist({ ...therapist, phone: event.target.value })}
-								/>
-								<label>Phone Number</label>
-							</div>
-							<div className="user-box">
-								<input
-									type="text"
-									name=""
-									required=""
-									value={therapist.email}
-									onChange={event => setTherapist({ ...therapist, email: event.target.value })}
+									value={newUser.email}
+									onChange={event => setNewUser({ ...newUser, email: event.target.value })}
 								/>
 								<label>Email</label>
 							</div>
@@ -94,8 +66,18 @@ export const SignUp = () => {
 									type="text"
 									name=""
 									required=""
-									value={therapist.userName}
-									onChange={event => setTherapist({ ...therapist, userName: event.target.value })}
+									value={newUser.phone}
+									onChange={event => setNewUser({ ...newUser, phone: event.target.value })}
+								/>
+								<label>Phone Number</label>
+							</div>
+							<div className="user-box">
+								<input
+									type="text"
+									name=""
+									required=""
+									value={newUser.userName}
+									onChange={event => setNewUser({ ...newUser, userName: event.target.value })}
 								/>
 								<label>Username</label>
 							</div>
@@ -104,8 +86,8 @@ export const SignUp = () => {
 									type="password"
 									name=""
 									required=""
-									value={therapist.password}
-									onChange={event => setTherapist({ ...therapist, password: event.target.value })}
+									value={newUser.password}
+									onChange={event => setNewUser({ ...newUser, password: event.target.value })}
 								/>
 								<label>Password</label>
 							</div>
@@ -117,17 +99,17 @@ export const SignUp = () => {
 								<Link
 									to="/therapistprofile"
 									onClick={() => {
-										actions.addTherapist(
-											therapist.firstName,
-											therapist.lastName,
-											therapist.zipcode,
-											therapist.email,
-											therapist.phone,
-											therapist.userName,
-											therapist.password
+										actions.addUser(
+											newUser.firstName,
+											newUser.lastName,
+											newUser.phone,
+											newUser.email,
+											newUser.userName,
+											newUser.password,
+											accountType
 										);
 									}}>
-									Create account
+									Save and proceed to therapist questionnaire
 								</Link>
 							</a>
 						</form>
@@ -185,7 +167,7 @@ export const SignUp = () => {
 										required=""
 										onChange={event => setNewUser({ ...newUser, phone: event.target.value })}
 									/>
-									<label>Phone number</label>
+									<label>Phone Number</label>
 								</div>
 								<div className="user-box">
 									<input
@@ -219,7 +201,8 @@ export const SignUp = () => {
 												newUser.phone,
 												newUser.email,
 												newUser.userName,
-												newUser.password
+												newUser.password,
+												accountType
 											);
 										}}>
 										Save and proceed to patient questionnaire
