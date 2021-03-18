@@ -40,7 +40,7 @@ export const Testimonials = () => {
 	return (
 		<>
 			<div className="test-bg">
-				<div className="testimonial-title  d-flex justify-content-center  ">Testimonials</div>
+				<div className="testimonial-title  d-flex justify-content-center ">Testimonials</div>
 				<div className="testimonial-title-background">
 					<div className="testimonials ">
 						{testimonialArr.map((item, i) => {
