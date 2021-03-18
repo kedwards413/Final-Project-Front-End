@@ -97,7 +97,7 @@ export const SignUp = () => {
 								<span />
 								<span />
 								<Link
-									to="/therapistprofile"
+									to="/therapistquestionnaire"
 									onClick={() => {
 										actions.addUser(
 											newUser.firstName,

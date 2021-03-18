@@ -98,10 +98,11 @@ const getState = ({ getStore, getActions, setStore }) => {
 				fetch("https://3000-pink-toad-rnysz19w.ws-us03.gitpod.io/" + "therapist", {
 					method: "POST",
 					body: JSON.stringify({
-						user_id: "4",
+						user_id: getStore().currentUser.id,
 						phobia: phobia,
 						zipcode: zipcode
 					}),
+
 					headers: {
 						"Content-Type": "application/json"
 					}
@@ -112,7 +113,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 						}
 						return response.json();
 					})
-					.then(response => console.log("Success:", JSON.stringify(response)))
+					.then(response => setStore({ currentUser: response }))
 					.catch(error => console.error("Error:", error));
 			},
 			addPatient: (phobia, severity, help, goal) => {
