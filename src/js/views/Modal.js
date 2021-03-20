@@ -13,7 +13,8 @@ export const Modal = () => {
 	const [info, setInfo] = useState({
 		title: "",
 		experience: "",
-		checkboxes: []
+		checkboxes: [],
+		date: ""
 	});
 	var d = new Date();
 	var month = d.getUTCMonth() + 1;
@@ -64,7 +65,8 @@ export const Modal = () => {
 												onChange={e => {
 													setInfo({
 														...info,
-														checkboxes: e.target.value + " - " + a
+														checkboxes: e.target.value,
+														date: a
 													});
 												}}
 											/>
@@ -81,7 +83,8 @@ export const Modal = () => {
 												onChange={e => {
 													setInfo({
 														...info,
-														checkboxes: e.target.value + " - " + a
+														checkboxes: e.target.value,
+														date: a
 													});
 												}}
 											/>
@@ -98,7 +101,8 @@ export const Modal = () => {
 												onChange={e => {
 													setInfo({
 														...info,
-														checkboxes: e.target.value + " - " + a
+														checkboxes: e.target.value,
+														date: a
 													});
 												}}
 											/>{" "}
@@ -115,7 +119,8 @@ export const Modal = () => {
 												onChange={e => {
 													setInfo({
 														...info,
-														checkboxes: e.target.value + " - " + a
+														checkboxes: e.target.value,
+														date: a
 													});
 												}}
 											/>{" "}
