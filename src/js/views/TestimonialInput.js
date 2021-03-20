@@ -18,20 +18,28 @@ export const TestimonialInput = () => {
 		setData({ testimony: "" });
 	};
 	return (
-		<div className="testimonial-input bg-white">
-			<h1 className=" text-white testimonial-title2">Testimonial</h1>
-			<input
-				onChange={e => setData({ testimony: e.target.value })}
-				value={data.testimony}
-				className="testimonial-finalInput d-flex justify-content-center text-dark"
-				style={{ width: 800, height: 200 }}
-			/>{" "}
-			<Link to="./testimonials" onClick={() => manageData()} className="uploadPhoto mt-3 text-white">
-				Share with Us
-			</Link>
-			<div className="profileTestimonialImage">
-				<TestimonialImageUpload />
+		<>
+			<video
+				className="background-video-testimonial"
+				src="https://v.ftcdn.net/04/19/14/78/700_F_419147894_f9BB8fdLSCWBFGjIm8c8Fi5wOIztA0sg_ST.mp4"
+				loop
+				autoPlay
+			/>
+			<div className="testimonial-input bg-white">
+				<h1 className=" text-white testimonial-title2">Testimonial</h1>
+				<input
+					onChange={e => setData({ testimony: e.target.value })}
+					value={data.testimony}
+					className="testimonial-finalInput d-flex justify-content-center text-dark"
+					style={{ width: 800, height: 200 }}
+				/>{" "}
+				<Link to="./testimonials" onClick={() => manageData()} className="uploadPhoto text-white ">
+					Share with Us
+				</Link>
+				<div className="profileTestimonialImage">
+					<TestimonialImageUpload />
+				</div>
 			</div>
-		</div>
+		</>
 	);
 };
