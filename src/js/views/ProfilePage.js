@@ -1,11 +1,7 @@
 import React, { useContext, useState } from "react";
-// import { Link } from "react-router-dom";
-// import { Questions } from "../views/Questions";
-// import { ModalQuestions } from "../views/ModalQuestions";
-// import { ModalQuestionsProfilePage } from "../views/ModalQuestionsProfilePage";
 import { Progress } from "../views/ProgressBar";
 import { Context } from "../store/appContext";
-import { TestimonialImageUpload } from "../views/TestimonialImageUpload";
+// import { TestimonialImageUpload } from "../views/TestimonialImageUpload";
 import { Link } from "react-router-dom";
 
 export const ProfilePage = () => {
@@ -144,7 +140,7 @@ export const ProfilePage = () => {
 					</div>
 				</div>
 				{/* END MODALQUESTIONS.JS */}
-				<div className="testimonial-input bg-white">
+				{/* <div className="testimonial-input bg-white">
 					<h1 className=" text-white testimonial-title2">Testimonial</h1>
 					<input
 						onChange={e => setData({ testimony: e.target.value })}
@@ -155,10 +151,10 @@ export const ProfilePage = () => {
 					<Link to="./testimonials" onClick={() => manageData()} className="uploadPhoto mt-3 text-white">
 						Share with Us
 					</Link>
-				</div>
-				<div className="profileTestimonialImage">
-					<TestimonialImageUpload />
-				</div>
+				</div> */}
+				<Link to="/testimonialinput">
+					<button>hi</button>
+				</Link>
 			</div>
 		</>
 	);

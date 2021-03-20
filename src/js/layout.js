@@ -20,7 +20,7 @@ import { SignUp } from "./views/SignUp";
 import { Login } from "./views/Login";
 import { Testimonials } from "./component/Testimonials";
 import { SearchBar } from "./component/SearchBar";
-
+import { TestimonialInput } from "./views/TestimonialInput";
 import { Profile } from "./views/Profile";
 
 //create your first component
@@ -55,6 +55,9 @@ const Layout = () => {
 						</Route>
 						<Route exact path="/searchbar">
 							<SearchBar />
+						</Route>
+						<Route exact path="/testimonialinput">
+							<TestimonialInput />
 						</Route>
 						<Route exact path="/patientquestionnaire">
 							<Questions />
