@@ -1130,3 +1130,39 @@ h2{
   color: white;
 }
 
+//Therapist Subscribe Page
+.subscribed, .subscribed2{
+    display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+  color: white;
+}
+
+.therapist-button2{
+    background: black;
+    color: white;
+    border-radius: 10px;
+    display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+a, a:hover{
+    color:white;
+}
+.center-button{
+margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  
+}
+
+.homebutton{
+    background: black;
+  color:white;
+  border-radius:10px;
+}

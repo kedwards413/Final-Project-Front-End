@@ -11,6 +11,7 @@ import { Modal } from "./views/Modal";
 import { ProfilePage } from "./views/ProfilePage";
 import { Questions } from "./views/Questions";
 import { TherapistQuestions } from "./views/TherapistQuestions";
+import { TherapistSubscribe } from "./views/TherapistSubscribe";
 // import { ModalQuestions } from "./views/ModalQuestions";
 // import { ModalQuestionsProfilePage } from "./views/ModalQuestionsProfilePage";
 
@@ -52,6 +53,9 @@ const Layout = () => {
 						</Route>
 						<Route exact path="/therapistquestionnaire">
 							<TherapistQuestions />
+						</Route>
+						<Route exact path="/therapistsubscribe">
+							<TherapistSubscribe />
 						</Route>
 						<Route exact path="/modal">
 							<Modal />

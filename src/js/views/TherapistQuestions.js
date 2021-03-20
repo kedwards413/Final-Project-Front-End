@@ -49,7 +49,7 @@ export const TherapistQuestions = () => {
 							onClick={() => {
 								actions.addTherapist(therapist.phobia, therapist.zipcode);
 							}}>
-							<Link to="/therapistprofile">Save and create account</Link>
+							<Link to="/therapistsubscribe">Save and subscribe</Link>
 						</button>
 					</div>
 				</div>
