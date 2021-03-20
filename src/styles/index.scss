@@ -1166,3 +1166,46 @@ margin: 0;
   color:white;
   border-radius:10px;
 }
+
+//SEARCHBAR
+
+.jumbotron_therapist{
+    background-color: black;
+           margin-top:80px;
+     margin-left:320px;
+
+  
+}
+
+.jumbotron_therapist_title{
+    background-color:black;
+ 
+   
+}
+.form-inline-therapist{
+    margin-left:600px;
+    padding-top:100px;
+    width:200px;
+}
+
+  
+.therapist-card {
+    
+      background-color:rgb(14, 13, 13);
+    border-radius:40px;
+     transition: all 1s ease-in-out;
+    border-color:rgb(14, 13, 13);
+    margin-top:150px;
+    margin-left:-140px;
+    margin-bottom:-80px;
+    
+}
+.therapist-card:hover{
+   background:rgb(14,13,13);
+     transform: scale(1.1);
+      transition: all 1s ease-in-out;
+        box-shadow: 0px 0px 40px 8px rgba(2, 67, 248, 0.925);
+}
+.search-icon{
+    font-size:20px;
+}

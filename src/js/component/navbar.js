@@ -29,7 +29,7 @@ export const Navbar = () => {
 						ABOUT
 					</span>
 				</Link>
-				<Link to="/therapists">
+				<Link to="/searchbar">
 					<span className="navbar-brand  mr-5 text-white">THERAPISTS</span>
 				</Link>
 				<div className="ml-auto">
