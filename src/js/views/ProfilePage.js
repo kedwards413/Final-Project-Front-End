@@ -45,23 +45,6 @@ export const ProfilePage = () => {
 							<h1 className="text-center mt-5 text-white">Patient Questionnaire</h1>
 							<div>
 								<div className="user-box text-white">
-									<label>Please select your phobia from the dropdown.</label>
-									<select
-										className="form-control"
-										required
-										placeholder="Enter email"
-										onChange={event =>
-											setNewAccount({ ...newAccount, phobia: event.target.value })
-										}>
-										<option>Acrophobia - Fear of heights </option>
-										<option>Arachnophobia - Fear of spiders</option>
-										<option>Astraphobia - Fear of thunder and lightning</option>
-										<option>Claustrophobia - Fear of enclosed spaces</option>
-										<option>Cynophobia - Fear of dogs</option>
-										<option>Social Phobia - Fear of social interaction</option>
-									</select>
-								</div>
-								<div className="user-box text-white">
 									<label>How severe is your phobia? Please choose between 1-5</label>
 									<select
 										className="form-control"

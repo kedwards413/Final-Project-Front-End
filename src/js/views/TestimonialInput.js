@@ -21,7 +21,7 @@ export const TestimonialInput = () => {
 		<>
 			<video
 				className="background-video-testimonial"
-				src="https://v.ftcdn.net/04/19/14/78/700_F_419147894_f9BB8fdLSCWBFGjIm8c8Fi5wOIztA0sg_ST.mp4"
+				src="https://v.ftcdn.net/03/85/39/47/700_F_385394730_DQfLuIRhABql8ZmUQmOkJkSv5aspR2VU_ST.mp4"
 				loop
 				autoPlay
 			/>
@@ -31,12 +31,12 @@ export const TestimonialInput = () => {
 					onChange={e => setData({ testimony: e.target.value })}
 					value={data.testimony}
 					className="testimonial-finalInput d-flex justify-content-center text-dark"
-					style={{ width: 800, height: 200 }}
+					style={{ width: 800, height: 400 }}
 				/>{" "}
 				<Link to="./testimonials" onClick={() => manageData()} className="uploadPhoto text-white ">
 					Share with Us
 				</Link>
-				<div className="profileTestimonialImage">
+				<div className="profileTestimonialImage ">
 					<TestimonialImageUpload />
 				</div>
 			</div>
