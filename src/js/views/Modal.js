@@ -1,5 +1,6 @@
 import React, { useContext, useState } from "react";
 import { Link } from "react-router-dom";
+import { Video } from "../component/Video";
 // import { ModalQuestions } from "../views/ModalQuestions";
 // import phobia from "../../img/phobia.png";
 
@@ -27,20 +28,24 @@ export const Modal = () => {
 			{modalIndex < lengthCards ? (
 				<div className="modalBackground ">
 					<div className="modal  " style={{ width: 600, height: 600 }}>
-						{store.modalCards[modalIndex].imageUrl == undefined ? null : showImage == false ? (
-							<div className="modalImage">
-								<img
-									src={store.modalCards[modalIndex].imageUrl}
-									style={{
-										width: 800,
-										height: 300
-									}}
-									onClick={() => {
-										setShowImageBlack(!showImage);
-										setShowTextBlack(!showText);
-									}}
-								/>
-							</div>
+						{store.modalCards[modalIndex].videoSrc !== undefined ? (
+							<Video />
+						) : showImage == false ? (
+							<>
+								<div className="modalImage">
+									<img
+										src={store.modalCards[modalIndex].imageUrl}
+										style={{
+											width: 800,
+											height: 300
+										}}
+										onClick={() => {
+											setShowImageBlack(!showImage);
+											setShowTextBlack(!showText);
+										}}
+									/>
+								</div>
+							</>
 						) : (
 							<div
 								className="blackout-modal pl-5 pr-5"

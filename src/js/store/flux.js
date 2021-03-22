@@ -1,4 +1,5 @@
 import React from "react";
+import { Video } from "../component/Video";
 
 const getState = ({ getStore, getActions, setStore }) => {
 	return {
@@ -44,7 +45,8 @@ const getState = ({ getStore, getActions, setStore }) => {
 			modalCards: [
 				{
 					title: "Arachnophobia",
-					// imageURL: "https://i.pinimg.com/564x/1b/4f/bf/1b4fbfcafd649d3414f1a456e3565087.jpg",
+					imageUrl:
+						"https://images.unsplash.com/photo-1506747958701-808cb3805b0f?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1651&q=80",
 					text:
 						"You're about to begin your journey. There will be missions you need to complete in order to be able to proceed to the next one. The missions will increase in difficulty. If at any time you feel uncomfortable because of an image, you can click on the image and it will blackout. When you're ready, you can continue. Click the arrow on the bottom to begin your journey. ",
 					button: ""
@@ -68,7 +70,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 
 				{
 					title: "Arachnophobia",
-					imageUrl: "www.youtube.com/embed/XXkwJupqoJA",
+					videoSrc: "https://www.youtube.com/embed/EcDVXeB_rY4",
 					text:
 						" A study has found that clips from “Spider-Man” were more effective at curing arachnophobia than footage of the real thing. It reduced participants’ fear-of-spiders by 20 percent.",
 					button: ""
