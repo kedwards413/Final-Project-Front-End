@@ -160,6 +160,29 @@ const getState = ({ getStore, getActions, setStore }) => {
 					})
 					.then(response => console.log("Success:", JSON.stringify(response)))
 					.catch(error => console.error("Error:", error));
+            },
+            userLogin: (userName, password) => {
+				fetch("https://3000-pink-toad-rnysz19w.ws-us03.gitpod.io/" + "user", {
+					method: "POST",
+					body: JSON.stringify({
+						
+						user_name: userName,
+						password: password
+						
+					}), // data can be `string` or {object}!
+
+					headers: {
+						"Content-Type": "application/json"
+					}
+				})
+					.then(response => {
+						if (!response.ok) {
+							throw Error(response.statusText);
+						}
+						return response.json();
+					})
+					.then(response => setStore({ currentUser: response }))
+					.catch(error => console.error("Error:", error));
 			},
 			addUser: (firstName, lastName, phone, email, userName, password, accountType) => {
 				fetch("https://3000-pink-toad-rnysz19w.ws-us03.gitpod.io/" + "user", {
