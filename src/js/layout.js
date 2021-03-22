@@ -10,6 +10,8 @@ import injectContext from "./store/appContext";
 import { Modal } from "./views/Modal";
 import { ProfilePage } from "./views/ProfilePage";
 import { Questions } from "./views/Questions";
+import { TherapistQuestions } from "./views/TherapistQuestions";
+import { TherapistSubscribe } from "./views/TherapistSubscribe";
 // import { ModalQuestions } from "./views/ModalQuestions";
 // import { ModalQuestionsProfilePage } from "./views/ModalQuestionsProfilePage";
 
@@ -17,7 +19,8 @@ import { Navbar } from "./component/navbar";
 import { Footer } from "./component/footer";
 import { About } from "./component/About";
 import { SignUp } from "./views/SignUp";
-
+import { Login } from "./views/Login";
+import { SearchBar } from "./component/SearchBar";
 import { Profile } from "./views/Profile";
 
 //create your first component
@@ -44,14 +47,18 @@ const Layout = () => {
 						<Route exact path="/demo">
 							<Demo />
 						</Route>
-						<Route exact path="signup">
-							<SignUp />
+						<Route exact path="/searchbar">
+							<SearchBar />
 						</Route>
-
-						<Route exact path="patientquestionnaire">
+						<Route exact path="/patientquestionnaire">
 							<Questions />
 						</Route>
-
+						<Route exact path="/therapistquestionnaire">
+							<TherapistQuestions />
+						</Route>
+						<Route exact path="/therapistsubscribe">
+							<TherapistSubscribe />
+						</Route>
 						<Route exact path="/modal">
 							<Modal />
 						</Route>
@@ -69,11 +76,11 @@ const Layout = () => {
 								button="Start"
 							/> */}
 						</Route>
+						<Route exact path="/login">
+							<Login />
+						</Route>
 						<Route exact path="/signup">
 							<SignUp />
-						</Route>
-						<Route exact path="/patientquestionnaire">
-							<Questions />
 						</Route>
 						<Route exact path="/profile">
 							<Profile />
