@@ -1,7 +1,20 @@
+<<<<<<< HEAD
 import React from "react";
 import { Link } from "react-router-dom";
 
 export const Login = () => {
+=======
+import React, { useContext, useState } from "react";
+import { Link } from "react-router-dom";
+import { Context } from "../store/appContext";
+
+export const Login = () => {
+    const [login, setLogin] = useState({
+        userName:"",
+        password:""
+    })
+    const { store, actions } = useContext(Context);
+>>>>>>> fd74ba4ac74cdaefc7cdac999e28cb161800088e
 	return (
 		<>
 			<div className="login-box">

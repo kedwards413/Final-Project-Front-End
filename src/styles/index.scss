@@ -1,4 +1,8 @@
+<<<<<<< HEAD
  .background-image{
+=======
+.background-image{
+>>>>>>> fd74ba4ac74cdaefc7cdac999e28cb161800088e
       position: fixed;
  z-index:-30;
   min-width: 100%;
@@ -23,6 +27,7 @@ body{
    
   
 }
+<<<<<<< HEAD
 .navbar-brand{
     color:grey;
 }
@@ -42,6 +47,8 @@ body{
   
 }
 
+=======
+>>>>>>> fd74ba4ac74cdaefc7cdac999e28cb161800088e
 
 .audioButton{
       display:flex;
@@ -399,7 +406,11 @@ body{
      transition: all 1s ease-in-out;
     border-color:rgb(14, 13, 13);
     margin-top:100px;
+<<<<<<< HEAD
  
+=======
+   
+>>>>>>> fd74ba4ac74cdaefc7cdac999e28cb161800088e
   
     
     
@@ -411,7 +422,15 @@ body{
    background:rgb(14,13,13);
      transform: scale(1.2);
       transition: all 1s ease-in-out;
+<<<<<<< HEAD
         // box-shadow: 0px 0px 60px 8px rgb(3, 217, 245);
+=======
+        // box-shadow: -35px 0px 60px 8px rgba(255,255,255,1);
+}
+.card-body{
+    background-color:rgb(14, 13, 13);
+   
+>>>>>>> fd74ba4ac74cdaefc7cdac999e28cb161800088e
 }
 .card-subtitle{
     color:rgb(161, 159, 159);
@@ -460,6 +479,7 @@ body{
         background-image: -ms-linear-gradient(left , white 2%, #E6E6E6 50%, white 98%);
         background-image: -webkit-gradient( linear, left bottom, right bottom, color-stop(0.02, grey), color-stop(0.5, white), color-stop(0.98, grey) );
 }
+<<<<<<< HEAD
 .fade_rule_about {
         height: 1px;
         z-index:10;
@@ -473,9 +493,12 @@ body{
         background-image: -ms-linear-gradient(left , white 5%, #E6E6E6 70%, white 90%);
         background-image: -webkit-gradient( linear, left bottom, right bottom, color-stop(0.02, grey), color-stop(0.5, white), color-stop(1.3, grey) );
 }
+=======
+>>>>>>> fd74ba4ac74cdaefc7cdac999e28cb161800088e
 
 //testimonials
 
+//testimonials
 
 .testimonials{
     width: 70%;
@@ -585,8 +608,11 @@ i{
     background-color:black;
     z-index:9000;
     width:100%;
+<<<<<<< HEAD
     height:800px;
    
+=======
+>>>>>>> fd74ba4ac74cdaefc7cdac999e28cb161800088e
   
 }
 
@@ -830,6 +856,7 @@ i{
    
     font-size:30px;
     margin-right:-100px;
+<<<<<<< HEAD
 }
 .secondquestion-modal-answers{
     margin-top: 100px;
@@ -840,6 +867,10 @@ i{
 
 }
 
+=======
+
+}
+>>>>>>> fd74ba4ac74cdaefc7cdac999e28cb161800088e
 
 
 
@@ -928,12 +959,21 @@ i{
 
 .login-box a:hover {
   background: white;
+<<<<<<< HEAD
   color: black;
   border-radius: 5px;
   box-shadow: 0 0 5px rgba(2, 67, 248, 0.925),
               0 0 25px rgba(2, 67, 248, 0.925),
               0 0 50px rgba(2, 67, 248, 0.925),
               0 0 100px rgba(2, 67, 248, 0.925);
+=======
+  color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 0 5px white,
+              0 0 25px white,
+              0 0 50px white,
+              0 0 100px white;
+>>>>>>> fd74ba4ac74cdaefc7cdac999e28cb161800088e
 }
 
 .login-box a span {
@@ -946,7 +986,11 @@ i{
   left: -100%;
   width: 100%;
   height: 2px;
+<<<<<<< HEAD
   background: linear-gradient(90deg, transparent, rgba(2, 67, 248, 0.925));
+=======
+  background: linear-gradient(90deg, transparent, white);
+>>>>>>> fd74ba4ac74cdaefc7cdac999e28cb161800088e
   animation: btn-anim1 1s linear infinite;
 }
 
@@ -964,7 +1008,11 @@ i{
   right: 0;
   width: 2px;
   height: 100%;
+<<<<<<< HEAD
   background: linear-gradient(180deg, transparent, white);
+=======
+  background: linear-gradient(180deg, transparent, whiteo);
+>>>>>>> fd74ba4ac74cdaefc7cdac999e28cb161800088e
   animation: btn-anim2 1s linear infinite;
   animation-delay: .25s
 }
@@ -1015,6 +1063,19 @@ i{
     bottom: 100%;
   }
 }
+<<<<<<< HEAD
+=======
+
+//Therapist and Patient Buttons on Sign UP
+.therapist-button, .patient-button{
+    background: black;
+    color: white;
+    border-radius: 10px;
+    align-items: center;
+    padding-bottom: 5px;
+
+}
+>>>>>>> fd74ba4ac74cdaefc7cdac999e28cb161800088e
 
 
 
@@ -1032,11 +1093,16 @@ i{
 
 
 .testimonial-input{
+<<<<<<< HEAD
     // position: relative;
+=======
+    // position: absolute;
+>>>>>>> fd74ba4ac74cdaefc7cdac999e28cb161800088e
     // top: 0;
     // left: 0;
     // height:730px;
     // width:100%;
+<<<<<<< HEAD
      margin-left:320px;
  margin-top:725px;
 
@@ -1055,6 +1121,16 @@ i{
 
    
 
+=======
+     margin-left:500px;
+ margin-top:500px;
+
+}
+
+
+   
+
+>>>>>>> fd74ba4ac74cdaefc7cdac999e28cb161800088e
 .testimonial-finalInput{
     height:200px;
     width:400px;
@@ -1181,6 +1257,56 @@ h2{
 
 }
 
+<<<<<<< HEAD
+=======
+
+//Login Warning for Modal
+.warning{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+  color: white;
+}
+
+//Therapist Subscribe Page
+.subscribed, .subscribed2{
+    display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+  color: white;
+}
+
+.therapist-button2{
+    background: black;
+    color: white;
+    border-radius: 10px;
+    display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+a, a:hover{
+    color:white;
+}
+.center-button{
+margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  
+}
+
+.homebutton{
+    background: black;
+  color:white;
+  border-radius:10px;
+}
+
+>>>>>>> fd74ba4ac74cdaefc7cdac999e28cb161800088e
 //SEARCHBAR
 
 .jumbotron_therapist{

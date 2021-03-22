@@ -29,20 +29,10 @@ const getState = ({ getStore, getActions, setStore }) => {
 			],
 			modalInfo: [],
 			testimonials: [],
-
-			demo: [
-				{
-					title: "FIRST",
-					background: "white",
-					initial: "white"
-				},
-				{
-					title: "SECOND",
-					background: "white",
-					initial: "white"
-				}
-			],
-			modalCards: [
+            account: [],
+			userLogin: false,
+			currentUser: [{}],
+		    modalCards: [
 				{
 					title: "Arachnophobia",
 					imageUrl:
@@ -103,9 +93,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 					text:
 						" Your first mission is to visit a spider exhibit at a zoo or go to a pet store and watch spiders in an enclosed space. They cannot touch you and will not hurt you. Stay calm and watch them for a bit. Bring a friend for emotional support. Remember to take deep breathes and close your eyes if you need to calm down.  Caution: next card contains an image",
 
-					button: ""
-				},
-
+                },
 				{
 					title: "Arachnophobia",
 					imageUrl:
@@ -131,9 +119,25 @@ const getState = ({ getStore, getActions, setStore }) => {
 			]
 		},
 
-		actions: {
-			addingModalInfo: info => {
-				setStore({ modalInfo: [...getStore().modalInfo, info] });
+			actions: {
+				getInitialData: () => {
+					fetch("")
+						.then(function(response) {
+							if (!response.ok) {
+								throw Error(response.statusText);
+							}
+							// Read the response as json.
+							return response.json();
+						})
+						.then(function(responseAsJson) {
+							//setStore({ characters: responseAsJson.results });
+							setStore({ account: responseAsJson });
+							console.log(responseAsJson);
+						})
+						.catch(function(error) {
+							console.log("Looks like there was a problem: \n", error);
+						});
+				
 			},
 
 			addingTestimonials: testimony => {
@@ -141,70 +145,115 @@ const getState = ({ getStore, getActions, setStore }) => {
 			},
 
 			// Use getActions to call a function within a fuction
-			exampleFunction: () => {
-				getActions().changeColor(0, "green");
-			},
-			loadSomeData: () => {
-				/**
-			account: []
-		},
-		actions: {
-			getInitialData: () => {
-				fetch("")
-					.then(function(response) {
+			/**
+					fetch().then().then(data => setStore({ "foo": data.bar }))
+                */
+			addTherapist: (phobia, zipcode) => {
+				fetch("https://3000-pink-toad-rnysz19w.ws-us03.gitpod.io/" + "therapist", {
+					method: "POST",
+					body: JSON.stringify({
+						user_id: getStore().currentUser.id,
+						phobia: phobia,
+						zipcode: zipcode
+					}),
+
+					headers: {
+						"Content-Type": "application/json"
+					}
+				})
+					.then(response => {
 						if (!response.ok) {
 							throw Error(response.statusText);
 						}
-						// Read the response as json.
 						return response.json();
 					})
-					.then(function(responseAsJson) {
-						//setStore({ characters: responseAsJson.results });
-						setStore({ account: responseAsJson });
-						console.log(responseAsJson);
+					.then(response => setStore({ currentUser: response }))
+					.catch(error => console.error("Error:", error));
+			},
+			addPatient: (phobia, severity, help, goal) => {
+				fetch("https://3000-pink-toad-rnysz19w.ws-us03.gitpod.io/" + "patient", {
+					method: "POST",
+					body: JSON.stringify({
+						user_id: getStore().currentUser.id,
+						phobia: phobia,
+						wishfearless: goal,
+						previous_help: help,
+						severity: severity
+					}),
+					headers: {
+						"Content-Type": "application/json"
+					}
+				})
+					.then(response => {
+						if (!response.ok) {
+							throw Error(response.statusText);
+						}
+						return response.json();
 					})
+					.then(response => console.log("Success:", JSON.stringify(response)))
+					.catch(error => console.error("Error:", error));
+            },
+            userLogin: (userName, password) => {
+				fetch("https://3000-pink-toad-rnysz19w.ws-us03.gitpod.io/" + "user", {
+					method: "POST",
+					body: JSON.stringify({
+						
+						user_name: userName,
+						password: password
+						
+					}), // data can be `string` or {object}!
+
+					headers: {
+						"Content-Type": "application/json"
+					}
+				})
+					.then(response => {
+						if (!response.ok) {
+							throw Error(response.statusText);
+						}
+						return response.json();
+					})
+
 					.catch(function(error) {
 						console.log("Looks like there was a problem: \n", error);
 					});
-			}
+			
 		},
-		addAccount: accountToAdd => {
-			const tempStore = getStore();
-			console.log(accountToAdd);
-			fetch("", {
-				method: "POST",
-				headers: {
-					"Content-Type": "application/json"
-				},
-				body: JSON.stringify(accountToAdd)
-			})
-				.then(response => response.json())
-				.then(() => {
-					getActions().getInitialData();
-				});
-		},
-		// Use getActions to call a function within a fuction
-		exampleFunction: () => {
-			getActions().changeColor(0, "green");
-		},
-		loadSomeData: () => {
-			/**
-					fetch().then().then(data => setStore({ "foo": data.bar }))
-				*/
-			},
-			changeColor: (index, color) => {
-				//get the store
-				const store = getStore();
+	
+	
 
-				//we have to loop the entire demo array to look for the respective index
-				//and change its color
-				const demo = store.demo.map((elm, i) => {
-					if (i === index) elm.background = color;
-					return elm;
-				});
+			
+
+			addUser: (firstName, lastName, phone, email, userName, password, accountType) => {
+				fetch("https://3000-pink-toad-rnysz19w.ws-us03.gitpod.io/" + "user", {
+					method: "POST",
+					body: JSON.stringify({
+						first_name: firstName,
+						last_name: lastName,
+						phone_number: phone,
+						email: email,
+						user_name: userName,
+						password: password,
+						account_type: accountType
+					}), // data can be `string` or {object}!
+
+					headers: {
+						"Content-Type": "application/json"
+					}
+				})
+					.then(response => {
+						if (!response.ok) {
+							throw Error(response.statusText);
+						}
+						return response.json();
+					})
+					.then(response => setStore({ currentUser: response }))
+					.catch(error => console.error("Error:", error));
+
 
 				//reset the global store
-				setStore({ demo: demo });
+			
+
 			}
 		}
 	};
