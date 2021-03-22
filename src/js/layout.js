@@ -20,7 +20,13 @@ import { Footer } from "./component/footer";
 import { About } from "./component/About";
 import { SignUp } from "./views/SignUp";
 import { Login } from "./views/Login";
+<<<<<<< HEAD
+import { Testimonials } from "./component/Testimonials";
 import { SearchBar } from "./component/SearchBar";
+import { TestimonialInput } from "./views/TestimonialInput";
+=======
+import { SearchBar } from "./component/SearchBar";
+>>>>>>> fd74ba4ac74cdaefc7cdac999e28cb161800088e
 import { Profile } from "./views/Profile";
 
 //create your first component
@@ -50,6 +56,22 @@ const Layout = () => {
 						<Route exact path="/searchbar">
 							<SearchBar />
 						</Route>
+<<<<<<< HEAD
+						<Route exact path="/login">
+							<Login />
+						</Route>
+						<Route exact path="/searchbar">
+							<SearchBar />
+						</Route>
+						<Route exact path="/testimonialinput">
+							<TestimonialInput />
+						</Route>
+						<Route exact path="/patientquestionnaire">
+							<Questions />
+						</Route>
+						<Route exact path="/testimonials">
+							<Testimonials />
+=======
 						<Route exact path="/patientquestionnaire">
 							<Questions />
 						</Route>
@@ -58,10 +80,12 @@ const Layout = () => {
 						</Route>
 						<Route exact path="/therapistsubscribe">
 							<TherapistSubscribe />
+>>>>>>> fd74ba4ac74cdaefc7cdac999e28cb161800088e
 						</Route>
 						<Route exact path="/modal">
 							<Modal />
 						</Route>
+
 						{/* <Route exact path="/modalquestions">
 							<ModalQuestions />
 						</Route> */}
@@ -75,6 +99,8 @@ const Layout = () => {
                             the button stop and the screen will black out. When youre ready, you can proceed."
 								button="Start"
 							/> */}
+<<<<<<< HEAD
+=======
 						</Route>
 						<Route exact path="/login">
 							<Login />
@@ -84,7 +110,9 @@ const Layout = () => {
 						</Route>
 						<Route exact path="/profile">
 							<Profile />
+>>>>>>> fd74ba4ac74cdaefc7cdac999e28cb161800088e
 						</Route>
+
 						<Route exact path="/single/:theid">
 							<Single />
 						</Route>

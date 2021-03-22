@@ -1,8 +1,11 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import { Link } from "react-router-dom";
+import { Context } from "../store/appContext";
 
 export const Testimonials = () => {
 	const [x, setX] = useState(0);
+	const { store, actions } = useContext(Context);
+
 	let testimonialArr = [
 		//components from profile uploading testimonial? not hard coded
 		<img
@@ -37,13 +40,14 @@ export const Testimonials = () => {
 	return (
 		<>
 			<div className="test-bg">
-				<div className="testimonial-title  d-flex justify-content-center  ">Testimonials</div>
+				<div className="testimonial-title  d-flex justify-content-center ">Testimonials</div>
 				<div className="testimonial-title-background">
 					<div className="testimonials ">
 						{testimonialArr.map((item, i) => {
 							return (
 								<div key={i} className="arr " style={{ transform: `translateX(${x}%)` }}>
 									{item}
+									{/* {manageData(props)} */}
 									<p className=" testimonial-text pt-3 pl-3 pb-4 pr-2">
 										EXAMPLE QUOTES WOULD NOT HARD CODED HOW DO WE IMPORT IMAGE AND QUOTE FROM
 										SUBMITTING TESTIMONIAL. FOR IMAGES WE NEED TO HAVE A PREDETERMINED SIZE FOR
@@ -53,6 +57,14 @@ export const Testimonials = () => {
 							);
 						})}
 
+						{store.testimonials.map((item, i) => {
+							return (
+								<div key={i} className="arr " style={{ transform: `translateX(${x}%)` }}>
+									{/* {manageData(props)} */}
+									<p className=" testimonial-text pt-3 pl-3 pb-4 pr-2">{item.testimony}</p>
+								</div>
+							);
+						})}
 						<button className="leftButton" onClick={goLeft}>
 							<i className="fas fa-chevron-left" />
 						</button>

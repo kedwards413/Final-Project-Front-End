@@ -1,14 +1,21 @@
 import useSound from "use-sound";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 //include images into your bundle
 import boopSfx from "../../img/sound.mp3";
 
 export const Audio = () => {
-	// const [click, setClick] = useState(true);
+	const [click, setClick] = useState(false);
 
-	const [play] = useSound(boopSfx, { volume: 0.01 });
+	const [play, { stop }] = useSound(boopSfx, { volume: 0.01 });
 
-	return <i className="fas fa-volume-down audioButton" loop onClick={play} />;
+	useEffect(
+		() => {
+			click ? play() : stop();
+		},
+		[click]
+	);
+
+	return <i className="fas fa-volume-down audioButton" loop onClick={() => setClick(!click)} />;
 };
 
 // New METHOD
