@@ -10,21 +10,24 @@ const getState = ({ getStore, getActions, setStore }) => {
 					specialty: "Agoraphobia, Social Phobia",
 					email: "gmihov@gmail.com",
 					phone_number: "954-438-4995",
-					zip_code: "33306"
+					zip_code: "33306",
+					id: 0
 				},
 				{
 					name: "Paolo Lucano",
 					specialty: "Arachnaphobia",
 					email: "plucano@gmail.com",
 					phone_number: "786-931-8944",
-					zip_code: "33160"
+					zip_code: "33160",
+					id: 1
 				},
 				{
 					name: "Marcelo Rigliano",
 					specialty: "Cynophobia, Astraphobia",
 					email: "marcelorig@gmail.com",
 					phone_number: "305-548-8234",
-					zip_code: "33179"
+					zip_code: "33179",
+					id: 2
 				}
 			],
 			modalInfo: [],
@@ -119,6 +122,23 @@ const getState = ({ getStore, getActions, setStore }) => {
 		},
 
 		actions: {
+			hardcodedId: id => {
+				setStore({ currentUser: [{ id: id }] });
+			},
+			hardcodedAddTherapist: therapist => {
+				setStore({ therapists: [...getStore().therapists, therapist] });
+			},
+			// hardcodedTherapistsExtraInfo: (zipcode, id, phobia) => {
+			// 	let filterTherapist = getStore().therapists.filter(therapist => {
+			// 		return therapist.id !== id;
+			// 	});
+			// 	let singularTherapist = getStore().therapists.filter(therapist => {
+			// 		return therapist.id == id;
+			// 	});
+			// 	singularTherapist[0].zip_code = zipcode;
+			// 	singularTherapist[0].specialty = phobia;
+			// 	setStore({ therapists: [filterTherapist, singularTherapist[0]] });
+			// },
 			getInitialData: () => {
 				fetch("")
 					.then(function(response) {
