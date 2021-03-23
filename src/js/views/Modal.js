@@ -25,18 +25,18 @@ export const Modal = () => {
 
 	return (
 		<>
-			{/* {modalIndex < lengthCards ? (
-				<div className="modalBackground ">
-					<div className="modal  " style={{ width: 600, height: 600 }}>
-						{store.modalCards[modalIndex].videoSrc !== undefined ? (
-							<Video />
-						) : showImage == false ? (
-							<> */}
 			{store.userLogin ? (
 				modalIndex < lengthCards ? (
 					<div className="modalBackground ">
 						<div className="modal  " style={{ width: 600, height: 600 }}>
-							{store.modalCards[modalIndex].imageUrl == undefined ? null : showImage == false ? (
+							{store.modalCards[modalIndex].videoSrc !== undefined ? (
+								<Video />
+							) : showImage == false ? (
+								// {store.userLogin ? (
+								// modalIndex < lengthCards ? (
+								// 	<div className="modalBackground ">
+								// 		<div className="modal  " style={{ width: 600, height: 600 }}>
+								// 			{store.modalCards[modalIndex].imageUrl == undefined ? null : showImage == false ? (
 								<div className="modalImage">
 									<img
 										src={store.modalCards[modalIndex].imageUrl}
