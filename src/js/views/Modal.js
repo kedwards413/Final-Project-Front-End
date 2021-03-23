@@ -9,6 +9,7 @@ export const Modal = () => {
 	const { store, actions } = useContext(Context);
 	const [modalIndex, setModalIndex] = useState(0);
 	const [showImage, setShowImageBlack] = useState(false);
+
 	const [showText, setShowTextBlack] = useState(true);
 	var lengthCards = store.modalCards.length - 1;
 	const [info, setInfo] = useState({
