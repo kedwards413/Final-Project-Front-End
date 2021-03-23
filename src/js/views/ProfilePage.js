@@ -6,7 +6,6 @@ import { ModalQuestionsProfilePage } from "../views/ModalQuestionsProfilePage";
 import { Progress } from "../views/ProgressBar";
 import { Context } from "../store/appContext";
 // import { TestimonialImageUpload } from "../views/TestimonialImageUpload";
-import { Link } from "react-router-dom";
 
 export const ProfilePage = () => {
 	const { store, actions } = useContext(Context);

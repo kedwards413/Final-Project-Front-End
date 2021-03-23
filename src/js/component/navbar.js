@@ -30,12 +30,6 @@ export const Navbar = () => {
 				<Link to="/searchbar">
 					<span className="navbar-brand mr-5 "> THERAPISTS</span>
 				</Link>
-<<<<<<< HEAD
-=======
-				<Link to="/searchbar">
-					<span className="navbar-brand  mr-5 text-white">THERAPISTS</span>
-				</Link>
->>>>>>> fd74ba4ac74cdaefc7cdac999e28cb161800088e
 				<div className="ml-auto">
 					<Link to="/login">
 						<span className="navbar-brand  mr-5">LOGIN</span>

@@ -20,13 +20,9 @@ import { Footer } from "./component/footer";
 import { About } from "./component/About";
 import { SignUp } from "./views/SignUp";
 import { Login } from "./views/Login";
-<<<<<<< HEAD
 import { Testimonials } from "./component/Testimonials";
 import { SearchBar } from "./component/SearchBar";
 import { TestimonialInput } from "./views/TestimonialInput";
-=======
-import { SearchBar } from "./component/SearchBar";
->>>>>>> fd74ba4ac74cdaefc7cdac999e28cb161800088e
 import { Profile } from "./views/Profile";
 
 //create your first component
@@ -42,8 +38,8 @@ const Layout = () => {
 					<Navbar />
 					<Switch>
 						{/* <Route exact path="/audio">
-							<Component />
-						</Route> */}
+                            <Component />
+                        </Route> */}
 						<Route exact path="/">
 							<Home />
 						</Route>
@@ -56,7 +52,6 @@ const Layout = () => {
 						<Route exact path="/searchbar">
 							<SearchBar />
 						</Route>
-<<<<<<< HEAD
 						<Route exact path="/login">
 							<Login />
 						</Route>
@@ -71,46 +66,34 @@ const Layout = () => {
 						</Route>
 						<Route exact path="/testimonials">
 							<Testimonials />
-=======
-						<Route exact path="/patientquestionnaire">
-							<Questions />
 						</Route>
 						<Route exact path="/therapistquestionnaire">
 							<TherapistQuestions />
 						</Route>
 						<Route exact path="/therapistsubscribe">
 							<TherapistSubscribe />
->>>>>>> fd74ba4ac74cdaefc7cdac999e28cb161800088e
 						</Route>
 						<Route exact path="/modal">
 							<Modal />
 						</Route>
 
 						{/* <Route exact path="/modalquestions">
-							<ModalQuestions />
-						</Route> */}
+                            <ModalQuestions />
+                        </Route> */}
 						<Route exact path="/profilepage">
 							<ProfilePage />
 							{/* <Modal
-								text="
+                                text="
                             Congratulations on taking your first step to conquering your fear. There will be a series of
                             missions increasing in difficulty that will help you overcome your phobia. Visuals may
                             accompany some of the following steps, so if at anytime it gets to intense for you, click on
                             the button stop and the screen will black out. When youre ready, you can proceed."
-								button="Start"
-							/> */}
-<<<<<<< HEAD
-=======
+                                button="Start"
+                            /> */}
 						</Route>
-						<Route exact path="/login">
-							<Login />
-						</Route>
+
 						<Route exact path="/signup">
 							<SignUp />
-						</Route>
-						<Route exact path="/profile">
-							<Profile />
->>>>>>> fd74ba4ac74cdaefc7cdac999e28cb161800088e
 						</Route>
 
 						<Route exact path="/single/:theid">

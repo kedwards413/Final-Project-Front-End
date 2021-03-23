@@ -29,10 +29,10 @@ const getState = ({ getStore, getActions, setStore }) => {
 			],
 			modalInfo: [],
 			testimonials: [],
-            account: [],
-			userLogin: false,
+			account: [],
+			userLogin: true,
 			currentUser: [{}],
-		    modalCards: [
+			modalCards: [
 				{
 					title: "Arachnophobia",
 					imageUrl:
@@ -91,9 +91,8 @@ const getState = ({ getStore, getActions, setStore }) => {
 				{
 					title: "Arachnophobia",
 					text:
-						" Your first mission is to visit a spider exhibit at a zoo or go to a pet store and watch spiders in an enclosed space. They cannot touch you and will not hurt you. Stay calm and watch them for a bit. Bring a friend for emotional support. Remember to take deep breathes and close your eyes if you need to calm down.  Caution: next card contains an image",
-
-                },
+						" Your first mission is to visit a spider exhibit at a zoo or go to a pet store and watch spiders in an enclosed space. They cannot touch you and will not hurt you. Stay calm and watch them for a bit. Bring a friend for emotional support. Remember to take deep breathes and close your eyes if you need to calm down.  Caution: next card contains an image"
+				},
 				{
 					title: "Arachnophobia",
 					imageUrl:
@@ -119,25 +118,24 @@ const getState = ({ getStore, getActions, setStore }) => {
 			]
 		},
 
-			actions: {
-				getInitialData: () => {
-					fetch("")
-						.then(function(response) {
-							if (!response.ok) {
-								throw Error(response.statusText);
-							}
-							// Read the response as json.
-							return response.json();
-						})
-						.then(function(responseAsJson) {
-							//setStore({ characters: responseAsJson.results });
-							setStore({ account: responseAsJson });
-							console.log(responseAsJson);
-						})
-						.catch(function(error) {
-							console.log("Looks like there was a problem: \n", error);
-						});
-				
+		actions: {
+			getInitialData: () => {
+				fetch("")
+					.then(function(response) {
+						if (!response.ok) {
+							throw Error(response.statusText);
+						}
+						// Read the response as json.
+						return response.json();
+					})
+					.then(function(responseAsJson) {
+						//setStore({ characters: responseAsJson.results });
+						setStore({ account: responseAsJson });
+						console.log(responseAsJson);
+					})
+					.catch(function(error) {
+						console.log("Looks like there was a problem: \n", error);
+					});
 			},
 
 			addingTestimonials: testimony => {
@@ -192,15 +190,13 @@ const getState = ({ getStore, getActions, setStore }) => {
 					})
 					.then(response => console.log("Success:", JSON.stringify(response)))
 					.catch(error => console.error("Error:", error));
-            },
-            userLogin: (userName, password) => {
+			},
+			userLogin: (userName, password) => {
 				fetch("https://3000-pink-toad-rnysz19w.ws-us03.gitpod.io/" + "user", {
 					method: "POST",
 					body: JSON.stringify({
-						
 						user_name: userName,
 						password: password
-						
 					}), // data can be `string` or {object}!
 
 					headers: {
@@ -217,12 +213,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 					.catch(function(error) {
 						console.log("Looks like there was a problem: \n", error);
 					});
-			
-		},
-	
-	
-
-			
+			},
 
 			addUser: (firstName, lastName, phone, email, userName, password, accountType) => {
 				fetch("https://3000-pink-toad-rnysz19w.ws-us03.gitpod.io/" + "user", {
@@ -250,10 +241,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 					.then(response => setStore({ currentUser: response }))
 					.catch(error => console.error("Error:", error));
 
-
 				//reset the global store
-			
-
 			}
 		}
 	};
