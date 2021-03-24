@@ -122,6 +122,22 @@ const getState = ({ getStore, getActions, setStore }) => {
 		},
 
 		actions: {
+			getModalCardsInfo: () => {
+				fetch("", {
+					method: "GET",
+					headers: {
+						"Content-Type": "application/json"
+					}
+				})
+					.then(response => {
+						if (!response.ok) {
+							throw Error(response.statusText);
+						}
+						return response.json();
+					})
+					.then(response => setStore({ modalCards: response }))
+					.catch(error => console.error("Error:", error));
+			},
 			hardcodedId: id => {
 				setStore({ currentUser: [{ id: id }] });
 			},
