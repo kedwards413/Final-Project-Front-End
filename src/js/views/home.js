@@ -39,13 +39,16 @@ export const Home = () => {
 
 			{/* <div className="fade_rule mt-5" /> */}
 
-			<div className="titleCard-background  container-fluid d-flex align-content flex-wrap ">
+			<div className="titleCard-background  container-fluid d-flex align-content flex-wrap mt-5 pt-5">
+				<TitleCard title="Mysophobia" subtitle="FEAR OF GERMS" />
+				<TitleCard title="Phasmophobia" subtitle="FEAR OF GHOSTS" />
+				<TitleCard title="Trypophobia" subtitle="FEAR OF HOLES" />
+				<TitleCard title="Autophobia" subtitle="FEAR OF BEING ALONE" />
+				<TitleCard title="Hydrophobia" subtitle="FEAR OF WATER" />
+				<TitleCard title="Nephophobia" subtitle="FEAR OF CLOUDS" />
 				<TitleCard title="Arachnophobia" subtitle="FEAR OF SPIDERS" />
 				<TitleCard title="Social Phobia" subtitle="FEAR OF SOCIAL INTERACTION" />
 				<TitleCard title="Acrophobia" subtitle="FEAR OF HEIGHTS" />
-				<TitleCard title="Cynophobia" subtitle="FEAR OF DOGS" />
-				<TitleCard title="Claustrophobia" subtitle="FEAR OF ENCLOSED SPACES" />
-				<TitleCard title=" Astraphobia" subtitle="FEAR OF THUNDER AND LIGHTNING" />
 			</div>
 
 			{/* <div className="fade_rule mt-3 mb-4" /> */}

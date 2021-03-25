@@ -48,6 +48,11 @@ export const TherapistQuestions = () => {
 							className="questionnaire-button form-control mt-5"
 							onClick={() => {
 								actions.addTherapist(therapist.phobia, therapist.zipcode);
+								// actions.hardcodedTherapistsExtraInfo(
+								// 	therapist.zipcode,
+								// 	store.currentUser[0].id,
+								// 	therapist.phobia
+								//);
 							}}>
 							<Link to="/therapistsubscribe">Save and subscribe</Link>
 						</button>

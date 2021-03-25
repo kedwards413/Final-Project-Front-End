@@ -1,4 +1,5 @@
 import React from "react";
+import { Video } from "../component/Video";
 
 const getState = ({ getStore, getActions, setStore }) => {
 	return {
@@ -35,6 +36,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 			userLogin: true,
 			currentUser: [{}],
 			token: null,
+
 			modalCards: [
 				{
 					title: "Arachnophobia",
@@ -60,6 +62,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 
 					button: ""
 				},
+
 
 				{
 					title: "Arachnophobia",
@@ -122,8 +125,26 @@ const getState = ({ getStore, getActions, setStore }) => {
 		},
 
 		actions: {
+
 			logout: () => {
 				setStore({ token: null });
+=======
+			getModalCardsInfo: () => {
+				fetch("", {
+					method: "GET",
+					headers: {
+						"Content-Type": "application/json"
+					}
+				})
+					.then(response => {
+						if (!response.ok) {
+							throw Error(response.statusText);
+						}
+						return response.json();
+					})
+					.then(response => setStore({ modalCards: response }))
+					.catch(error => console.error("Error:", error));
+
 			},
 			hardcodedId: id => {
 				setStore({ currentUser: [{ id: id }] });
@@ -215,7 +236,9 @@ const getState = ({ getStore, getActions, setStore }) => {
 					.catch(error => console.error("Error:", error));
 			},
 			userLogin: (userName, password) => {
+
 				fetch("https://3000-pink-toad-rnysz19w.ws-us03.gitpod.io/" + "login", {
+
 					method: "POST",
 					body: JSON.stringify({
 						user_name: userName,
@@ -232,6 +255,9 @@ const getState = ({ getStore, getActions, setStore }) => {
 						} else {
 							setStore({ token: token });
 						}
+
+						return response.json();
+					})
 					});
 			},
 

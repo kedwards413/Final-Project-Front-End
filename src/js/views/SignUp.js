@@ -108,6 +108,30 @@ export const SignUp = () => {
 											newUser.password,
 											accountType
 										);
+										//hardcoded actions before connecting backend - delete after backend is working
+										const uniqueRandomNumber = () => {
+											let randomNumber;
+											let done = false;
+											do {
+												randomNumber = Math.floor(Math.random() * 100);
+												let checkForId = store.therapists.filter(therapist => {
+													return randomNumber == therapist.id;
+												});
+												if (checkForId.length == 0) done = true;
+											} while (!done);
+											return randomNumber;
+										};
+										const id = uniqueRandomNumber();
+										actions.hardcodedAddTherapist({
+											name: `${newUser.firstName} ${newUser.lastName}`,
+											specialty: "Arachnophobia",
+											email: newUser.email,
+											phone_number: newUser.phone,
+											zip_code: "33132",
+											id: id
+										});
+										actions.hardcodedId(id);
+										console.log(store.currentUser);
 									}}>
 									Save and proceed to therapist questionnaire
 								</Link>

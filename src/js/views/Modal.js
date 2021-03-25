@@ -1,5 +1,6 @@
 import React, { useContext, useState } from "react";
 import { Link } from "react-router-dom";
+import { Video } from "../component/Video";
 // import { ModalQuestions } from "../views/ModalQuestions";
 // import phobia from "../../img/phobia.png";
 
@@ -11,26 +12,16 @@ export const Modal = () => {
 	const [showText, setShowTextBlack] = useState(true);
 	var lengthCards = store.modalCards.length - 1;
 	const [info, setInfo] = useState({
+		title: "",
 		experience: "",
-		checkboxes: []
+		checkboxes: [],
+		date: ""
 	});
-
-	const checkBoxClearing = e => {
-		let filterInfo = info.checkboxes.filter(checkbox => {
-			return e.target.value !== checkbox;
-		});
-		if (filterInfo.length < info.checkboxes.length) {
-			setInfo({
-				...info,
-				checkboxes: filterInfo
-			});
-		} else {
-			setInfo({
-				...info,
-				checkboxes: [...info.checkboxes, e.target.value]
-			});
-		}
-	};
+	var d = new Date();
+	var month = d.getUTCMonth() + 1;
+	var day = d.getUTCDate();
+	var year = d.getUTCFullYear();
+	var a = month + "/" + day + "/" + year;
 
 	return (
 		<>
@@ -38,7 +29,14 @@ export const Modal = () => {
 				modalIndex < lengthCards ? (
 					<div className="modalBackground ">
 						<div className="modal  " style={{ width: 600, height: 600 }}>
-							{store.modalCards[modalIndex].imageUrl == undefined ? null : showImage == false ? (
+							{store.modalCards[modalIndex].videoSrc !== undefined ? (
+								<Video />
+							) : showImage == false ? (
+								// {store.userLogin ? (
+								// modalIndex < lengthCards ? (
+								// 	<div className="modalBackground ">
+								// 		<div className="modal  " style={{ width: 600, height: 600 }}>
+								// 			{store.modalCards[modalIndex].imageUrl == undefined ? null : showImage == false ? (
 								<div className="modalImage">
 									<img
 										src={store.modalCards[modalIndex].imageUrl}
@@ -67,19 +65,18 @@ export const Modal = () => {
 											</p>
 										</div>
 										<div className="modal-checkbox d-flex justify-content-center text-white">
-											<div className="form-check form-check-inline">
+											<div className="form-check form-check-inline ">
 												<input
-													className="form-check-input "
+													className="form-check-input text-white"
 													type="checkbox"
 													id="inlineCheckbox1"
-													// value={info.experience}
-													// name="experience"
-													// onChange={e => {
-													// 	setInfo({ ...info, experience: e.target.value });
-													// }}
 													value="uncomfortable"
 													onChange={e => {
-														checkBoxClearing(e);
+														setInfo({
+															...info,
+															checkboxes: e.target.value,
+															date: a
+														});
 													}}
 												/>
 												<label className="form-check-label " htmlFor="inlineCheckbox1 ">
@@ -88,17 +85,16 @@ export const Modal = () => {
 											</div>
 											<div className="form-check form-check-inline">
 												<input
-													className="form-check-input "
+													className="form-check-input"
 													type="checkbox"
 													id="inlineCheckbox1"
-													// 		value={info.experience}
-													// name="experience"
-													// onChange={e => {
-													// 	setInfo({ ...info, experience: e.target.value });
-													// }}
 													value="scared"
 													onChange={e => {
-														checkBoxClearing(e);
+														setInfo({
+															...info,
+															checkboxes: e.target.value,
+															date: a
+														});
 													}}
 												/>
 												<label className="form-check-label " htmlFor="inlineCheckbox1 ">
@@ -111,23 +107,43 @@ export const Modal = () => {
 													type="checkbox"
 													id="inlineCheckbox1"
 													value="terrified"
-													// onChange={e => {
-													// 	setInfo({ ...info, experience: e.target.value });
-													// }}
 													onChange={e => {
-														checkBoxClearing(e);
+														setInfo({
+															...info,
+															checkboxes: e.target.value,
+															date: a
+														});
 													}}
-												/>
+												/>{" "}
 												<label
 													className="form-check-label text-white"
 													htmlFor="inlineCheckbox1 ">
 													Terrified
 												</label>
 											</div>
+											<div className="form-check form-check-inline">
+												<input
+													className="form-check-input"
+													type="checkbox"
+													id="inlineCheckbox1"
+													value="neutral"
+													onChange={e => {
+														setInfo({
+															...info,
+															checkboxes: e.target.value,
+															date: a
+														});
+													}}
+												/>{" "}
+												<label className="form-check-label " htmlFor="inlineCheckbox1 ">
+													Neutral
+												</label>
+											</div>
 										</div>
+
 										<div className="modal-answer2 text-center">
 											<div className="modal-question3 d-flex justify-content-center ">
-												<p className="secondquestion-modal text-white pt-5  ">
+												<p className="secondquestion-modal text-white pt-5 mr-3 ">
 													Tell us more about your experience
 												</p>
 											</div>
@@ -137,9 +153,6 @@ export const Modal = () => {
 													className="form-control "
 													style={{ width: 300, height: 50 }}
 													value={info.experience}
-													// onChange={e => {
-													// 	setInfo({ ...info, vcb hyhhyhg    yhexperience: e.target.value });
-													// }}
 													onChange={e => {
 														setInfo({
 															...info,
@@ -164,7 +177,11 @@ export const Modal = () => {
 												setShowImageBlack(!showImage);
 												setShowTextBlack(!showText);
 												actions.addingModalInfo(info);
-												setInfo({ ...info, experience: "" });
+												setInfo({
+													...info,
+													experience: "",
+													title: store.modalCards[modalIndex].title
+												});
 											}}>
 											Continue
 										</button>

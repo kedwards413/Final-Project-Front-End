@@ -20,7 +20,9 @@ import { Footer } from "./component/footer";
 import { About } from "./component/About";
 import { SignUp } from "./views/SignUp";
 import { Login } from "./views/Login";
+import { Testimonials } from "./component/Testimonials";
 import { SearchBar } from "./component/SearchBar";
+import { TestimonialInput } from "./views/TestimonialInput";
 import { Profile } from "./views/Profile";
 
 //create your first component
@@ -50,8 +52,20 @@ const Layout = () => {
 						<Route exact path="/searchbar">
 							<SearchBar />
 						</Route>
+						<Route exact path="/login">
+							<Login />
+						</Route>
+						<Route exact path="/searchbar">
+							<SearchBar />
+						</Route>
+						<Route exact path="/testimonialinput">
+							<TestimonialInput />
+						</Route>
 						<Route exact path="/patientquestionnaire">
 							<Questions />
+						</Route>
+						<Route exact path="/testimonials">
+							<Testimonials />
 						</Route>
 						<Route exact path="/therapistquestionnaire">
 							<TherapistQuestions />
@@ -62,6 +76,7 @@ const Layout = () => {
 						<Route exact path="/modal">
 							<Modal />
 						</Route>
+
 						{/* <Route exact path="/modalquestions">
 							<ModalQuestions />
 						</Route> */}
@@ -76,15 +91,11 @@ const Layout = () => {
 								button="Start"
 							/> */}
 						</Route>
-						<Route exact path="/login">
-							<Login />
-						</Route>
+
 						<Route exact path="/signup">
 							<SignUp />
 						</Route>
-						<Route exact path="/profile">
-							<Profile />
-						</Route>
+
 						<Route exact path="/single/:theid">
 							<Single />
 						</Route>

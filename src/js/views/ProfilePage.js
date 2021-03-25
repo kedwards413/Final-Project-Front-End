@@ -5,17 +5,24 @@ import { ModalQuestions } from "../views/ModalQuestions";
 import { ModalQuestionsProfilePage } from "../views/ModalQuestionsProfilePage";
 import { Progress } from "../views/ProgressBar";
 import { Context } from "../store/appContext";
-import { TestimonialImageUpload } from "../views/TestimonialImageUpload";
+// import { TestimonialImageUpload } from "../views/TestimonialImageUpload";
 
 export const ProfilePage = () => {
 	const { store, actions } = useContext(Context);
-	console.log(store.modalInfo);
+
 	const [state, setState] = useState(null);
+	const [data, setData] = useState({
+		testimony: ""
+	});
+	const manageData = () => {
+		actions.addingTestimonials(data);
+		setData({ testimony: "" });
+	};
 	return (
 		<>
 			<div className="main mt-5" style={{ width: 400, height: 700 }}>
-				<div className="avatar">
-					<img id="output" style={{ width: "100%" }} src={state} />
+				<div className="avatar" style={{ width: 180, height: 210, borderRadius: 100 }}>
+					<img id="output" style={{ width: 180, height: 210, borderRadius: 100 }} src={state} />
 				</div>
 				<div className="personId ">
 					<h1 className="person-name d-flex justify-content-center mt-3 text-white">Monica Lopez</h1>
@@ -27,7 +34,6 @@ export const ProfilePage = () => {
 						id="input "
 						accept="image/*"
 						onChange={event => setState(URL.createObjectURL(event.target.files[0]))}
-						value=""
 					/>
 
 					<Progress />
@@ -41,23 +47,6 @@ export const ProfilePage = () => {
 						<div>
 							<h1 className="text-center mt-5 text-white">Patient Questionnaire</h1>
 							<div>
-								<div className="user-box text-white">
-									<label>Please select your phobia from the dropdown.</label>
-									<select
-										className="form-control"
-										required
-										placeholder="Enter email"
-										onChange={event =>
-											setNewAccount({ ...newAccount, phobia: event.target.value })
-										}>
-										<option>Acrophobia - Fear of heights </option>
-										<option>Arachnophobia - Fear of spiders</option>
-										<option>Astraphobia - Fear of thunder and lightning</option>
-										<option>Claustrophobia - Fear of enclosed spaces</option>
-										<option>Cynophobia - Fear of dogs</option>
-										<option>Social Phobia - Fear of social interaction</option>
-									</select>
-								</div>
 								<div className="user-box text-white">
 									<label>How severe is your phobia? Please choose between 1-5</label>
 									<select
@@ -115,36 +104,43 @@ export const ProfilePage = () => {
 							<p className="firstquestion-modal2 text-center text-white pt-5">
 								How are you feeling right now?
 							</p>
-
-							{store.modalInfo.map((info, index) => {
-								return <p key={index}>{info.checkboxes}</p>;
-							})}
+							<div className="firstquestion-modal-answers text-white">
+								{store.modalInfo.map((info, index) => {
+									return <p key={index}>{info.checkboxes}</p>;
+								})}
+							</div>
 						</div>
 
 						<div className="modal-answer-p-page text-white">
 							<div className="modal-question-p-page d-flex justify-content-center">
-								<p className="secondquestion-modal text-white  mt-3">
+								<p className="secondquestion-modal text-white  mt-5">
 									Tell us more about your experience
 								</p>
-								{store.modalInfo.map((info, index) => {
-									return <p key={index}>{info.experience}</p>;
-								})}
+								<div className="secondquestion-modal-answers">
+									{store.modalInfo.map((info, index) => {
+										return <p key={index}>{info.experience}</p>;
+									})}
+								</div>
 							</div>
 						</div>
 					</div>
 				</div>
 				{/* END MODALQUESTIONS.JS */}
-				<div className="testimonial-input bg-white">
+				{/* <div className="testimonial-input bg-white">
 					<h1 className=" text-white testimonial-title2">Testimonial</h1>
 					<input
-						className="testimonial-finalInput d-flex justify-content-center"
+						onChange={e => setData({ testimony: e.target.value })}
+						value={data.testimony}
+						className="testimonial-finalInput d-flex justify-content-center text-dark"
 						style={{ width: 800, height: 200 }}
-					/>
-					<button className="uploadPhoto mt-3"> Share with Us</button>
-				</div>
-				<div>
-					<TestimonialImageUpload />
-				</div>
+					/>{" "}
+					<Link to="./testimonials" onClick={() => manageData()} className="uploadPhoto mt-3 text-white">
+						Share with Us
+					</Link>
+				</div> */}
+				<Link to="/testimonialinput">
+					<button>hi</button>
+				</Link>
 			</div>
 		</>
 	);
