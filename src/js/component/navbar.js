@@ -1,8 +1,10 @@
-import React, { useRef, myRef } from "react";
+import React, { useState, useContext, useRef, myRef } from "react";
 import { Link } from "react-router-dom";
 import { Audio } from "../component/Audio";
+import { Context } from "../store/appContext";
 
 export const Navbar = () => {
+	const { store, actions } = useContext(Context);
 	const titleRef = useRef();
 
 	function handleBackClick() {
@@ -16,26 +18,30 @@ export const Navbar = () => {
 	return (
 		<nav className="navbar  " style={{ height: 46 }}>
 			<Link to="/profilepage">
-				<span className="navbar-brand text-white  ">fearLESS</span>
+				<span className="navbar-brand  ">fearLESS</span>
 			</Link>
 			<Audio />
 
 			<div className="d-flex justify-content-end ">
 				<Link to="/">
-					<span className="navbar-brand  mr-5 text-white">HOME</span>
+					<span className="navbar-brand  mr-5 ">HOME</span>
 				</Link>
-				<Link to="/about" ref={myRef}>
-					<span className="navbar-brand  mr-5 text-white" ref={titleRef} onClick={handleBackClick}>
-						ABOUT
-					</span>
+				<Link to="/about">
+					<span className="navbar-brand  mr-5 ">ABOUT</span>
 				</Link>
+
 				<Link to="/searchbar">
 					<span className="navbar-brand  mr-5 text-white">THERAPISTS</span>
 				</Link>
 				<div className="ml-auto">
 					<Link to="/login">
-						<span className="navbar-brand text-white mr-5">LOGIN</span>
+						<span className="navbar-brand  mr-5">LOGIN</span>
 					</Link>
+					<button
+						className={store.token ? "btn btn-dark mr-2 btn-sm mb-1" : "d-none"}
+						onClick={actions.logout()}>
+						LOGOUT
+					</button>
 					<Link to="/signup">
 						<button className="btn btn-dark mr-2 btn-sm mb-1">SIGN UP</button>
 					</Link>
