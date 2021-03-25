@@ -24,7 +24,7 @@ export const SearchResultCard = props => {
 				<p className={showNumber ? "card-text text-white ml-1" : "d-none"}>{props.therapist.phone_number}</p>
 
 				<p className="card-text text-white ml-1">{props.therapist.zip_code}</p>
-				<button className="btn btn-success btn-lg ml-1 my-2 my-sm-0" type="submit" onClick={show}>
+				<button className="btn btn-primary btn-sm ml-1 my-2 my-sm-0" type="submit" onClick={show}>
 					Reveal number
 				</button>
 				<p className={showWarning ? "card-text text-white ml-1" : "d-none"}>
