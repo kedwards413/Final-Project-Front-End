@@ -127,8 +127,9 @@ const getState = ({ getStore, getActions, setStore }) => {
 		actions: {
 
 			logout: () => {
-				setStore({ token: null });
-=======
+                setStore({ token: null });
+            },
+
 			getModalCardsInfo: () => {
 				fetch("", {
 					method: "GET",
@@ -258,7 +259,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 
 						return response.json();
 					})
-					});
+					
 			},
 
 			addUser: (firstName, lastName, phone, email, userName, password, accountType) => {

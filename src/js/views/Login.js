@@ -14,11 +14,21 @@ export const Login = () => {
 				<h2>Login</h2>
 				<form>
 					<div className="user-box">
-						<input type="text" name="" required="" />
+						<input
+							type="text"
+							name=""
+							required=""
+							onChange={event => setLogin({ ...login, userName: event.target.value })}
+						/>
 						<label>Username</label>
 					</div>
 					<div className="user-box">
-						<input type="password" name="" required="" />
+						<input
+							type="password"
+							name=""
+							required=""
+							onChange={event => setLogin({ ...login, password: event.target.value })}
+						/>
 						<label>Password</label>
 					</div>
 					<a href="#">
@@ -26,7 +36,9 @@ export const Login = () => {
 						<span />
 						<span />
 						<span />
-						Submit
+						<Link to="/profilepage" onClick={() => actions.userLogin(login.userName, login.password)}>
+							Submit
+						</Link>
 					</a>
 				</form>
 			</div>
