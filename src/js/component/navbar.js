@@ -1,8 +1,10 @@
-import React, { useRef, myRef } from "react";
+import React, { useState, useContext, useRef, myRef } from "react";
 import { Link } from "react-router-dom";
 import { Audio } from "../component/Audio";
+import { Context } from "../store/appContext";
 
 export const Navbar = () => {
+	const { store, actions } = useContext(Context);
 	const titleRef = useRef();
 
 	function handleBackClick() {
@@ -35,6 +37,11 @@ export const Navbar = () => {
 					<Link to="/login">
 						<span className="navbar-brand  mr-5">LOGIN</span>
 					</Link>
+					<button
+						className={store.token ? "btn btn-dark mr-2 btn-sm mb-1" : "d-none"}
+						onClick={actions.logout()}>
+						LOGOUT
+					</button>
 					<Link to="/signup">
 						<button className="btn btn-dark mr-2 btn-sm mb-1">SIGN UP</button>
 					</Link>

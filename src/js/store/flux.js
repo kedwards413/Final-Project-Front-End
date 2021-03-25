@@ -35,6 +35,8 @@ const getState = ({ getStore, getActions, setStore }) => {
 			account: [],
 			userLogin: true,
 			currentUser: [{}],
+			token: null,
+
 			modalCards: [
 				{
 					title: "Arachnophobia",
@@ -60,6 +62,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 
 					button: ""
 				},
+
 
 				{
 					title: "Arachnophobia",
@@ -122,6 +125,10 @@ const getState = ({ getStore, getActions, setStore }) => {
 		},
 
 		actions: {
+
+			logout: () => {
+				setStore({ token: null });
+=======
 			getModalCardsInfo: () => {
 				fetch("", {
 					method: "GET",
@@ -137,6 +144,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 					})
 					.then(response => setStore({ modalCards: response }))
 					.catch(error => console.error("Error:", error));
+
 			},
 			hardcodedId: id => {
 				setStore({ currentUser: [{ id: id }] });
@@ -228,7 +236,9 @@ const getState = ({ getStore, getActions, setStore }) => {
 					.catch(error => console.error("Error:", error));
 			},
 			userLogin: (userName, password) => {
-				fetch("https://3000-pink-toad-rnysz19w.ws-us03.gitpod.io/" + "user", {
+
+				fetch("https://3000-pink-toad-rnysz19w.ws-us03.gitpod.io/" + "login", {
+
 					method: "POST",
 					body: JSON.stringify({
 						user_name: userName,
@@ -239,15 +249,15 @@ const getState = ({ getStore, getActions, setStore }) => {
 						"Content-Type": "application/json"
 					}
 				})
-					.then(response => {
-						if (!response.ok) {
-							throw Error(response.statusText);
+					.then(response => response.json())
+					.then(token => {
+						if (typeof token.msg != "undefined") {
+						} else {
+							setStore({ token: token });
 						}
+
 						return response.json();
 					})
-
-					.catch(function(error) {
-						console.log("Looks like there was a problem: \n", error);
 					});
 			},
 

@@ -25,7 +25,7 @@ export const Modal = () => {
 
 	return (
 		<>
-			{store.userLogin ? (
+			{store.token ? (
 				modalIndex < lengthCards ? (
 					<div className="modalBackground ">
 						<div className="modal  " style={{ width: 600, height: 600 }}>
