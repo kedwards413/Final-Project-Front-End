@@ -1,4 +1,4 @@
-import React, { useState, useContext, useRef, myRef } from "react";
+import React, { useState, useContext, useRef, myRef, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { Audio } from "../component/Audio";
 import { Context } from "../store/appContext";
@@ -15,6 +15,18 @@ export const Navbar = () => {
 
 	// const executeScroll = () => myRef.current.scrollIntoView();
 	// on about span.   onClick={executeScroll}
+	const [log, setLog] = useState(false);
+	useEffect(
+		() => {
+			if (store.token !== null) {
+				setLog(true);
+			} else if (store.token == null) {
+				setLog(false);
+			}
+		},
+		[store.token]
+	);
+	console.log(store.token);
 	return (
 		<nav className="navbar  " style={{ height: 46 }}>
 			<Link to="/profilepage">
@@ -34,14 +46,15 @@ export const Navbar = () => {
 					<span className="navbar-brand  mr-5 text-white">THERAPISTS</span>
 				</Link>
 				<div className="ml-auto">
-					<Link to="/login">
-						<span className="navbar-brand  mr-5">LOGIN</span>
-					</Link>
-					<button
-						className={store.token ? "btn btn-dark mr-2 btn-sm mb-1" : "d-none"}
-						onClick={actions.logout()}>
-						LOGOUT
-					</button>
+					{!log ? (
+						<Link to="/login">
+							<span className="navbar-brand  mr-5">LOGIN</span>
+						</Link>
+					) : (
+						<button className="btn btn-dark mr-2 btn-sm mb-1" onClick={() => actions.logout()}>
+							LOGOUT
+						</button>
+					)}
 					<Link to="/signup">
 						<button className="btn btn-dark mr-2 btn-sm mb-1">SIGN UP</button>
 					</Link>

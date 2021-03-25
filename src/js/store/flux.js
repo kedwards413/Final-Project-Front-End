@@ -33,7 +33,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 			modalInfo: [],
 			testimonials: [],
 			account: [],
-			userLogin: true,
+			// userLogin: true,
 			currentUser: [{}],
 			token: null,
 
@@ -53,6 +53,13 @@ const getState = ({ getStore, getActions, setStore }) => {
 						" Spiders save us from the world’s deadliest animal. They mostly eat insects, which helps control their populations. Their webs are particularly adept at catching small flying insects such as mosquitos. Worldwide, mosquito-borne viruses kill more humans than any other animal. Caution: next mission will contain an image of spiders. Feel free to click on the image to black them out.  ",
 					button: ""
 				},
+				{
+					title: "Arachnophobia",
+					videoSrc: "https://www.youtube.com/embed/EcDVXeB_rY4",
+					text:
+						" A study has found that clips from “Spider-Man” were more effective at curing arachnophobia than footage of the real thing. It reduced participants’ fear-of-spiders by 20 percent.",
+					button: ""
+				},
 
 				{
 					title: "Arachnophobia",
@@ -63,14 +70,6 @@ const getState = ({ getStore, getActions, setStore }) => {
 					button: ""
 				},
 
-
-				{
-					title: "Arachnophobia",
-					videoSrc: "https://www.youtube.com/embed/EcDVXeB_rY4",
-					text:
-						" A study has found that clips from “Spider-Man” were more effective at curing arachnophobia than footage of the real thing. It reduced participants’ fear-of-spiders by 20 percent.",
-					button: ""
-				},
 				{
 					title: "Arachnophobia",
 					imageUrl:
@@ -125,10 +124,9 @@ const getState = ({ getStore, getActions, setStore }) => {
 		},
 
 		actions: {
-
 			logout: () => {
-                setStore({ token: null });
-            },
+				setStore({ token: null });
+			},
 
 			getModalCardsInfo: () => {
 				fetch("", {
@@ -145,7 +143,6 @@ const getState = ({ getStore, getActions, setStore }) => {
 					})
 					.then(response => setStore({ modalCards: response }))
 					.catch(error => console.error("Error:", error));
-
 			},
 			hardcodedId: id => {
 				setStore({ currentUser: [{ id: id }] });
@@ -237,9 +234,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 					.catch(error => console.error("Error:", error));
 			},
 			userLogin: (userName, password) => {
-
 				fetch("https://3000-pink-toad-rnysz19w.ws-us03.gitpod.io/" + "login", {
-
 					method: "POST",
 					body: JSON.stringify({
 						user_name: userName,
@@ -253,13 +248,14 @@ const getState = ({ getStore, getActions, setStore }) => {
 					.then(response => response.json())
 					.then(token => {
 						if (typeof token.msg != "undefined") {
+							console.log(token);
 						} else {
 							setStore({ token: token });
 						}
 
 						return response.json();
 					})
-					
+					.catch(e => console.log(e));
 			},
 
 			addUser: (firstName, lastName, phone, email, userName, password, accountType) => {
