@@ -4,7 +4,7 @@ export const TestimonialImageUpload = () => {
 	const [state, setState] = useState(null);
 
 	return (
-		<div>
+		<>
 			<button style={{ marginLeft: 800, height: 40, width: 120 }}>
 				<input
 					type="file"
@@ -19,7 +19,7 @@ export const TestimonialImageUpload = () => {
 
 			{state && <button onClick={event => setState(null)}>Remove Image</button>}
 			<img id="output" style={{ width: "50%" }} src={state} />
-		</div>
+		</>
 	);
 };
 // export function ImageUpload() {
