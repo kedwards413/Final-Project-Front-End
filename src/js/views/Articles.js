@@ -5,22 +5,28 @@ export const Articles = () => {
 		<>
 			<div className="container d-flex justify-content-around">
 				<div className="row">
-					<div className="col-md-4  d-flex justify-content-around">
-						<div className="card card-style" style={{ width: 400, height: 500 }}>
+					<div className="col-md-4 d-flex justify-content-around">
+						<div className="card card-style " style={{ width: 400, height: 500 }}>
 							<img
-								src="https://iskconnews.org/media/img_versions/2010/08-Aug/fear_slideshow.jpg"
+								src="https://cdn2.lamag.com/wp-content/uploads/sites/6/2020/04/coronaart.jpg"
+								style={{ height: 230 }}
+								className="card-img-top"
 								alt="..."
 							/>
 							<div className="card-body">
-								<h4 className="card-text">Fear of death underlies most of our phobias</h4>
+								<h4 className="card-text">
+									Fear can spread from person to person faster than the coronavirus – but there are
+									ways to slow it down
+								</h4>
 								<p className="text-muted">
-									We manage our fear of death by creating a sense of permanence and meaning in life.
-									But for some people, death anxiety results in pathological coping mechanisms, such
-									as being afraid of spiders.
+									It can feel like everyone is stewing in anxiety about COVID-19 and seeing other
+									people freak out can make you freak out more. A psychiatrist explains this
+									phenomenon, and how to keep it in check.
 								</p>
 							</div>
 						</div>
 					</div>
+
 					<div className="col-md-4  d-flex justify-content-around">
 						<div className="card card-style " style={{ width: 400, height: 500 }}>
 							<img
@@ -223,23 +229,18 @@ export const Articles = () => {
 							</div>
 						</div>
 					</div>
-					<div className="col-md-4">
-						<div className="card card-style " style={{ width: 400, height: 500 }}>
+					<div className="col-md-4  d-flex justify-content-around">
+						<div className="card card-style" style={{ width: 400, height: 500 }}>
 							<img
-								src="https://cdn2.lamag.com/wp-content/uploads/sites/6/2020/04/coronaart.jpg"
-								style={{ height: 230 }}
-								className="card-img-top"
+								src="https://iskconnews.org/media/img_versions/2010/08-Aug/fear_slideshow.jpg"
 								alt="..."
 							/>
 							<div className="card-body">
-								<h4 className="card-text">
-									Fear can spread from person to person faster than the coronavirus – but there are
-									ways to slow it down
-								</h4>
+								<h4 className="card-text">Fear of death underlies most of our phobias</h4>
 								<p className="text-muted">
-									It can feel like everyone is stewing in anxiety about COVID-19 and seeing other
-									people freak out can make you freak out more. A psychiatrist explains this
-									phenomenon, and how to keep it in check.
+									We manage our fear of death by creating a sense of permanence and meaning in life.
+									But for some people, death anxiety results in pathological coping mechanisms, such
+									as being afraid of spiders.
 								</p>
 							</div>
 						</div>
