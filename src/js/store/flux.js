@@ -33,7 +33,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 			modalInfo: [],
 			testimonials: [],
 			account: [],
-			userLogin: false,
+			// userLogin: true,
 			currentUser: [{}],
 			token: null,
 
@@ -53,6 +53,13 @@ const getState = ({ getStore, getActions, setStore }) => {
 						" Spiders save us from the world’s deadliest animal. They mostly eat insects, which helps control their populations. Their webs are particularly adept at catching small flying insects such as mosquitos. Worldwide, mosquito-borne viruses kill more humans than any other animal. Caution: next mission will contain an image of spiders. Feel free to click on the image to black them out.  ",
 					button: ""
 				},
+				{
+					title: "Arachnophobia",
+					videoSrc: "https://www.youtube.com/embed/EcDVXeB_rY4",
+					text:
+						" A study has found that clips from “Spider-Man” were more effective at curing arachnophobia than footage of the real thing. It reduced participants’ fear-of-spiders by 20 percent.",
+					button: ""
+				},
 
 				{
 					title: "Arachnophobia",
@@ -63,13 +70,6 @@ const getState = ({ getStore, getActions, setStore }) => {
 					button: ""
 				},
 
-				{
-					title: "Arachnophobia",
-					videoSrc: "https://www.youtube.com/embed/EcDVXeB_rY4",
-					text:
-						" A study has found that clips from “Spider-Man” were more effective at curing arachnophobia than footage of the real thing. It reduced participants’ fear-of-spiders by 20 percent.",
-					button: ""
-				},
 				{
 					title: "Arachnophobia",
 					imageUrl:
