@@ -31,17 +31,20 @@ export const Navbar = () => {
 				</Link>
 
 				<Link to="/searchbar">
-					<span className="navbar-brand  mr-5 text-white">THERAPISTS</span>
+					<span className="navbar-brand  mr-5 ">THERAPISTS</span>
+				</Link>
+				<Link to="/articles">
+					<span className="navbar-brand  mr-5 ">ARTICLES</span>
 				</Link>
 				<div className="ml-auto">
 					<Link to="/login">
 						<span className="navbar-brand  mr-5">LOGIN</span>
 					</Link>
-					<button
+					{/* <button
 						className={store.token ? "btn btn-dark mr-2 btn-sm mb-1" : "d-none"}
 						onClick={actions.logout()}>
 						LOGOUT
-					</button>
+					</button> */}
 					<Link to="/signup">
 						<button className="btn btn-dark mr-2 btn-sm mb-1">SIGN UP</button>
 					</Link>

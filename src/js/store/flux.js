@@ -33,7 +33,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 			modalInfo: [],
 			testimonials: [],
 			account: [],
-			userLogin: true,
+			userLogin: false,
 			currentUser: [{}],
 			token: null,
 
@@ -62,7 +62,6 @@ const getState = ({ getStore, getActions, setStore }) => {
 
 					button: ""
 				},
-
 
 				{
 					title: "Arachnophobia",
@@ -125,10 +124,9 @@ const getState = ({ getStore, getActions, setStore }) => {
 		},
 
 		actions: {
-
 			logout: () => {
-                setStore({ token: null });
-            },
+				setStore({ token: null });
+			},
 
 			getModalCardsInfo: () => {
 				fetch("", {
@@ -145,7 +143,6 @@ const getState = ({ getStore, getActions, setStore }) => {
 					})
 					.then(response => setStore({ modalCards: response }))
 					.catch(error => console.error("Error:", error));
-
 			},
 			hardcodedId: id => {
 				setStore({ currentUser: [{ id: id }] });
@@ -237,9 +234,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 					.catch(error => console.error("Error:", error));
 			},
 			userLogin: (userName, password) => {
-
 				fetch("https://3000-pink-toad-rnysz19w.ws-us03.gitpod.io/" + "login", {
-
 					method: "POST",
 					body: JSON.stringify({
 						user_name: userName,
@@ -258,8 +253,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 						}
 
 						return response.json();
-					})
-					
+					});
 			},
 
 			addUser: (firstName, lastName, phone, email, userName, password, accountType) => {

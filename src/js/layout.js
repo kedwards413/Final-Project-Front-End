@@ -24,6 +24,7 @@ import { Testimonials } from "./component/Testimonials";
 import { SearchBar } from "./component/SearchBar";
 import { TestimonialInput } from "./views/TestimonialInput";
 import { Profile } from "./views/Profile";
+import { Articles } from "./views/Articles";
 
 //create your first component
 const Layout = () => {
@@ -54,6 +55,9 @@ const Layout = () => {
 						</Route>
 						<Route exact path="/login">
 							<Login />
+						</Route>
+						<Route exact path="/articles">
+							<Articles />
 						</Route>
 						<Route exact path="/searchbar">
 							<SearchBar />
