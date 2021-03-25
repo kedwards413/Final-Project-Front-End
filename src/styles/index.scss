@@ -527,9 +527,10 @@ button{
     position:absolute;
     top:50%;
     left:0;
+    margin-top:8px;
     transform:translateY(-50%);
     width:5%;
-    height: 80%;
+    height: 77%;
     transition:0.5s;
     border-right:1px solid black;
     &:hover{
@@ -559,9 +560,10 @@ button{
     position:absolute;
     top:50%;
     right:0;
+    margin-top:8px;
     transform:translateY(-50%);
     width:5%;
-    height: 80%;
+    height: 77%;
     border-left:none;
     border-top:none;
     border-bottom:none;
