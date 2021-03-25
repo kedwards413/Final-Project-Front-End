@@ -35,8 +35,6 @@ export const ProfilePage = () => {
 						accept="image/*"
 						onChange={event => setState(URL.createObjectURL(event.target.files[0]))}
 					/>
-
-					<Progress />
 				</div>
 				<div className="outer-line">
 					<div className="inner-line" />
