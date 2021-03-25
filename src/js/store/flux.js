@@ -248,12 +248,14 @@ const getState = ({ getStore, getActions, setStore }) => {
 					.then(response => response.json())
 					.then(token => {
 						if (typeof token.msg != "undefined") {
+							console.log(token);
 						} else {
 							setStore({ token: token });
 						}
 
 						return response.json();
-					});
+					})
+					.catch(e => console.log(e));
 			},
 
 			addUser: (firstName, lastName, phone, email, userName, password, accountType) => {
