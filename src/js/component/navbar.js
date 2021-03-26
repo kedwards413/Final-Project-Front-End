@@ -10,7 +10,18 @@ export const Navbar = () => {
 	function handleBackClick() {
 		titleRef.current.scrollIntoView({ behavior: "smooth" });
 		// Scroll back to the title element...
-	}
+    }
+    const [log, setLog] = useState(false);
+	useEffect(
+		() => {
+			if (store.token !== null) {
+				setLog(true);
+			} else if (store.token == null) {
+				setLog(false);
+			}
+		},
+		[store.token]
+	);
 	// const myRef = useRef(null);
 
 	// const executeScroll = () => myRef.current.scrollIntoView();
@@ -37,14 +48,15 @@ export const Navbar = () => {
 					<span className="navbar-brand  mr-5 ">ARTICLES</span>
 				</Link>
 				<div className="ml-auto">
-					<Link to="/login">
-						<span className="navbar-brand  mr-5">LOGIN</span>
-					</Link>
-					{/* <button
-						className={store.token ? "btn btn-dark mr-2 btn-sm mb-1" : "d-none"}
-						onClick={actions.logout()}>
-						LOGOUT
-					</button> */}
+					{!log ? (
+						<Link to="/login">
+							<span className="navbar-brand  mr-5">LOGIN</span>
+						</Link>
+					) : (
+						<button className="btn btn-dark mr-2 btn-sm mb-1" onClick={() => actions.logout()}>
+							LOGOUT
+						</button>
+					)}
 					<Link to="/signup">
 						<button className="btn btn-dark mr-2 btn-sm mb-1">SIGN UP</button>
 					</Link>
