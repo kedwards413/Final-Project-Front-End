@@ -33,7 +33,6 @@ export const Modal = () => {
 				modalIndex < lengthCards ? (
 					<div className="modalBackground ">
 						<div className="modal  " style={{ width: 600, height: 600 }}>
-							<p>{store.modalCards[modalIndex].quest}</p>
 							{store.modalCards[modalIndex].videoSrc !== undefined ? (
 								<Video />
 							) : showImage == false ? (
@@ -189,7 +188,12 @@ export const Modal = () => {
 									</div>
 								</div>
 							)}
-							{showText && <p className="modalText pl-5 pr-5">{store.modalCards[modalIndex].text}</p>}
+							{showText && (
+								<p className="modalText pl-5 pr-5">
+									<h1 className="d-block mt-5">{store.modalCards[modalIndex].quest}</h1>
+									<p className="d-block">{store.modalCards[modalIndex].text}</p>
+								</p>
+							)}
 							<i
 								className="arrowIcon fas fa-arrow-right
 							startButton mb-3"
