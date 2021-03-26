@@ -729,7 +729,7 @@ i{
     color:rgb(161, 159, 159);
     width:100%;
     position:absolute;
-      display:flex;
+    //   display:flex;
     justify-content:center;
     align-self:flex-end;
     margin-bottom:150px;
@@ -1084,15 +1084,7 @@ i{
   min-height: 100%;
   z-index:-30;
 
-}
-
-
-   
-
- 
-
-
-   
+}   
 
 .testimonial-finalInput{
     height:200px;

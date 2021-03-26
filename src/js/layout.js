@@ -39,8 +39,8 @@ const Layout = () => {
 					<Navbar />
 					<Switch>
 						{/* <Route exact path="/audio">
-							<Component />
-						</Route> */}
+                            <Component />
+                        </Route> */}
 						<Route exact path="/">
 							<Home />
 						</Route>
@@ -82,18 +82,23 @@ const Layout = () => {
 						</Route>
 
 						{/* <Route exact path="/modalquestions">
-							<ModalQuestions />
-						</Route> */}
+                            <ModalQuestions />
+                        </Route> */}
 						<Route exact path="/profilepage">
 							<ProfilePage />
 							{/* <Modal
-								text="
+                                text="
                             Congratulations on taking your first step to conquering your fear. There will be a series of
                             missions increasing in difficulty that will help you overcome your phobia. Visuals may
                             accompany some of the following steps, so if at anytime it gets to intense for you, click on
                             the button stop and the screen will black out. When youre ready, you can proceed."
+<<<<<<< HEAD
+                                button="Start"
+                            /> */}
+=======
 								button="Start"
 							/> */}
+>>>>>>> 1c93fedf38ce5cba7796f3bb2754b295a91314bf
 						</Route>
 
 						<Route exact path="/signup">
