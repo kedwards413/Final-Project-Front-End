@@ -752,11 +752,14 @@ i{
    
 }
 
-
+.firstquestion-modal2 {
+    font-size:40px;
+    margin-right:-150px;
+}
 
 //PROFILE page
 .profileButton{
-    margin-left:150px;
+    margin-left:140px;
     font-size:20px;
     
 }
@@ -788,6 +791,7 @@ i{
     font-size:35px;
      display:flex;
    justify-content:center;
+   margin-right:60px;
 
 }
 .outer-line {
@@ -797,7 +801,7 @@ i{
   position: relative;
   overflow: hidden;
   margin-right:-1px;
-  margin-top:-500px;
+  margin-top:-350px;
   
  
 }
@@ -821,29 +825,30 @@ i{
 //questions
 
 .questions2{
-    margin-left:500px;
-    margin-top:-700px;
+    margin-left:450px;
+    margin-top:-920px;
     width:250px;
    
     font-size: 10px;
 }
 
 
-
+.profil
 
 // modal on profile page
 
 .firstquestion-modal2{
     font-size:30px;
     margin-right:-100px;
-    margin-top:200px;
+  
     
    
 }
 .secondquestion-modal{
    
-    font-size:30px;
-    margin-right:-100px;
+    font-size:40px;
+    margin-right:-170px;
+    margin-top:50px;
 }
 .secondquestion-modal-answers{
     margin-top: 100px;
@@ -1029,6 +1034,11 @@ i{
   }
 }
 
+.testimonial-btn{
+    margin-left:150px;
+    margin-top:100px;
+    position:relative;
+}
 //Therapist and Patient Buttons on Sign UP
 .therapist-button, .patient-button{
     background: black;
@@ -1182,7 +1192,9 @@ h2{
     margin-top:-40px;
    
 }
-
+.container-questions2{
+    margin-right:500px;
+}
 .custom-file-input::before {
   content: 'Select the Image';
 //   display: inline-block;

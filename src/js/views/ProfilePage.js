@@ -25,7 +25,7 @@ export const ProfilePage = () => {
 					<img id="output" style={{ width: 180, height: 210, borderRadius: 100 }} src={state} />
 				</div>
 				<div className="personId ">
-					<h1 className="person-name d-flex justify-content-center mt-3 text-white">Monica Lopez</h1>
+					<h1 className="person-name d-flex justify-content-center mt-3 text-white">Alicia</h1>
 					<h2 className="phobiaName d-flex justify-content-center mt-4 text-white">Arachnaphobic</h2>
 
 					<input
@@ -111,7 +111,7 @@ export const ProfilePage = () => {
 
 						<div className="modal-answer-p-page text-white">
 							<div className="modal-question-p-page d-flex justify-content-center">
-								<p className="secondquestion-modal text-white  mt-5">
+								<p className="secondquestion-modal text-white  mt-5 pt-5">
 									Tell us more about your experience
 								</p>
 								<div className="secondquestion-modal-answers">
@@ -137,7 +137,7 @@ export const ProfilePage = () => {
 					</Link>
 				</div> */}
 				<Link to="/testimonialinput">
-					<button>hi</button>
+					<button className="testimonial-btn">testimonial</button>
 				</Link>
 			</div>
 		</>
