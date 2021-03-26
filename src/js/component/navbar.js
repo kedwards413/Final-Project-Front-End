@@ -1,4 +1,4 @@
-import React, { useState, useContext, useRef, myRef } from "react";
+import React, { useState, useContext, useRef, myRef, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { Audio } from "../component/Audio";
 import { Context } from "../store/appContext";
@@ -10,8 +10,8 @@ export const Navbar = () => {
 	function handleBackClick() {
 		titleRef.current.scrollIntoView({ behavior: "smooth" });
 		// Scroll back to the title element...
-    }
-    const [log, setLog] = useState(false);
+	}
+	const [log, setLog] = useState(false);
 	useEffect(
 		() => {
 			if (store.token !== null) {
