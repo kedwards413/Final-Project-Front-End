@@ -10,28 +10,33 @@ const getState = ({ getStore, getActions, setStore }) => {
 					specialty: "Agoraphobia, Social Phobia",
 					email: "gmihov@gmail.com",
 					phone_number: "954-438-4995",
-					zip_code: "33306"
+					zip_code: "33306",
+					id: 0
 				},
 				{
 					name: "Paolo Lucano",
 					specialty: "Arachnaphobia",
 					email: "plucano@gmail.com",
 					phone_number: "786-931-8944",
-					zip_code: "33160"
+					zip_code: "33160",
+					id: 1
 				},
 				{
 					name: "Marcelo Rigliano",
 					specialty: "Cynophobia, Astraphobia",
 					email: "marcelorig@gmail.com",
 					phone_number: "305-548-8234",
-					zip_code: "33179"
+					zip_code: "33179",
+					id: 2
 				}
 			],
 			modalInfo: [],
 			testimonials: [],
 			account: [],
-			userLogin: true,
+			// userLogin: true,
 			currentUser: [{}],
+			token: null,
+
 			modalCards: [
 				{
 					title: "Arachnophobia",
@@ -50,14 +55,13 @@ const getState = ({ getStore, getActions, setStore }) => {
 						" Spiders save us from the world’s deadliest animal. They mostly eat insects, which helps control their populations. Their webs are particularly adept at catching small flying insects such as mosquitos. Worldwide, mosquito-borne viruses kill more humans than any other animal. Caution: next mission will contain an image of spiders. Feel free to click on the image to black them out.  ",
 					button: ""
 				},
-
 				{
 					title: "Arachnophobia",
 					quest: "Quest 3",
 					imageUrl: "https://earthsky.org/upl/2015/10/peacock-spider-e1477522482238.jpg",
+					videoSrc: "https://www.youtube.com/embed/EcDVXeB_rY4",
 					text:
-						"Each day, try to increase your time spent with the photograph. When you feel safe or comfortable enough, try touching the image. When you are ready, move on to the next mission.",
-
+						" A study has found that clips from “Spider-Man” were more effective at curing arachnophobia than footage of the real thing. It reduced participants’ fear-of-spiders by 20 percent.",
 					button: ""
 				},
 
@@ -65,10 +69,13 @@ const getState = ({ getStore, getActions, setStore }) => {
 					title: "Arachnophobia",
 					quest: "Quest 4",
 					videoSrc: "https://www.youtube.com/embed/EcDVXeB_rY4",
+					imageUrl: "https://earthsky.org/upl/2015/10/peacock-spider-e1477522482238.jpg",
 					text:
-						" A study has found that clips from “Spider-Man” were more effective at curing arachnophobia than footage of the real thing. It reduced participants’ fear-of-spiders by 20 percent.",
+						"Each day, try to increase your time spent with the photograph. When you feel safe or comfortable enough, try touching the image. When you are ready, move on to the next mission.",
+
 					button: ""
 				},
+
 				{
 					title: "Arachnophobia",
 					quest: "Quest 5",
@@ -129,6 +136,43 @@ const getState = ({ getStore, getActions, setStore }) => {
 		},
 
 		actions: {
+			logout: () => {
+				setStore({ token: null });
+			},
+
+			getModalCardsInfo: () => {
+				fetch("", {
+					method: "GET",
+					headers: {
+						"Content-Type": "application/json"
+					}
+				})
+					.then(response => {
+						if (!response.ok) {
+							throw Error(response.statusText);
+						}
+						return response.json();
+					})
+					.then(response => setStore({ modalCards: response }))
+					.catch(error => console.error("Error:", error));
+			},
+			hardcodedId: id => {
+				setStore({ currentUser: [{ id: id }] });
+			},
+			hardcodedAddTherapist: therapist => {
+				setStore({ therapists: [...getStore().therapists, therapist] });
+			},
+			// hardcodedTherapistsExtraInfo: (zipcode, id, phobia) => {
+			// 	let filterTherapist = getStore().therapists.filter(therapist => {
+			// 		return therapist.id !== id;
+			// 	});
+			// 	let singularTherapist = getStore().therapists.filter(therapist => {
+			// 		return therapist.id == id;
+			// 	});
+			// 	singularTherapist[0].zip_code = zipcode;
+			// 	singularTherapist[0].specialty = phobia;
+			// 	setStore({ therapists: [filterTherapist, singularTherapist[0]] });
+			// },
 			getInitialData: () => {
 				fetch("")
 					.then(function(response) {
@@ -204,7 +248,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 					.catch(error => console.error("Error:", error));
 			},
 			userLogin: (userName, password) => {
-				fetch("https://3000-pink-toad-rnysz19w.ws-us03.gitpod.io/" + "user", {
+				fetch("https://3000-pink-toad-rnysz19w.ws-us03.gitpod.io/" + "login", {
 					method: "POST",
 					body: JSON.stringify({
 						user_name: userName,
@@ -215,10 +259,14 @@ const getState = ({ getStore, getActions, setStore }) => {
 						"Content-Type": "application/json"
 					}
 				})
-					.then(response => {
-						if (!response.ok) {
-							throw Error(response.statusText);
+					.then(response => response.json())
+					.then(token => {
+						if (typeof token.msg != "undefined") {
+							console.log(token);
+						} else {
+							setStore({ token: token });
 						}
+
 						return response.json();
 					})
 

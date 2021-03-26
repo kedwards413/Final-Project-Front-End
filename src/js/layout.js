@@ -24,6 +24,7 @@ import { Testimonials } from "./component/Testimonials";
 import { SearchBar } from "./component/SearchBar";
 import { TestimonialInput } from "./views/TestimonialInput";
 import { Profile } from "./views/Profile";
+import { Articles } from "./views/Articles";
 
 //create your first component
 const Layout = () => {
@@ -54,6 +55,9 @@ const Layout = () => {
 						</Route>
 						<Route exact path="/login">
 							<Login />
+						</Route>
+						<Route exact path="/articles">
+							<Articles />
 						</Route>
 						<Route exact path="/searchbar">
 							<SearchBar />
@@ -88,8 +92,13 @@ const Layout = () => {
                             missions increasing in difficulty that will help you overcome your phobia. Visuals may
                             accompany some of the following steps, so if at anytime it gets to intense for you, click on
                             the button stop and the screen will black out. When youre ready, you can proceed."
+<<<<<<< HEAD
                                 button="Start"
                             /> */}
+=======
+								button="Start"
+							/> */}
+>>>>>>> 1c93fedf38ce5cba7796f3bb2754b295a91314bf
 						</Route>
 
 						<Route exact path="/signup">

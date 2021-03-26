@@ -4,7 +4,9 @@
   min-width: 100%;
   min-height: 100%;
 }
-
+.card-style{
+    color:white;
+}
 // TITLECARD 
 
 body{
@@ -23,6 +25,7 @@ body{
    
   
 }
+
 .navbar-brand{
     color:grey;
 }
@@ -457,6 +460,7 @@ body{
         z-index:10;
         width: 66.0em;
         margin: 0 auto;
+        
        
         background-image: linear-gradient(left , white 2%, #E6E6E6 50%, white 98%);
         background-image: -o-linear-gradient(left , white 2%, #E6E6E6 50%, white 98%);
@@ -524,9 +528,10 @@ button{
     position:absolute;
     top:50%;
     left:0;
+    margin-top:8px;
     transform:translateY(-50%);
     width:5%;
-    height: 80%;
+    height: 77%;
     transition:0.5s;
     border-right:1px solid black;
     &:hover{
@@ -556,9 +561,10 @@ button{
     position:absolute;
     top:50%;
     right:0;
+    margin-top:8px;
     transform:translateY(-50%);
     width:5%;
-    height: 80%;
+    height: 77%;
     border-left:none;
     border-top:none;
     border-bottom:none;
@@ -618,11 +624,13 @@ i{
 
      justify-content:center;
      display:flex;
+     
 
 }
 .testimonial-text{
     background:rgba(0,0,0,0.253);
     color:white;
+    
 
 }
 
@@ -814,7 +822,7 @@ i{
 
 .questions2{
     margin-left:500px;
-    margin-top:-1000px;
+    margin-top:-700px;
     width:250px;
    
     font-size: 10px;
@@ -828,7 +836,7 @@ i{
 .firstquestion-modal2{
     font-size:30px;
     margin-right:-100px;
-    margin-top:-80px;
+    margin-top:200px;
     
    
 }
@@ -933,15 +941,14 @@ i{
 }
 
 .login-box a:hover {
-  background: white;
-  color: #fff;
+  background: black;
+  color:white;
   border-radius: 5px;
-  box-shadow: 0 0 5px white,
-              0 0 25px white,
-              0 0 50px white,
-              0 0 100px white;
+  box-shadow: 0 0 5px rgba(2, 67, 248, 0.925),
+              0 0 25px rgba(2, 67, 248, 0.925),
+              0 0 50px rgba(2, 67, 248, 0.925),
+              0 0 100px rgba(2, 67, 248, 0.925);
 }
-
 .login-box a span {
   position: absolute;
   display: block;
@@ -1067,15 +1074,7 @@ i{
   min-height: 100%;
   z-index:-30;
 
-}
-
-
-   
-
-   
-
-
-   
+}   
 
 .testimonial-finalInput{
     height:200px;
@@ -1291,4 +1290,14 @@ margin: 0;
 }
 .search-icon{
     font-size:20px;
+}
+
+.therapist-number{
+    background-color: #0cbaba;
+background-image: linear-gradient(315deg, #0cbaba 0%, #380036 74%);
+color: white;
+
+}
+.therapist-number:hover{
+    color:white;
 }
