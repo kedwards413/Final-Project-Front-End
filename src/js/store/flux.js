@@ -35,6 +35,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 			modalCards: [
 				{
 					title: "Arachnophobia",
+					quest: "Quest 1",
 					imageUrl:
 						"https://images.unsplash.com/photo-1506747958701-808cb3805b0f?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1651&q=80",
 					text:
@@ -43,6 +44,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 				},
 				{
 					title: "Arachnophobia",
+					quest: "Quest 2",
 					// imageUrl: "https://s.hdnux.com/photos/01/13/13/45/19708276/8/rawImage.jpg",
 					text:
 						" Spiders save us from the world’s deadliest animal. They mostly eat insects, which helps control their populations. Their webs are particularly adept at catching small flying insects such as mosquitos. Worldwide, mosquito-borne viruses kill more humans than any other animal. Caution: next mission will contain an image of spiders. Feel free to click on the image to black them out.  ",
@@ -51,6 +53,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 
 				{
 					title: "Arachnophobia",
+					quest: "Quest 3",
 					imageUrl: "https://earthsky.org/upl/2015/10/peacock-spider-e1477522482238.jpg",
 					text:
 						"Each day, try to increase your time spent with the photograph. When you feel safe or comfortable enough, try touching the image. When you are ready, move on to the next mission.",
@@ -60,6 +63,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 
 				{
 					title: "Arachnophobia",
+					quest: "Quest 4",
 					videoSrc: "https://www.youtube.com/embed/EcDVXeB_rY4",
 					text:
 						" A study has found that clips from “Spider-Man” were more effective at curing arachnophobia than footage of the real thing. It reduced participants’ fear-of-spiders by 20 percent.",
@@ -67,6 +71,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 				},
 				{
 					title: "Arachnophobia",
+					quest: "Quest 5",
 					imageUrl:
 						"https://media.pri.org/s3fs-public/styles/story_main/public/widow_hand_SeanMcCann-625x450.jpg?itok=MiEpSGq3",
 					text:
@@ -75,6 +80,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 				},
 				{
 					title: "Arachnophobia",
+					quest: "Quest 6",
 					imageURL: "https://i.pinimg.com/564x/1b/4f/bf/1b4fbfcafd649d3414f1a456e3565087.jpg",
 					text:
 						"You're about to begin your journey. There will be missions you need to complete in order to be able to proceed to the next one. The missions will increase in difficulty. If at any time you feel uncomfortable because of an image, you can click on the image and it will turn black. When you're ready you can continue. Caution: next card contains an image ",
@@ -82,6 +88,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 				},
 				{
 					title: "Arachnophobia",
+					quest: "Quest 7",
 					imageUrl: "https://s.hdnux.com/photos/01/13/13/45/19708276/8/rawImage.jpg",
 					text:
 						"The VAST majority of spiders are not harmful to humans. Instead their webs catch mosqitoes, which kill more humans than any other animal.  When you are ready, press 'next' and you will begin your first mission",
@@ -90,11 +97,13 @@ const getState = ({ getStore, getActions, setStore }) => {
 
 				{
 					title: "Arachnophobia",
+					quest: "Quest 8",
 					text:
 						" Your first mission is to visit a spider exhibit at a zoo or go to a pet store and watch spiders in an enclosed space. They cannot touch you and will not hurt you. Stay calm and watch them for a bit. Bring a friend for emotional support. Remember to take deep breathes and close your eyes if you need to calm down.  Caution: next card contains an image"
 				},
 				{
 					title: "Arachnophobia",
+					quest: "Quest 9",
 					imageUrl:
 						" http://home.bt.com/images/how-can-i-make-my-home-less-attractive-to-spiders-136421898964210401-171008113636.jpg",
 					text:
@@ -103,6 +112,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 				},
 				{
 					title: "Arachnophobia",
+					quest: "Quest 10",
 					imageUrl:
 						"https://media.pri.org/s3fs-public/styles/story_main/public/widow_hand_SeanMcCann-625x450.jpg?itok=MiEpSGq3",
 					text:
@@ -137,7 +147,9 @@ const getState = ({ getStore, getActions, setStore }) => {
 						console.log("Looks like there was a problem: \n", error);
 					});
 			},
-
+			addingModalInfo: info => {
+				setStore({ modalInfo: [...getStore().modalInfo, info] });
+			},
 			addingTestimonials: testimony => {
 				setStore({ testimonials: [...getStore().testimonials, testimony] });
 			},

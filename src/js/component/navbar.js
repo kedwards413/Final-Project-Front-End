@@ -15,7 +15,7 @@ export const Navbar = () => {
 	// on about span.   onClick={executeScroll}
 	return (
 		<nav className="navbar  " style={{ height: 46 }}>
-			<Link to="/profilepage">
+			<Link to="/">
 				<span className="navbar-brand  ">fearLESS</span>
 			</Link>
 			<Audio />
