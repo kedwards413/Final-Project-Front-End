@@ -33,6 +33,7 @@ export const Modal = () => {
 				modalIndex < lengthCards ? (
 					<div className="modalBackground ">
 						<div className="modal  " style={{ width: 600, height: 600 }}>
+							<p>{store.modalCards[modalIndex].quest}</p>
 							{store.modalCards[modalIndex].videoSrc !== undefined ? (
 								<Video />
 							) : showImage == false ? (
