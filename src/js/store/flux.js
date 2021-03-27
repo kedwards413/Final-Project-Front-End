@@ -251,8 +251,9 @@ const getState = ({ getStore, getActions, setStore }) => {
 							console.log(token);
 						} else {
 							setStore({ token: token });
+							setStore({ currentUser: response.currentUser });
 						}
-
+						console.log(currentUser);
 						return response.json();
 					})
 					.catch(e => console.log(e));
