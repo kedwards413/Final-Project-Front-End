@@ -231,7 +231,15 @@ export const Modal = () => {
 			) : (
 				<div className="warning">
 					<p className="login-warning">
-						Please <Link to="/signup">sign up</Link> or <Link to="/login">login</Link> to start a mission
+						Please{" "}
+						<strong>
+							<Link to="/signup"> sign up</Link>
+						</strong>{" "}
+						or{" "}
+						<strong>
+							<Link to="/login"> login</Link>
+						</strong>{" "}
+						to start a mission
 					</p>
 					<div />
 				</div>
