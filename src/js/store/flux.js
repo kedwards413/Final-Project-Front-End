@@ -265,14 +265,12 @@ const getState = ({ getStore, getActions, setStore }) => {
 							console.log(token);
 						} else {
 							setStore({ token: token });
+							setStore({ currentUser: response.currentUser });
 						}
-
+						console.log(currentUser);
 						return response.json();
 					})
-
-					.catch(function(error) {
-						console.log("Looks like there was a problem: \n", error);
-					});
+					.catch(e => console.log(e));
 			},
 
 			addUser: (firstName, lastName, phone, email, userName, password, accountType) => {
