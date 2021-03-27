@@ -53,9 +53,11 @@ export const Navbar = () => {
 							<span className="navbar-brand  mr-5">LOGIN</span>
 						</Link>
 					) : (
-						<button className="btn btn-dark mr-2 btn-sm mb-1" onClick={() => actions.logout()}>
-							LOGOUT
-						</button>
+						<Link to="/">
+							<button className="btn btn-dark mr-2 btn-sm mb-1" onClick={() => actions.logout()}>
+								LOGOUT
+							</button>
+						</Link>
 					)}
 					<Link to="/signup">
 						<button className="btn btn-dark mr-2 btn-sm mb-1">SIGN UP</button>
