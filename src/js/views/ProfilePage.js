@@ -104,7 +104,11 @@ export const ProfilePage = () => {
 							</p>
 							<div className="firstquestion-modal-answers text-white">
 								{store.modalInfo.map((info, index) => {
-									return <p key={index}>{info.checkboxes}</p>;
+									return (
+										<p key={index}>
+											{info.quest} : {info.checkboxes}
+										</p>
+									);
 								})}
 							</div>
 						</div>
@@ -116,7 +120,11 @@ export const ProfilePage = () => {
 								</p>
 								<div className="secondquestion-modal-answers">
 									{store.modalInfo.map((info, index) => {
-										return <p key={index}>{info.experience}</p>;
+										return (
+											<p key={index}>
+												{info.quest} : {info.experience}
+											</p>
+										);
 									})}
 								</div>
 							</div>

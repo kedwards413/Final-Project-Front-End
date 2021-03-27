@@ -35,7 +35,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 			account: [],
 			// userLogin: true,
 			currentUser: [{}],
-			token: null,
+			token: "12335",
 
 			modalCards: [
 				{

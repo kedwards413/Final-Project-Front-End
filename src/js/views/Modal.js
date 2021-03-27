@@ -180,8 +180,11 @@ export const Modal = () => {
 											onClick={() => {
 												setShowImageBlack(!showImage);
 												setShowTextBlack(!showText);
-												// actions.addingModalInfo(info);
-												setStory({ ...story, info });
+												actions.addingModalInfo({
+													...info,
+													quest: store.modalCards[modalIndex].quest
+												});
+												// setStory({ ...story, [store.modalCards[modalIndex].quest]: info });
 												setInfo({
 													...info,
 													experience: "",

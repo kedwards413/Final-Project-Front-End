@@ -92,13 +92,8 @@ const Layout = () => {
                             missions increasing in difficulty that will help you overcome your phobia. Visuals may
                             accompany some of the following steps, so if at anytime it gets to intense for you, click on
                             the button stop and the screen will black out. When youre ready, you can proceed."
-<<<<<<< HEAD
                                 button="Start"
                             /> */}
-=======
-								button="Start"
-							/> */}
->>>>>>> 1c93fedf38ce5cba7796f3bb2754b295a91314bf
 						</Route>
 
 						<Route exact path="/signup">
