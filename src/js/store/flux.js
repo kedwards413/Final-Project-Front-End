@@ -53,7 +53,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 					imageUrl:
 						"https://images-fibreglast-com.s3.amazonaws.com/pio-resized/750/Single%20Stage%20Black%20Paint-5.jpg",
 					text:
-						" Spiders save us from the world’s deadliest animal. They mostly eat insects, which helps control their populations. Their webs are particularly adept at catching small flying insects such as mosquitos. Worldwide, mosquito-borne viruses kill more humans than any other animal. Caution: next mission will contain an image of spiders. Feel free to click on the image to black them out.  ",
+						" Spiders save us from the world’s deadliest animal. They mostly eat insects, which helps control their populations. Their webs are particularly adept at catching small flying insects such as mosquitos. Worldwide, mosquito-borne viruses kill more humans than any other animal.    ",
 					button: ""
 				},
 				{
@@ -61,7 +61,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 
 					videoSrc: "https://www.youtube.com/embed/EcDVXeB_rY4",
 					text:
-						" A study has found that clips from “Spider-Man” were more effective at curing arachnophobia than footage of the real thing. It reduced participants’ fear-of-spiders by 20 percent.",
+						" A study has found that clips from “Spider-Man” were more effective at curing arachnophobia than footage of the real thing. It reduced participants’ fear-of-spiders by 20 percent. Caution: next missions will contain images of a spiders.",
 					button: ""
 				},
 
@@ -78,8 +78,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 				{
 					title: "Arachnophobia",
 
-					imageUrl:
-						"https://media.pri.org/s3fs-public/styles/story_main/public/widow_hand_SeanMcCann-625x450.jpg?itok=MiEpSGq3",
+					imageUrl: "https://i.etsystatic.com/12485742/r/il/a05d96/1930792067/il_1588xN.1930792067_e5li.jpg",
 					text:
 						"Once you have gotten used to looking at spider pictures, try upping the discomfort factor by holding a toy spider. You will probably feel discomfort, but as long as you don't feel completely overwhelmed, you should keep going",
 					button: ""
@@ -87,7 +86,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 				{
 					title: "Arachnophobia",
 
-					imageUrL: "http://www.tarantulacages.com/images/mterrfront.jpg",
+					imageUrl: "https://i.ytimg.com/vi/VxPW-QdEFlI/maxresdefault.jpg",
 					text:
 						"Visit a spider exhibit at the zoo or simply go to a pet store. Bring a friend if you need to. Observe the spider. Remember there's glass between the two of you and you're safe. ",
 					button: ""
