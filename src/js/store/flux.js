@@ -40,25 +40,25 @@ const getState = ({ getStore, getActions, setStore }) => {
 			modalCards: [
 				{
 					title: "Arachnophobia",
-					quest: "Quest 1",
+
 					imageUrl:
-						"https://images.unsplash.com/photo-1506747958701-808cb3805b0f?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1651&q=80",
+						"https://images-fibreglast-com.s3.amazonaws.com/pio-resized/750/Single%20Stage%20Black%20Paint-5.jpg",
 					text:
-						"You're about to begin your journey. There will be missions you need to complete in order to be able to proceed to the next one. The missions will increase in difficulty. If at any time you feel uncomfortable because of an image, you can click on the image and it will blackout. When you're ready, you can continue. Click the arrow on the bottom to begin your journey. ",
+						"You're about to begin your journey. There will be missions you need to complete in order to be able to proceed to the next one. The missions will increase in difficulty. If at any time you feel uncomfortable because of an image, you can click on the image and it will blackout. When you're ready, you can continue. Click the arrow on the bottom right to begin your journey. ",
 					button: ""
 				},
 				{
 					title: "Arachnophobia",
-					quest: "Quest 2",
-					// imageUrl: "https://s.hdnux.com/photos/01/13/13/45/19708276/8/rawImage.jpg",
+
+					imageUrl:
+						"https://images-fibreglast-com.s3.amazonaws.com/pio-resized/750/Single%20Stage%20Black%20Paint-5.jpg",
 					text:
 						" Spiders save us from the world’s deadliest animal. They mostly eat insects, which helps control their populations. Their webs are particularly adept at catching small flying insects such as mosquitos. Worldwide, mosquito-borne viruses kill more humans than any other animal. Caution: next mission will contain an image of spiders. Feel free to click on the image to black them out.  ",
 					button: ""
 				},
 				{
 					title: "Arachnophobia",
-					quest: "Quest 3",
-					imageUrl: "https://earthsky.org/upl/2015/10/peacock-spider-e1477522482238.jpg",
+
 					videoSrc: "https://www.youtube.com/embed/EcDVXeB_rY4",
 					text:
 						" A study has found that clips from “Spider-Man” were more effective at curing arachnophobia than footage of the real thing. It reduced participants’ fear-of-spiders by 20 percent.",
@@ -67,63 +67,72 @@ const getState = ({ getStore, getActions, setStore }) => {
 
 				{
 					title: "Arachnophobia",
-					quest: "Quest 4",
-					videoSrc: "https://www.youtube.com/embed/EcDVXeB_rY4",
+
 					imageUrl: "https://earthsky.org/upl/2015/10/peacock-spider-e1477522482238.jpg",
 					text:
-						"Each day, try to increase your time spent with the photograph. When you feel safe or comfortable enough, try touching the image. When you are ready, move on to the next mission.",
+						"Each day, try to increase your time spent with this photograph. When you feel safe or comfortable enough, try touching the image. When you are ready, move on to the next mission.",
 
 					button: ""
 				},
 
 				{
 					title: "Arachnophobia",
-					quest: "Quest 5",
+
 					imageUrl:
 						"https://media.pri.org/s3fs-public/styles/story_main/public/widow_hand_SeanMcCann-625x450.jpg?itok=MiEpSGq3",
 					text:
-						"You've reached your last mission! Visit a friend that might have a spider or go to a spider exhibit and watch someone else handle a spider. Try to get as close as you comfortable can and stay for a few long breathes.",
+						"Once you have gotten used to looking at spider pictures, try upping the discomfort factor by holding a toy spider. You will probably feel discomfort, but as long as you don't feel completely overwhelmed, you should keep going",
 					button: ""
 				},
 				{
 					title: "Arachnophobia",
-					quest: "Quest 6",
-					imageURL: "https://i.pinimg.com/564x/1b/4f/bf/1b4fbfcafd649d3414f1a456e3565087.jpg",
+
+					imageUrL: "http://www.tarantulacages.com/images/mterrfront.jpg",
 					text:
-						"You're about to begin your journey. There will be missions you need to complete in order to be able to proceed to the next one. The missions will increase in difficulty. If at any time you feel uncomfortable because of an image, you can click on the image and it will turn black. When you're ready you can continue. Caution: next card contains an image ",
+						"Visit a spider exhibit at the zoo or simply go to a pet store. Bring a friend if you need to. Observe the spider. Remember there's glass between the two of you and you're safe. ",
 					button: ""
 				},
 				{
 					title: "Arachnophobia",
-					quest: "Quest 7",
-					imageUrl: "https://s.hdnux.com/photos/01/13/13/45/19708276/8/rawImage.jpg",
+					imageUrl:
+						"https://www.treehugger.com/thmb/tWAdOxwdOwbAQ8Wy-smYRLz5T9A=/768x0/filters:no_upscale():max_bytes(150000):strip_icc()/__opt__aboutcom__coeus__resources__content_migration__mnn__images__2017__09__spiderweb-7ab384d6884b47fd97eaf5794652fd26.jpg",
 					text:
-						"The VAST majority of spiders are not harmful to humans. Instead their webs catch mosqitoes, which kill more humans than any other animal.  When you are ready, press 'next' and you will begin your first mission",
+						"Go outside and observe spiders. Stand at a comfortable distance. When you feel comfortable, take a step toward the spider. Repeat however many times you feel comfortable. "
+				},
+				{
+					title: "Arachnophobia",
+
+					imageUrl:
+						"https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/common-house-spider-on-the-floor-in-a-home-royalty-free-image-1568322713.jpg?crop=1.00xw:0.752xh;0,0.173xh&resize=980:*",
+					text:
+						"When there is a spider around, don't automatically smash it, run away, or scream to someone else to kill it. Stand far away from it and keep looking at it until you feel less scared. ",
 					button: ""
 				},
 
 				{
 					title: "Arachnophobia",
-					quest: "Quest 8",
-					text:
-						" Your first mission is to visit a spider exhibit at a zoo or go to a pet store and watch spiders in an enclosed space. They cannot touch you and will not hurt you. Stay calm and watch them for a bit. Bring a friend for emotional support. Remember to take deep breathes and close your eyes if you need to calm down.  Caution: next card contains an image"
-				},
-				{
-					title: "Arachnophobia",
-					quest: "Quest 9",
+
 					imageUrl:
-						" http://home.bt.com/images/how-can-i-make-my-home-less-attractive-to-spiders-136421898964210401-171008113636.jpg",
+						"https://www.treehugger.com/thmb/rF1w5nI5oe3RVhnOmO4YHwUF5rI=/5184x2606/filters:no_upscale():max_bytes(150000):strip_icc()/__opt__aboutcom__coeus__resources__content_migration__mnn__images__2015__10__spider-glass-03592d0b160c49f0a285c5f8d04ec137.jpg ",
 					text:
-						" It's time to take it a step further. Go outside and view a spider in it's natural habitat. Don't forget to take deep breathes. watch the spider and count your breathes. Repeat this mission as long as you feel comfortable.",
+						"If there is a spider in your house, attempt to catch it with a glass cup, then look at it. Look at the spider and stay there until you feel more comfortable and safe.",
 					button: ""
 				},
 				{
 					title: "Arachnophobia",
-					quest: "Quest 10",
-					imageUrl:
-						"https://media.pri.org/s3fs-public/styles/story_main/public/widow_hand_SeanMcCann-625x450.jpg?itok=MiEpSGq3",
+
+					imageUrl: "https://www.giantspiders.com/s/cc_images/teaserbox_2206604.jpg?t=1486460453",
 					text:
-						"You've reached your last mission! Visit a friend that might have a spider or go to a spider exhibit and watch someone else handle a spider. Try to get as close as you comfortable can and stay for a few long breathes.",
+						"If you have a friend with a pet spider, ask to view the spider with the top of the enclosure removed (provided this is safe, of course). Watch your friend feed and handle the spider.",
+					button: ""
+				},
+				{
+					title: "Arachnophobia",
+
+					imageUrl:
+						"http://schoolofbugs.com/wp-content/uploads/2019/10/person-holding-black-and-brown-tarantula-3672148-1024x576.jpg",
+					text:
+						"Increase your interaction with spiders. Touch a safe spider if you are feeling very confident. You could try to touch a non-aggressive spider, or you could go to a pet shop and request to hold one.",
 					button: ""
 				},
 				{

@@ -16,9 +16,14 @@ export const Progress = () => {
 	const handleProgress = () => {
 		console.log(store.modalInfo);
 		console.log("state:", state);
-		if (progress.length == 1) setState(33);
-		if (progress.length == 2) setState(66);
-		if (progress.length == 3) setState(99);
+		if (progress.length == 1) setState(12.5);
+		if (progress.length == 2) setState(25);
+		if (progress.length == 3) setState(37.5);
+		if (progress.length == 4) setState(50);
+		if (progress.length == 5) setState(62.5);
+		if (progress.length == 6) setState(75);
+		if (progress.length == 7) setState(87.5);
+		if (progress.length == 8) setState(100);
 	};
 	useEffect(() => {
 		handleProgress();

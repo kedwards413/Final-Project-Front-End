@@ -180,10 +180,7 @@ export const Modal = () => {
 											onClick={() => {
 												setShowImageBlack(!showImage);
 												setShowTextBlack(!showText);
-												actions.addingModalInfo({
-													...info,
-													quest: store.modalCards[modalIndex].quest
-												});
+												actions.addingModalInfo(info);
 												// setStory({ ...story, [store.modalCards[modalIndex].quest]: info });
 												setInfo({
 													...info,
@@ -196,12 +193,8 @@ export const Modal = () => {
 									</div>
 								</div>
 							)}
-							{showText && (
-								<p className="modalText pl-5 pr-5">
-									<h1 className="d-block mt-5">{store.modalCards[modalIndex].quest}</h1>
-									<p className="d-block">{store.modalCards[modalIndex].text}</p>
-								</p>
-							)}
+							{showText && <p className="modalText pl-5 pr-5">{store.modalCards[modalIndex].text}</p>}
+
 							<i
 								className="arrowIcon fas fa-arrow-right
 							startButton mb-3"

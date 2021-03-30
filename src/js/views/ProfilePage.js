@@ -36,6 +36,7 @@ export const ProfilePage = () => {
 						onChange={event => setState(URL.createObjectURL(event.target.files[0]))}
 					/>
 				</div>
+				<Progress />
 				<div className="outer-line">
 					<div className="inner-line" />
 				</div>
@@ -104,11 +105,7 @@ export const ProfilePage = () => {
 							</p>
 							<div className="firstquestion-modal-answers text-white">
 								{store.modalInfo.map((info, index) => {
-									return (
-										<p key={index}>
-											{info.quest} : {info.checkboxes}
-										</p>
-									);
+									return <p key={index}>{info.checkboxes}</p>;
 								})}
 							</div>
 						</div>
@@ -120,11 +117,7 @@ export const ProfilePage = () => {
 								</p>
 								<div className="secondquestion-modal-answers">
 									{store.modalInfo.map((info, index) => {
-										return (
-											<p key={index}>
-												{info.quest} : {info.experience}
-											</p>
-										);
+										return <p key={index}>{info.experience}</p>;
 									})}
 								</div>
 							</div>
