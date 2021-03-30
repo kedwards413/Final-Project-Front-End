@@ -26,6 +26,10 @@ export const Navbar = () => {
 
 	// const executeScroll = () => myRef.current.scrollIntoView();
 	// on about span.   onClick={executeScroll}
+	const goToView = () => {
+		const elmnt = document.getElementById("content");
+		elmnt.scrollIntoView();
+	};
 	return (
 		<nav className="navbar  " style={{ height: 46 }}>
 			<Link to="/profilepage">
@@ -37,7 +41,7 @@ export const Navbar = () => {
 				<Link to="/">
 					<span className="navbar-brand  mr-5 ">HOME</span>
 				</Link>
-				<Link to="/about">
+				<Link onClick={() => goToView()}>
 					<span className="navbar-brand  mr-5 ">ABOUT</span>
 				</Link>
 
