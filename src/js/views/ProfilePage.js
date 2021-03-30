@@ -20,7 +20,7 @@ export const ProfilePage = () => {
 	};
 	return (
 		<>
-			<div className="main mt-5" style={{ width: 400, height: 700 }}>
+			<div className="main mt-5" style={{ width: 400, height: 400 }}>
 				<div className="avatar" style={{ width: 180, height: 210, borderRadius: 100 }}>
 					<img id="output" style={{ width: 180, height: 210, borderRadius: 100 }} src={state} />
 				</div>
@@ -138,7 +138,7 @@ export const ProfilePage = () => {
 					</Link>
 				</div> */}
 				<Link to="/testimonialinput">
-					<button className="testimonial-btn">testimonial</button>
+					<button className="testimonial-btn">Leave A Testimonial</button>
 				</Link>
 			</div>
 		</>
