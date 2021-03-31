@@ -15,7 +15,7 @@ export const Navbar = () => {
 		() => {
 			if (store.token !== null) {
 				setLog(true);
-			} else if (store.token == null) {
+			} else {
 				setLog(false);
 			}
 		},
@@ -55,9 +55,14 @@ export const Navbar = () => {
 				</Link>
 				<div className="ml-auto">
 					{!log ? (
-						<Link to="/login" onClick={() => scrollTo(0, 0)}>
-							<span className="navbar-brand  mr-5">LOGIN</span>
-						</Link>
+						<>
+							<Link to="/login" onClick={() => scrollTo(0, 0)}>
+								<span className="navbar-brand  mr-5">LOGIN</span>
+							</Link>
+							<Link to="/signup" onClick={() => scrollTo(0, 0)}>
+								<button className="btn btn-dark mr-2 btn-sm mb-1">SIGN UP</button>
+							</Link>
+						</>
 					) : (
 						<Link to="/" onClick={() => scrollTo(0, 0)}>
 							<button className="btn btn-dark mr-2 btn-sm mb-1" onClick={() => actions.logout()}>
@@ -65,9 +70,6 @@ export const Navbar = () => {
 							</button>
 						</Link>
 					)}
-					<Link to="/signup" onClick={() => scrollTo(0, 0)}>
-						<button className="btn btn-dark mr-2 btn-sm mb-1">SIGN UP</button>
-					</Link>
 				</div>
 			</div>
 		</nav>

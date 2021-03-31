@@ -40,7 +40,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 			currentPatient: {},
 			currentTherapist: {},
 			currentUser: [{}],
-			token: "12335",
+			token: null,
 			profileImg: "",
 
 			modalCards: [
