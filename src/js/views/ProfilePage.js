@@ -65,7 +65,7 @@ export const ProfilePage = () => {
 
 	return (
 		<>
-			<div className="main mt-5" style={{ width: 400, height: 700 }}>
+			<div className="main mt-5" style={{ width: 400, height: 400 }}>
 				<div className="avatar" style={{ width: 180, height: 210, borderRadius: 100 }}>
 					<img id="output" style={{ width: 180, height: 210, borderRadius: 100 }} src={profileImg} />
 				</div>
@@ -85,6 +85,7 @@ export const ProfilePage = () => {
 						onChange={event => setFiles(event.target.files)}
 					/>
 				</div>
+				<Progress />
 				<div className="outer-line">
 					<div className="inner-line" />
 				</div>
@@ -160,7 +161,7 @@ export const ProfilePage = () => {
 
 						<div className="modal-answer-p-page text-white">
 							<div className="modal-question-p-page d-flex justify-content-center">
-								<p className="secondquestion-modal text-white  mt-5">
+								<p className="secondquestion-modal text-white  mt-5 pt-5">
 									Tell us more about your experience
 								</p>
 								<div className="secondquestion-modal-answers">
@@ -186,7 +187,7 @@ export const ProfilePage = () => {
 					</Link>
 				</div> */}
 				<Link to="/testimonialinput">
-					<button>hi</button>
+					<button className="testimonial-btn">Leave A Testimonial</button>
 				</Link>
 			</div>
 		</>

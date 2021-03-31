@@ -5,10 +5,12 @@ import { Video } from "../component/Video";
 // import phobia from "../../img/phobia.png";
 
 import { Context } from "../store/appContext";
+
 export const Modal = () => {
 	const { store, actions } = useContext(Context);
 	const [modalIndex, setModalIndex] = useState(0);
 	const [showImage, setShowImageBlack] = useState(false);
+
 	const [showText, setShowTextBlack] = useState(true);
 	var lengthCards = store.modalCards.length - 1;
 	const [info, setInfo] = useState({
@@ -17,6 +19,8 @@ export const Modal = () => {
 		checkboxes: [],
 		date: ""
 	});
+	const [story, setStory] = useState([]);
+
 	var d = new Date();
 	var month = d.getUTCMonth() + 1;
 	var day = d.getUTCDate();
@@ -165,7 +169,7 @@ export const Modal = () => {
 									</div>
 									<div className="d-flex justify-content-center">
 										<p className="last-modalbox-advice text-white ml-3 mr-3 pt-5 text-center">
-											Close your eyes and focus on your breathe. Think positive {"\n"}
+											Close your eyes and focus on your breath. Think positive {"\n"}
 											thought while breathing deeply. When you feel calm and ready go ahead and
 											click on the button. The image will reappear and you can continue with
 											overcoming your fear.
@@ -177,6 +181,7 @@ export const Modal = () => {
 												setShowImageBlack(!showImage);
 												setShowTextBlack(!showText);
 												actions.addingModalInfo(info);
+												// setStory({ ...story, [store.modalCards[modalIndex].quest]: info });
 												setInfo({
 													...info,
 													experience: "",
@@ -189,6 +194,7 @@ export const Modal = () => {
 								</div>
 							)}
 							{showText && <p className="modalText pl-5 pr-5">{store.modalCards[modalIndex].text}</p>}
+
 							<i
 								className="arrowIcon fas fa-arrow-right
 							startButton mb-3"
@@ -218,7 +224,15 @@ export const Modal = () => {
 			) : (
 				<div className="warning">
 					<p className="login-warning">
-						Please <Link to="/signup">sign up</Link> or <Link to="/login">login</Link> to start a mission
+						Please{" "}
+						<strong>
+							<Link to="/signup"> sign up</Link>
+						</strong>{" "}
+						or{" "}
+						<strong>
+							<Link to="/login"> login</Link>
+						</strong>{" "}
+						to start a mission
 					</p>
 					<div />
 				</div>

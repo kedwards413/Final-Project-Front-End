@@ -1,22 +1,10 @@
 import React, { useRef, useEffect } from "react";
-// import { Scroll } from "../component/Scroll";
+import { Scroll } from "../component/Scroll";
 
 export const About = () => {
-	//   const aboutRef = React.useRef<About/>(null);
-	//   React.useEffect(() => {
-	//     if (error && aboutRef.current) {
-	//       aboutRef.current.scrollIntoView();
-	//     }
-	//   }, [error]);
-
-	// // };
-	//         IN DIV BELOW
-	//      about" ref={aboutRef}
 	return (
 		<>
-			{/* <Scroll /> */}
-
-			<div className="about-background ">
+			<div className="about-background " id="content">
 				<h1 className="aboutTitle"> Our Story </h1>
 				<div className="fade_rule_about" />
 				<p className="aboutText ">
