@@ -14,7 +14,8 @@ export const TestimonialInput = () => {
 	});
 	const { store, actions } = useContext(Context);
 	const manageData = () => {
-		actions.addingTestimonials(data);
+		//actions.addingTestimonials(data.testimony);
+		actions.addTestimonial(data);
 		setData({ testimony: "" });
 	};
 	return (
@@ -33,7 +34,10 @@ export const TestimonialInput = () => {
 					className="testimonial-finalInput d-flex justify-content-center text-dark"
 					style={{ width: 800, height: 400 }}
 				/>{" "}
-				<Link to="./testimonials" onClick={() => manageData()} className="uploadPhoto text-white ">
+				<Link
+					to="./testimonials"
+					onClick={() => actions.addTestimonial(data)}
+					className="uploadPhoto text-white ">
 					Share with Us
 				</Link>
 				<div className="profileTestimonialImage ">

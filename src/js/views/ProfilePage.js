@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { Questions } from "../views/Questions";
 import { ModalQuestions } from "../views/ModalQuestions";
@@ -10,7 +10,8 @@ import { Context } from "../store/appContext";
 export const ProfilePage = () => {
 	const { store, actions } = useContext(Context);
 
-	const [state, setState] = useState(null);
+	const [profileImg, setProfileImg] = useState("");
+	const [files, setFiles] = useState("");
 	const [data, setData] = useState({
 		testimony: ""
 	});
@@ -18,22 +19,70 @@ export const ProfilePage = () => {
 		actions.addingTestimonials(data);
 		setData({ testimony: "" });
 	};
+
+	useEffect(
+		() => {
+			if (files.length > 0) {
+				console.log("Enviando imagen");
+				uploadImage();
+			}
+		},
+		[files]
+	);
+
+	useEffect(
+		() => {
+			getImage();
+		},
+		[profileImg]
+	);
+
+	const uploadImage = () => {
+		// we are about to send this to the backend.
+		console.log("This are the files", files);
+		let body = new FormData();
+		body.append("profile_picture", files[0]);
+		const options = {
+			body,
+			method: "POST"
+		};
+		fetch("https://3000-pink-toad-rnysz19w.ws-us03.gitpod.io/profile_picture/" + store.currentUser.id, options)
+			.then(resp => resp.json())
+			.then(data => {
+				console.log("Success!!!!", data);
+				getImage();
+			})
+			.catch(error => console.error("ERRORRRRRR!!!", error));
+	};
+
+	const getImage = () => {
+		// we are about to send this to the backend.
+		fetch("https://3000-pink-toad-rnysz19w.ws-us03.gitpod.io/user/" + store.currentUser.id)
+			.then(resp => resp.json())
+			.then(data => setProfileImg(data[0].profile_picture))
+			.catch(error => console.error("ERRORRRRRR!!!", error));
+	};
+
 	return (
 		<>
 			<div className="main mt-5" style={{ width: 400, height: 700 }}>
 				<div className="avatar" style={{ width: 180, height: 210, borderRadius: 100 }}>
-					<img id="output" style={{ width: 180, height: 210, borderRadius: 100 }} src={state} />
+					<img id="output" style={{ width: 180, height: 210, borderRadius: 100 }} src={profileImg} />
 				</div>
 				<div className="personId ">
-					<h1 className="person-name d-flex justify-content-center mt-3 text-white">Monica Lopez</h1>
-					<h2 className="phobiaName d-flex justify-content-center mt-4 text-white">Arachnaphobic</h2>
+					<h1 className="person-name d-flex justify-content-center mt-3 text-white">
+						{store.currentUser.first_name}
+					</h1>
+					<h2 className="phobiaName d-flex justify-content-center mt-4 text-white">
+						{store.currentPatient.phobia}
+					</h2>
 
 					<input
 						className="profileButton d-flex justify-content-center mt-4 text-black  "
 						type="file"
 						id="input "
 						accept="image/*"
-						onChange={event => setState(URL.createObjectURL(event.target.files[0]))}
+						onChange={event => setFiles(event.target.files)}
 					/>
 				</div>
 				<div className="outer-line">

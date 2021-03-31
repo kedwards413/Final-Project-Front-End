@@ -34,7 +34,9 @@ const getState = ({ getStore, getActions, setStore }) => {
 			testimonials: [],
 			account: [],
 			// userLogin: true,
-			currentUser: [{}],
+			currentUser: {},
+			currentPatient: {},
+			currentTherapist: {},
 			token: null,
 
 			modalCards: [
@@ -144,12 +146,12 @@ const getState = ({ getStore, getActions, setStore }) => {
 					.then(response => setStore({ modalCards: response }))
 					.catch(error => console.error("Error:", error));
 			},
-			hardcodedId: id => {
-				setStore({ currentUser: [{ id: id }] });
-			},
-			hardcodedAddTherapist: therapist => {
-				setStore({ therapists: [...getStore().therapists, therapist] });
-			},
+			// hardcodedId: id => {
+			// 	setStore({ currentUser: [{ id: id }] });
+			// },
+			// hardcodedAddTherapist: therapist => {
+			// 	setStore({ therapists: [...getStore().therapists, therapist] });
+			// },
 			// hardcodedTherapistsExtraInfo: (zipcode, id, phobia) => {
 			// 	let filterTherapist = getStore().therapists.filter(therapist => {
 			// 		return therapist.id !== id;
@@ -207,9 +209,10 @@ const getState = ({ getStore, getActions, setStore }) => {
 						}
 						return response.json();
 					})
-					.then(response => setStore({ currentUser: response }))
+					.then(response => setStore({ currenTherapist: response }))
 					.catch(error => console.error("Error:", error));
 			},
+
 			addPatient: (phobia, severity, help, goal) => {
 				fetch("https://3000-pink-toad-rnysz19w.ws-us03.gitpod.io/" + "patient", {
 					method: "POST",
@@ -230,10 +233,15 @@ const getState = ({ getStore, getActions, setStore }) => {
 						}
 						return response.json();
 					})
-					.then(response => console.log("Success:", JSON.stringify(response)))
+					.then(response => {
+						console.log(response);
+						setStore({ currentPatient: response[0] });
+					})
+					//.then(response => console.log("Success:", JSON.stringify(response)))
 					.catch(error => console.error("Error:", error));
 			},
 			userLogin: (userName, password) => {
+				const store = getStore();
 				fetch("https://3000-pink-toad-rnysz19w.ws-us03.gitpod.io/" + "login", {
 					method: "POST",
 					body: JSON.stringify({
@@ -246,18 +254,44 @@ const getState = ({ getStore, getActions, setStore }) => {
 					}
 				})
 					.then(response => response.json())
-					.then(token => {
-						if (typeof token.msg != "undefined") {
-							console.log(token);
+					.then(data => {
+						console.log(data.currentUser);
+						if (typeof data.access_token === "undefined") {
+							console.log(data);
+							return;
 						} else {
-							setStore({ token: token });
+							setStore({ token: data.access_token });
+							setStore({ currentUser: data.currentUser });
+							getActions().getInfoUserType(data.currentUser.id, data.currentUser.account_type);
 						}
+						console.log(store.currentUser);
 
-						return response.json();
+						//return data.json();
 					})
 					.catch(e => console.log(e));
 			},
 
+			getInfoUserType: (id, account_type) => {
+				fetch(`https://3000-pink-toad-rnysz19w.ws-us03.gitpod.io/${account_type}/${id}`, {
+					method: "GET",
+					headers: {
+						"Content-Type": "application/json"
+					}
+				})
+					.then(response => {
+						if (!response.ok) {
+							throw Error(response.statusText);
+						}
+						return response.json();
+					})
+					.then(response => {
+						console.log(response);
+						if (account_type === "patient") setStore({ currentPatient: response[0] });
+						else if (account_type === "therapist") setStore({ currentTherapist: response[0] });
+					})
+					//.then(response => console.log("Success:", JSON.stringify(response)))
+					.catch(error => console.error("Error:", error));
+			},
 			addUser: (firstName, lastName, phone, email, userName, password, accountType) => {
 				fetch("https://3000-pink-toad-rnysz19w.ws-us03.gitpod.io/" + "user", {
 					method: "POST",
@@ -281,10 +315,35 @@ const getState = ({ getStore, getActions, setStore }) => {
 						}
 						return response.json();
 					})
-					.then(response => setStore({ currentUser: response }))
+					.then(response => {
+						console.log(response);
+						setStore({ currentUser: response });
+					})
 					.catch(error => console.error("Error:", error));
 
 				//reset the global store
+			},
+
+			addTestimonial: data => {
+				console.log("Data: ", data);
+				fetch("https://3000-pink-toad-rnysz19w.ws-us03.gitpod.io/" + "user/" + getStore().currentUser.id, {
+					method: "PUT",
+					body: JSON.stringify({
+						testimonial_desciption: data.testimony
+					}),
+
+					headers: {
+						"Content-Type": "application/json"
+					}
+				})
+					.then(response => {
+						if (!response.ok) {
+							throw Error(response.statusText);
+						}
+						return response.json();
+					})
+					.catch(error => console.error("Error:", error));
+				return data.testimony;
 			}
 		}
 	};

@@ -28,6 +28,26 @@ export const Testimonials = () => {
 			key={4}
 			style={{ height: 200 }}
 			src="https://images.unsplash.com/photo-1498550744921-75f79806b8a7?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80"
+		/>,
+		<img
+			key={5}
+			style={{ height: 200 }}
+			src="https://images.unsplash.com/photo-1498550744921-75f79806b8a7?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80"
+		/>,
+		<img
+			key={6}
+			style={{ height: 200 }}
+			src="https://images.unsplash.com/photo-1498550744921-75f79806b8a7?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80"
+		/>,
+		<img
+			key={7}
+			style={{ height: 200 }}
+			src="https://images.unsplash.com/photo-1498550744921-75f79806b8a7?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80"
+		/>,
+		<img
+			key={8}
+			style={{ height: 200 }}
+			src="https://images.unsplash.com/photo-1498550744921-75f79806b8a7?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80"
 		/>
 	];
 
