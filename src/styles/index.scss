@@ -640,8 +640,9 @@ i{
 
 
 .login-box {
+   
   position: absolute;
-  top: 50%;
+  margin-top:90px;
   left: 50%;
   width: 400px;
   padding: 40px;
@@ -1051,10 +1052,12 @@ i{
     background: black;
     color: white;
     border-radius: 10px;
-    align-items: center;
+     margin-left:57px;
+    margin-bottom:20px;
     padding-bottom: 5px;
 
 }
+
 
 
 
