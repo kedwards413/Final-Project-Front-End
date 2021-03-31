@@ -30,12 +30,12 @@ export const ProfilePage = () => {
 		[files]
 	);
 
-	useEffect(
-		() => {
-			getImage();
-		},
-		[profileImg]
-	);
+	// useEffect(
+	// 	() => {
+	// 		getImage();
+	// 	},
+	// 	[profileImg]
+	// );
 
 	const uploadImage = () => {
 		// we are about to send this to the backend.
@@ -55,23 +55,23 @@ export const ProfilePage = () => {
 			.catch(error => console.error("ERRORRRRRR!!!", error));
 	};
 
-	const getImage = () => {
-		// we are about to send this to the backend.
-		fetch("https://3000-pink-toad-rnysz19w.ws-us03.gitpod.io/user/" + store.currentUser.id)
-			.then(resp => resp.json())
-			.then(data => setProfileImg(data[0].profile_picture))
-			.catch(error => console.error("ERRORRRRRR!!!", error));
-	};
-
 	return (
 		<>
 			<div className="main mt-5" style={{ width: 400, height: 400 }}>
 				<div className="avatar" style={{ width: 180, height: 210, borderRadius: 100 }}>
-					<img id="output" style={{ width: 180, height: 210, borderRadius: 100 }} src={profileImg} />
+					<img
+						id="output"
+						style={{ width: 180, height: 210, borderRadius: 100 }}
+						src={
+							store.currentUser.profile_picture === "default"
+								? store.defaultProfileImg
+								: store.currentUser.profile_picture
+						}
+					/>
 				</div>
 				<div className="personId ">
 					<h1 className="person-name d-flex justify-content-center mt-3 text-white">
-						{store.currentUser.first_name}
+						{`${store.currentUser.first_name} ${store.currentUser.last_name} `}
 					</h1>
 					<h2 className="phobiaName d-flex justify-content-center mt-4 text-white">
 						{store.currentPatient.phobia}

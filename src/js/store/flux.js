@@ -30,14 +30,18 @@ const getState = ({ getStore, getActions, setStore }) => {
 					id: 2
 				}
 			],
+
+			defaultProfileImg:
+				"https://res.cloudinary.com/djqzyoj1p/image/upload/v1617208882/6525a08f1df98a2e3a545fe2ace4be47_hpwjnv.jpg",
 			modalInfo: [],
-			testimonials: [],
+			userTestimonials: [],
 			account: [],
 			// userLogin: true,
 			currentPatient: {},
 			currentTherapist: {},
 			currentUser: [{}],
 			token: "12335",
+			profileImg: "",
 
 			modalCards: [
 				{
@@ -183,24 +187,24 @@ const getState = ({ getStore, getActions, setStore }) => {
 			// 	singularTherapist[0].specialty = phobia;
 			// 	setStore({ therapists: [filterTherapist, singularTherapist[0]] });
 			// },
-			getInitialData: () => {
-				fetch("")
-					.then(function(response) {
-						if (!response.ok) {
-							throw Error(response.statusText);
-						}
-						// Read the response as json.
-						return response.json();
-					})
-					.then(function(responseAsJson) {
-						//setStore({ characters: responseAsJson.results });
-						setStore({ account: responseAsJson });
-						console.log(responseAsJson);
-					})
-					.catch(function(error) {
-						console.log("Looks like there was a problem: \n", error);
-					});
-			},
+			// getInitialData: () => {
+			// 	fetch("")
+			// 		.then(function(response) {
+			// 			if (!response.ok) {
+			// 				throw Error(response.statusText);
+			// 			}
+			// 			// Read the response as json.
+			// 			return response.json();
+			// 		})
+			// 		.then(function(responseAsJson) {
+			// 			//setStore({ characters: responseAsJson.results });
+			// 			setStore({ account: responseAsJson });
+			// 			console.log(responseAsJson);
+			// 		})
+			// 		.catch(function(error) {
+			// 			console.log("Looks like there was a problem: \n", error);
+			// 		});
+			// },
 			addingModalInfo: info => {
 				setStore({ modalInfo: [...getStore().modalInfo, info] });
 			},
@@ -264,6 +268,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 			},
 			userLogin: (userName, password) => {
 				const store = getStore();
+				const actions = getActions();
 				fetch("https://3000-pink-toad-rnysz19w.ws-us03.gitpod.io/" + "login", {
 					method: "POST",
 					body: JSON.stringify({
@@ -284,10 +289,12 @@ const getState = ({ getStore, getActions, setStore }) => {
 						} else {
 							setStore({ token: data.access_token });
 							setStore({ currentUser: data.currentUser });
+
+							//actions.getImage();
 							getActions().getInfoUserType(data.currentUser.id, data.currentUser.account_type);
 						}
-                        console.log(store.currentUser);
-                        return response.json();
+						console.log(store.currentUser);
+						return response.json();
 						//return data.json();
 					})
 					.catch(e => console.log(e));
@@ -366,6 +373,22 @@ const getState = ({ getStore, getActions, setStore }) => {
 					})
 					.catch(error => console.error("Error:", error));
 				return data.testimony;
+			},
+
+			getImage: () => {
+				// we are about to send this to the backend.
+				const store = getStore();
+				fetch("https://3000-pink-toad-rnysz19w.ws-us03.gitpod.io/user/" + store.currentUser.id)
+					.then(resp => resp.json())
+					.then(data => setStore({ profileImg: data[0].profile_picture }))
+					.catch(error => console.error("ERRORRRRRR!!!", error));
+			},
+
+			getTestimonials: () => {
+				fetch("https://3000-pink-toad-rnysz19w.ws-us03.gitpod.io/user/testimonial")
+					.then(resp => resp.json())
+					.then(data => setStore({ userTestimonials: data }))
+					.catch(error => console.error("ERRORRRRRR!!!", error));
 			}
 		}
 	};
