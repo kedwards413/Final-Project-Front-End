@@ -186,9 +186,9 @@ export const ProfilePage = () => {
 						Share with Us
 					</Link>
 				</div> */}
-				<Link to="/testimonialinput">
+				{/* <Link to="/testimonialinput">
 					<button className="testimonial-btn">Leave A Testimonial</button>
-				</Link>
+				</Link> */}
 			</div>
 		</>
 	);

@@ -135,8 +135,8 @@ const getState = ({ getStore, getActions, setStore }) => {
 				{
 					title: "Arachnophobia",
 					text:
-						"YOU DID IT! Congratulations! You've come closer than before to overcoming your fear. The more you expose yourself safely to your fears, the stronger you will feel knowing that fear cannot control you. Press the button and sign up for a free one-time session with a therapist! ",
-					button: "see your progress"
+						"YOU DID IT! Congratulations! You've come closer than before to overcoming your fear. The more you expose yourself safely to your fears, the stronger you will feel knowing that fear cannot control you.",
+					button: "Leave A Testimonial"
 				}
 			]
 		},
