@@ -40,7 +40,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 			currentPatient: {},
 			currentTherapist: {},
 			currentUser: [{}],
-			token: "12335",
+			token: "",
 			profileImg: "",
 
 			modalCards: [
@@ -380,7 +380,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 				const store = getStore();
 				fetch("https://3000-pink-toad-rnysz19w.ws-us03.gitpod.io/user/" + store.currentUser.id)
 					.then(resp => resp.json())
-					.then(data => setStore({ profileImg: data[0].profile_picture }))
+					.then(data => setStore({ currentUser: data[0] }))
 					.catch(error => console.error("ERRORRRRRR!!!", error));
 			},
 

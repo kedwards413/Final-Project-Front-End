@@ -50,7 +50,7 @@ export const ProfilePage = () => {
 			.then(resp => resp.json())
 			.then(data => {
 				console.log("Success!!!!", data);
-				getImage();
+				actions.getImage();
 			})
 			.catch(error => console.error("ERRORRRRRR!!!", error));
 	};

@@ -84,7 +84,7 @@ export const Questions = () => {
 									newAccount.help
 								);
 							}}>
-							<Link to="/profilepage">Save and create account</Link>
+							<Link to="/login">Save and create account</Link>
 						</button>
 					</div>
 				</div>
