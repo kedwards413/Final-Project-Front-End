@@ -34,7 +34,7 @@ export const Navbar = () => {
 	};
 	return (
 		<nav className="navbar  " style={{ height: 46 }}>
-			<Link to="/profilepage">
+			<Link to="/">
 				<span className="navbar-brand  ">fearLESS</span>
 			</Link>
 			<Audio />
@@ -46,13 +46,13 @@ export const Navbar = () => {
 				<Link onClick={() => goToView()}>
 					<span className="navbar-brand  mr-5 ">ABOUT</span>
 				</Link>
-
-				<Link to="/searchbar" onClick={() => scrollTo(0, 0)}>
-					<span className="navbar-brand  mr-5 ">THERAPISTS</span>
-				</Link>
 				<Link to="/articles" onClick={() => scrollTo(0, 0)}>
 					<span className="navbar-brand  mr-5 ">ARTICLES</span>
 				</Link>
+				<Link to="/searchbar" onClick={() => scrollTo(0, 0)}>
+					<span className="navbar-brand  mr-5 ">THERAPISTS</span>
+				</Link>
+
 				<div className="ml-auto">
 					{!log ? (
 						<>
@@ -64,11 +64,16 @@ export const Navbar = () => {
 							</Link>
 						</>
 					) : (
-						<Link to="/" onClick={() => scrollTo(0, 0)}>
-							<button className="btn btn-dark mr-2 btn-sm mb-1" onClick={() => actions.logout()}>
-								LOGOUT
-							</button>
-						</Link>
+						<>
+							<Link to="/profilepage" onClick={() => scrollTo(0, 0)}>
+								<span className="navbar-brand mr-5">PROFILE</span>
+							</Link>
+							<Link to="/" onClick={() => scrollTo(0, 0)}>
+								<button className="btn btn-dark mr-2 btn-sm mb-1" onClick={() => actions.logout()}>
+									LOGOUT
+								</button>
+							</Link>
+						</>
 					)}
 				</div>
 			</div>

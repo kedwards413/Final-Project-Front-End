@@ -10,7 +10,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 					specialty: "Agoraphobia, Social Phobia",
 					email: "gmihov@gmail.com",
 					phone_number: "954-438-4995",
-					zip_code: "33306",
+					zip_code: "Fort Lauderdale, FL 33306",
 					id: 0
 				},
 				{
@@ -18,7 +18,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 					specialty: "Arachnaphobia",
 					email: "plucano@gmail.com",
 					phone_number: "786-931-8944",
-					zip_code: "33160",
+					zip_code: "Aventura, FL 33160",
 					id: 1
 				},
 				{
@@ -26,7 +26,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 					specialty: "Cynophobia, Astraphobia",
 					email: "marcelorig@gmail.com",
 					phone_number: "305-548-8234",
-					zip_code: "33179",
+					zip_code: "North Miami Beach, FL 33179",
 					id: 2
 				}
 			],
@@ -40,7 +40,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 			currentPatient: {},
 			currentTherapist: {},
 			currentUser: [{}],
-			token: null,
+			token: "1234",
 			profileImg: "",
 
 			modalCards: [
