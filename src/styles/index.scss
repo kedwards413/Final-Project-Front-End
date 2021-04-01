@@ -640,8 +640,9 @@ i{
 
 
 .login-box {
+   
   position: absolute;
-  top: 50%;
+  margin-top:90px;
   left: 50%;
   width: 400px;
   padding: 40px;
@@ -709,7 +710,7 @@ i{
 .seeProgressButton{
     margin-top:540px;
     margin-left:-85px;
-    font-size:20px;
+    font-size:18px;
     padding:5px;
     width:180px;
     height:40px;
@@ -753,7 +754,7 @@ i{
 }
 
 .firstquestion-modal2 {
-    font-size:40px;
+    font-size:30px;
     margin-right:-150px;
 }
 
@@ -833,13 +834,13 @@ i{
 }
 
 
-.profil
+
 
 // modal on profile page
 
 .firstquestion-modal2{
     font-size:30px;
-    margin-right:-100px;
+    margin-right:-60px;
     
   
     
@@ -847,17 +848,18 @@ i{
 }
 .secondquestion-modal{
    
-    font-size:40px;
-    margin-right:-170px;
+    font-size:30px;
+    margin-right:-400px;
     margin-top:10px;
 }
 .secondquestion-modal-answers{
     margin-top: 150px;
-    font-size:20px;
+    font-size:15px;
+    margin-right: 300px;
    
 }
 .firstquestion-modal-answers {
-    font-size:20px;
+    font-size:15px;
     margin-left:50px;
 
 }
@@ -1051,10 +1053,12 @@ i{
     background: black;
     color: white;
     border-radius: 10px;
-    align-items: center;
+     margin-left:57px;
+    margin-bottom:20px;
     padding-bottom: 5px;
 
 }
+
 
 
 

@@ -72,7 +72,7 @@ export const Testimonials = () => {
 					<div className="testimonials ">
 						{store.userTestimonials.map((item, i) => {
 							return (
-								<div key={i} className="arr " style={{ transform: `translateX(${x}%)` }}>
+								<div key={i} className="arr" style={{ transform: `translateX(${x}%)` }}>
 									<img
 										src={
 											item.profile_picture === "default"
@@ -89,6 +89,7 @@ export const Testimonials = () => {
 								</div>
 							);
 						})}
+
 						<button className="leftButton" onClick={goLeft}>
 							<i className="fas fa-chevron-left" />
 						</button>

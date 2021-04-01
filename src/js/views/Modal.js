@@ -212,7 +212,7 @@ export const Modal = () => {
 							<div className="modalText2 pl-5 pr-5">
 								<p>{store.modalCards[modalIndex].text}</p>
 							</div>
-							<Link to="/profilepage">
+							<Link to="/testimonialinput">
 								<button className="seeProgressButton mb-4">
 									{" "}
 									{store.modalCards[modalIndex].button}

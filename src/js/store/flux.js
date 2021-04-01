@@ -10,7 +10,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 					specialty: "Agoraphobia, Social Phobia",
 					email: "gmihov@gmail.com",
 					phone_number: "954-438-4995",
-					zip_code: "33306",
+					zip_code: "Fort Lauderdale, FL 33306",
 					id: 0
 				},
 				{
@@ -18,7 +18,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 					specialty: "Arachnaphobia",
 					email: "plucano@gmail.com",
 					phone_number: "786-931-8944",
-					zip_code: "33160",
+					zip_code: "Aventura, FL 33160",
 					id: 1
 				},
 				{
@@ -26,7 +26,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 					specialty: "Cynophobia, Astraphobia",
 					email: "marcelorig@gmail.com",
 					phone_number: "305-548-8234",
-					zip_code: "33179",
+					zip_code: "North Miami Beach, FL 33179",
 					id: 2
 				}
 			],
@@ -40,7 +40,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 			currentPatient: {},
 			currentTherapist: {},
 			currentUser: [{}],
-			token: "",
+			token: null,
 			profileImg: "",
 
 			modalCards: [
@@ -53,15 +53,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 						"You're about to begin your journey. There will be missions you need to complete in order to be able to proceed to the next one. The missions will increase in difficulty. If at any time you feel uncomfortable because of an image, you can click on the image and it will blackout. When you're ready, you can continue. Click the arrow on the bottom right to begin your journey. ",
 					button: ""
 				},
-				{
-					title: "Arachnophobia",
 
-					imageUrl:
-						"https://images-fibreglast-com.s3.amazonaws.com/pio-resized/750/Single%20Stage%20Black%20Paint-5.jpg",
-					text:
-						" Spiders save us from the world’s deadliest animal. They mostly eat insects, which helps control their populations. Their webs are particularly adept at catching small flying insects such as mosquitos. Worldwide, mosquito-borne viruses kill more humans than any other animal.    ",
-					button: ""
-				},
 				{
 					title: "Arachnophobia",
 
@@ -143,8 +135,8 @@ const getState = ({ getStore, getActions, setStore }) => {
 				{
 					title: "Arachnophobia",
 					text:
-						"YOU DID IT! Congratulations! You've come closer than before to overcoming your fear. The more you expose yourself safely to your fears, the stronger you will feel knowing that fear cannot control you. Press the button and sign up for a free one-time session with a therapist! ",
-					button: "see your progress"
+						"YOU DID IT! Congratulations! You've come closer than before to overcoming your fear. The more you expose yourself safely to your fears, the stronger you will feel knowing that fear cannot control you.",
+					button: "Leave A Testimonial"
 				}
 			]
 		},
