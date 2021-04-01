@@ -161,7 +161,7 @@ export const ProfilePage = () => {
 
 						<div className="modal-answer-p-page text-white">
 							<div className="modal-question-p-page d-flex justify-content-center">
-								<p className="secondquestion-modal text-white  mt-5 pt-5">
+								<p className="secondquestion-modal text-white   pt-5">
 									Tell us more about your experience
 								</p>
 								<div className="secondquestion-modal-answers">
