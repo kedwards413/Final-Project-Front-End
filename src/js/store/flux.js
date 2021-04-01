@@ -53,15 +53,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 						"You're about to begin your journey. There will be missions you need to complete in order to be able to proceed to the next one. The missions will increase in difficulty. If at any time you feel uncomfortable because of an image, you can click on the image and it will blackout. When you're ready, you can continue. Click the arrow on the bottom right to begin your journey. ",
 					button: ""
 				},
-				{
-					title: "Arachnophobia",
 
-					imageUrl:
-						"https://images-fibreglast-com.s3.amazonaws.com/pio-resized/750/Single%20Stage%20Black%20Paint-5.jpg",
-					text:
-						" Spiders save us from the world’s deadliest animal. They mostly eat insects, which helps control their populations. Their webs are particularly adept at catching small flying insects such as mosquitos. Worldwide, mosquito-borne viruses kill more humans than any other animal.    ",
-					button: ""
-				},
 				{
 					title: "Arachnophobia",
 
