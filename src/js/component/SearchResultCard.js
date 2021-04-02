@@ -31,7 +31,7 @@ export const SearchResultCard = props => {
 				<p className={showNumber ? "card-text text-white ml-1" : "d-none"}>{props.therapist.phone_number}</p>
 
 				<button className="btn btn-lg ml-1 my-2 my-sm-0 therapist-number" type="submit" onClick={show}>
-					Free Consultation
+					Reveal Number
 				</button>
 				<p className={showWarning ? "card-text text-white ml-1" : "d-none"}>
 					Please login to see therapist number
